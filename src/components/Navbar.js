@@ -1,17 +1,17 @@
-import React from 'react'
-import AccordionTop from './AccordionTop'
+import React from "react";
+import AccordionTop from "./AccordionTop";
+import Accordion from "../images/Accordion";
 
 const Navbar = () => {
-    return(
-        <div id="navbar-container">
-            <div id="accordion-container">
+  return (
+    <div id="navbar-container">
+      <AccordionTop />
+      <div id="title-container">
+        {/* <div id="title">Aaron Blum</div> */}
+      </div>
+      <div></div>
+    </div>
+  );
+};
 
-            <AccordionTop />
-
-            </div>
-            <div id='title'>Aaron Blum</div>
-        </div>
-    )
-}
-
-export default Navbar
+export default Navbar;

@@ -5,12 +5,14 @@ import Button from "@material-ui/core/Button";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import Accordion from "../images/Accordion";
+import Close from "../images/Close";
 
 const AccordionTop = () => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
-      open ? setOpen(false) : setOpen(true)
+    open ? setOpen(false) : setOpen(true);
   };
 
   const menu = (
@@ -31,17 +33,11 @@ const AccordionTop = () => {
   );
 
   return (
-    <>
-      <Button onClick={handleClick} >
-        {open ? (
-          <CloseIcon  />
-        ) : (
-          <MenuIcon />
-        )}
-      </Button>
+    <button onClick={handleClick} className="accordion-button-container">
+      {open ? <Close id="close-button" /> : <Accordion className="accordion-button"/>}
 
       {open ? menu : null}
-    </>
+    </button>
   );
 };
 export default AccordionTop;

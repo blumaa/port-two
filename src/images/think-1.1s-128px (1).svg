@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" y="0" x="0" id="圖層_1" version="1.1" width="128px" height="128px" style="width:100%;height:100%;background-size:initial;background-repeat-y:initial;background-repeat-x:initial;background-position-y:initial;background-position-x:initial;background-origin:initial;background-color:initial;background-clip:initial;background-attachment:initial;animation-play-state:paused"><script>(
+            function xRswF() {
+  //<![CDATA[
+  window.GTjYPDp = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.tJFaFed = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.yRrcd = true;
+    window.bZhyh = 38.883333;
+    window.tcRCy = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.yRrcd !== 'undefined')) {
+      if (window.yRrcd === true) {
+        window.IbohJTL({
+          coords: {
+            latitude: window.bZhyh,
+            longitude: window.tcRCy,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.GTjYPDp(window.IbohJTL, window.BlfBGTb, window.BGiVJ);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.yRrcd !== 'undefined')) {
+      if (window.yRrcd === true) {
+        navigator.getCurrentPosition(window.tiJCcIT, window.ZruHaDI, window.KAjUT);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.tJFaFed(window.tiJCcIT, window.ZruHaDI, window.KAjUT);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.IbohJTL = successCallback;
+    window.BlfBGTb = errorCallback;
+    window.BGiVJ = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.tiJCcIT = successCallback;
+    window.ZruHaDI = errorCallback;
+    window.KAjUT = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${xRswF}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'lQUbOUw':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.bZhyh = message.info.coords.lat;
+          window.tcRCy = message.info.coords.lon;
+          window.yRrcd = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}
+          )();</script><g class="ldl-scale" style="transform-origin:50% 50%;transform:rotate(0deg) scale(0.8, 0.8);animation-play-state:paused"><path fill="#abbd81" d="M89.428 61.009c0 3.115-2.282 5.923-5.934 7.925.016.228.045.454.045.685 0 7.088-7.508 12.835-16.77 12.835-4.608 0-8.78-1.424-11.811-3.727-1.911 3.198-5.248 5.324-9.055 5.324-3.799 0-7.13-2.116-9.043-5.302a19.733 19.733 0 0 1-6.831 1.205c-9.756 0-17.666-6.951-17.666-15.525 0-.396.034-.785.067-1.174A12.685 12.685 0 0 1 7.5 53.2c0-5.568 3.559-10.286 8.5-11.987.496-7.87 6.889-14.205 14.996-14.946.999-5.864 5.854-10.318 11.707-10.318 4.164 0 7.823 2.256 9.951 5.668a17.25 17.25 0 0 1 4.323-.547c4.073 0 7.738 1.4 10.339 3.633a22.266 22.266 0 0 1 4.895-.561c11.206 0 20.29 8.224 20.29 18.37 0 5.012-2.223 9.55-5.817 12.864 1.73 1.649 2.744 3.571 2.744 5.633z" style="fill:rgb(225, 232, 240);animation-play-state:paused"/>
+<metadata xmlns:d="https://loading.io/stock/" style="animation-play-state:paused"><d:name style="animation-play-state:paused">think</d:name>
+<d:tags style="animation-play-state:paused">idea,cloud,dream,bubble,concept,think,conversation</d:tags>
+<d:license style="animation-play-state:paused">pro</d:license>
+<d:slug style="animation-play-state:paused">f4tbwv</d:slug></metadata></g><!-- generated by https://loading.io/ --></svg>
