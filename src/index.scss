@@ -1,12 +1,12 @@
 @import "mixins";
 
-$font-stack: 'Proza Libre', sans-serif;
+$font-stack: "Proza Libre", sans-serif;
 $background-color: #f1f0eb;
 
-.App{
+.App {
   border: 0;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 body {
@@ -32,7 +32,7 @@ body {
 
   header {
     font-family: $font-stack;
-    height: 15vh;
+    height: 50vh;
     position: fixed;
     // overflow: hidden;
     width: 100%;
@@ -72,7 +72,7 @@ body {
         // border: 2px solid red;
         background-color: rgba(102, 51, 153, 0);
         position: absolute;
-        #accordion-icon{
+        #accordion-icon {
           padding-top: 20px;
           margin-left: 2vw;
           height: 3vh;
@@ -87,13 +87,13 @@ body {
           height: 3vh;
           // filter: drop-shadow(1px 1px 2px #161748);
         }
-        #button-container{
-          border: 1px solid red;
+        #button-container {
+          // border: 1px solid red;
           padding-top: 5px;
           // margin-left: 10px;
           position: relative;
           left: 1.2vw;
-          .button-one{
+          .button-one {
             // margin-bottom: 5px;
             // bottom: 0;
             // width: 7vw;
@@ -103,36 +103,32 @@ body {
             background-color: #8076a3;
             border-radius: 40%;
             text-align: center;
-            border: 2px solid #ffffff;
-            line-height:49px;
+            // border: 2px solid #ffffff;
+            line-height: 49px;
             font-size: 1.5em;
             // box-shadow: 2px 2px 10px rgba(109, 109, 109, 0.25) inset,
             //   1px 1px 5px #f9c5bd inset, 0px 3px 3px rgba(0, 0, 0, 0.5);
           }
-          .button-two{
-
+          .button-two {
           }
-          .button-three{
-
+          .button-three {
           }
-          .button-four{
-
+          .button-four {
           }
         }
       }
-      .item2{
-
+      .item2 {
         // border: 1px solid green;
         // height: 100%;
         width: 20vw;
       }
-      .item3{
+      .item3 {
         // border: 1px solid blue;
         height: 100%;
         width: 80vw;
         background-image: url(./images/cloud2.svg);
         background-position: center;
-        background-repeat:no-repeat;
+        background-repeat: no-repeat;
 
         z-index: 1;
       }
@@ -148,138 +144,66 @@ body {
     // position: fixed;
     // background-color: #76c1d4;
     // background-size:10%;
-    // border: purple 1px solid;
     border: 0;
     padding: 0;
     margin: 0;
     // bottom: 0;
     // border: purple 1px solid;
+    #main-container{
 
-    #section-one {
-      // position: fixed;
-      // margin-top: 40px;
-      // height: 100%;
-      // border: purple 1px solid;
-      z-index: 0;
-      .grid-container {
-        // height: 91%;
-        // border: purple 1px solid;
-        width: 100vw;
-        height: 100vh;
-
-        display: grid;
-        grid-template-columns: auto;
-        // background-color: #2196f3;
-        
-        .long-item-top {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          height: 15vh;
-          // background-color: rgba(255, 255, 255, 0.8);
-          // border: 1px solid rgba(0, 0, 0, 0.8);
-          border-top-left-radius: 25px;
-          // border-bottom-right-radius: 25px;
-          display: flex;
-          justify-content: flex-end;
-          #title-box {
-            // background-color: #e1e8f0;
-            // background-attachment: fixed;
-            // height: 100%;
-            background-image: url(./images/pinkcloud.svg);
-            background-size: 100%;
-            background-position: center;
-            background-repeat: repeat-x;
-            // overflow: hidden;
-            z-index: 0;
-            // border: 1px solid rgba(0, 0, 0, 0.8);
-            #title {
-              @include aarontitle;
-            }
-            #sub-title{
-              @include sub-title;
-              
-            }
-          }
-          // padding: 20px;
-          // font-size: 30px;
-          text-align: center;
-        }
-        .long-item {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          background-color: rgba(255, 255, 255, 0.8);
-          // border: 1px solid rgba(0, 0, 0, 0.8);
-          // border-radius: 50px;
-          // padding: 20px;
-          // font-size: 30px;
-          text-align: center;
-        }
-        .long-item-bottom {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          background-color: rgba(255, 255, 255, 0.8);
-          // border: 1px solid rgba(0, 0, 0, 0.8);
-          border-bottom-left-radius: 25px;
-          border-bottom-right-radius: 25px;
-
-          // padding: 20px;
-          // font-size: 30px;
-          text-align: center;
-        }
-        .long-item-bottom-title {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          // background-color: rgba(255, 255, 255, 0.8);
-         
-          // background-color: rgba(255, 255, 255, 0.8);
-          // border: 1px solid rgba(0, 0, 0, 0.8);
-          border-bottom-left-radius: 25px;
-          // border-bottom-right-radius: 25px;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-         
-          // padding: 20px;
-          // font-size: 30px;
-          text-align: center;
-        }
-        .grid-item {
-          background-color: rgba(255, 255, 255, 0.8);
-          // border: 1px solid rgba(0, 0, 0, 0.8);
-          // border-radius: 50px;
-          // padding: 20px;
-          // font-size: 30px;
-          text-align: center;
-        }
+      #about-me,
+      #tech-stack,
+      #portfolio,
+      #contact {
+        @include main-area-template;
       }
     }
+  }
+  .list-transition-enter {
   }
 
   /* footer */
   footer {
     font-family: $font-stack;
-    height: 20vh;
+    height: 50vh;
     position: fixed;
     bottom: 0;
     border: 0;
-    margin:0;
+    margin: 0;
     // overflow: hidden;
     width: 100%;
     // border: 1px solid rgba(0, 0, 0, 0.8);
     z-index: 1;
-    .footer-container{
+    .footer-container {
       // border: 1px solid rgba(0, 0, 0, 0.8);
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: flex-end;
+      flex-direction: row;
       background-image: url(./images/Flat-Mountains.svg);
       background-size: 100%;
       background-position: bottom;
       background-repeat: repeat-x;
-      .item3{
-       
+      .item1 {
+        // border: 1px solid green;
+        // height: 100%;
+        width: 20vw;
+      }
+      .item2 {
+        // border: 1px solid green;
+        // height: 100%;
+        width: 20vw;
+      }
+      .item3 {
+        height: 100%;
+        width: 60vw;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        background-image: url(./images/cloudclump.svg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
 
+        z-index: 1; 
       }
     }
   }

@@ -1,13 +1,13 @@
 import React from "react";
-import AccordionTop from "./AccordionTop";
+import AccordionTop from "../discard/AccordionTop";
 import Accordion from "../images/Accordion";
 import AccordionUpperLeft from './AccordionUpperLeft'
 
-const Navbar = () => {
+const Navbar = ({flipSwitch}) => {
   return (
     <div id="navbar-container">
-      {/* <AccordionTop /> */}
-      <AccordionUpperLeft />
+      
+      <AccordionUpperLeft flipSwitch={flipSwitch}/>
       <div className="item2">
         
       </div>

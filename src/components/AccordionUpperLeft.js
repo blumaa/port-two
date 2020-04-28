@@ -11,9 +11,13 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import Drawer1 from "../images/drawer1.svg";
 import close from "../images/close.svg";
+import { Route, NavLink } from "react-router-dom";
+import TechStack from "./TechStack";
+import AboutMe from "./AboutMe";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const useStyles = makeStyles({
-    
   paper: {
     backgroundColor: "#8076a300",
     marginTop: "10vh",
@@ -23,7 +27,6 @@ const useStyles = makeStyles({
     color: "white",
     height: "60vw",
     display: "flex",
-   
 
     justifyContent: "center",
     alignItems: "center",
@@ -33,7 +36,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer({ flipSwitch }) {
   const classes = useStyles();
   const [state, setState] = useState({
     top: false,
@@ -54,26 +57,71 @@ export default function SwipeableTemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
+
+  const list = () => (
     <div
       className={clsx(classes.list, "left")}
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer("left", false)}
+      onKeyDown={toggleDrawer("left", false)}
     >
       <List>
-        <ListItem button>
-          <ListItemText>About Me</ListItemText>
+        <ListItem>
+            <Link
+              to="page1"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              delay={250}
+
+              onClick={toggleDrawer("left", false)}
+            >
+              <ListItemText>About Me</ListItemText>
+            </Link>
         </ListItem>
-        <ListItem button>
-          <ListItemText>Tech Stack</ListItemText>
+
+        <ListItem>
+          <Link
+            to="page2"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            delay={250}
+
+            onClick={toggleDrawer("left", false)}
+          >
+            <ListItemText>Tech Stack</ListItemText>
+          </Link>
         </ListItem>
-        <ListItem button>
-          <ListItemText>Portfolio</ListItemText>
+        <ListItem>
+            <Link
+              to="page3"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              delay={250}
+              onClick={toggleDrawer("left", false)}
+            >
+              <ListItemText>Portfolio</ListItemText>
+            </Link>
         </ListItem>
-        <ListItem button>
-          <ListItemText>Contact</ListItemText>
+        <ListItem>
+            <Link
+              to="page4"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              delay={250}
+              onClick={toggleDrawer("left", false)}
+            >
+              <ListItemText>Contact</ListItemText>
+            </Link>
         </ListItem>
       </List>
+
       {/* <Divider /> */}
     </div>
   );
@@ -81,6 +129,7 @@ export default function SwipeableTemporaryDrawer() {
   return (
     <div>
       <React.Fragment>
+
         <button
           onClick={toggleDrawer("left", true)}
           className="accordion-button-container"
@@ -91,13 +140,14 @@ export default function SwipeableTemporaryDrawer() {
             <img src={Drawer1} id="accordion-icon" />
           )}
         </button>
+
         {/* <Button onClick={toggleDrawer("left", true)}>Left</Button> */}
         <SwipeableDrawer
           open={state["left"]}
           onClose={toggleDrawer("left", false)}
           onOpen={toggleDrawer("left", true)}
           classes={{
-              root: classes.root,
+            root: classes.root,
             paper: classes.paper, // class name, e.g. `classes-nesting-root-x`
           }}
           BackdropProps={{ invisible: true }}

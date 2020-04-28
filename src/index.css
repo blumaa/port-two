@@ -30,7 +30,7 @@ body {
   /* header */
   header {
     font-family: "Proza Libre", sans-serif;
-    height: 15vh;
+    height: 50vh;
     position: fixed;
     width: 100%;
     top: 0;
@@ -71,7 +71,6 @@ body {
     height: 3vh;
   }
   header #navbar-container .accordion-button-container #button-container {
-    border: 1px solid red;
     padding-top: 5px;
     position: relative;
     left: 1.2vw;
@@ -82,7 +81,6 @@ body {
     background-color: #8076a3;
     border-radius: 40%;
     text-align: center;
-    border: 2px solid #ffffff;
     line-height: 49px;
     font-size: 1.5em;
   }
@@ -106,32 +104,47 @@ body {
     padding: 0;
     margin: 0;
   }
-  main #section-one {
+  main #main-container #about-me,
+main #main-container #tech-stack,
+main #main-container #portfolio,
+main #main-container #contact {
     z-index: 0;
   }
-  main #section-one .grid-container {
+  main #main-container #about-me .grid-container,
+main #main-container #tech-stack .grid-container,
+main #main-container #portfolio .grid-container,
+main #main-container #contact .grid-container {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: auto;
   }
-  main #section-one .grid-container .long-item-top {
+  main #main-container #about-me .grid-container .long-row-top,
+main #main-container #tech-stack .grid-container .long-row-top,
+main #main-container #portfolio .grid-container .long-row-top,
+main #main-container #contact .grid-container .long-row-top {
     grid-column-start: 1;
     grid-column-end: 3;
-    height: 15vh;
     border-top-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
+    height: 8vh;
     text-align: center;
   }
-  main #section-one .grid-container .long-item-top #title-box {
+  main #main-container #about-me .grid-container .long-row-top #title-box,
+main #main-container #tech-stack .grid-container .long-row-top #title-box,
+main #main-container #portfolio .grid-container .long-row-top #title-box,
+main #main-container #contact .grid-container .long-row-top #title-box {
     background-image: url(./images/pinkcloud.svg);
     background-size: 100%;
     background-position: center;
     background-repeat: repeat-x;
     z-index: 0;
   }
-  main #section-one .grid-container .long-item-top #title-box #title {
+  main #main-container #about-me .grid-container .long-row-top #title-box #title,
+main #main-container #tech-stack .grid-container .long-row-top #title-box #title,
+main #main-container #portfolio .grid-container .long-row-top #title-box #title,
+main #main-container #contact .grid-container .long-row-top #title-box #title {
     font-family: "Proza Libre", sans-serif;
     padding-top: 10px;
     padding-right: 10px;
@@ -139,35 +152,60 @@ body {
     text-shadow: 1px 1px 2px #4a4a66;
     font-size: 8vw;
   }
-  main #section-one .grid-container .long-item-top #title-box #sub-title {
+  main #main-container #about-me .grid-container .long-row-top #title-box #sub-title,
+main #main-container #tech-stack .grid-container .long-row-top #title-box #sub-title,
+main #main-container #portfolio .grid-container .long-row-top #title-box #sub-title,
+main #main-container #contact .grid-container .long-row-top #title-box #sub-title {
     font-family: "Proza Libre", sans-serif;
     font-size: 80%;
     color: #3d7c47ff;
   }
-  main #section-one .grid-container .long-item {
+  main #main-container #about-me .grid-container .long-row-middle-1,
+main #main-container #tech-stack .grid-container .long-row-middle-1,
+main #main-container #portfolio .grid-container .long-row-middle-1,
+main #main-container #contact .grid-container .long-row-middle-1 {
+    height: 62vh;
     grid-column-start: 1;
     grid-column-end: 3;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-  }
-  main #section-one .grid-container .long-item-bottom {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    text-align: center;
-  }
-  main #section-one .grid-container .long-item-bottom-title {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    border: 1px solid rgba(0, 0, 0, 0.8);
     border-bottom-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     text-align: center;
   }
-  main #section-one .grid-container .grid-item {
+  main #main-container #about-me .grid-container .long-row-middle-2,
+main #main-container #tech-stack .grid-container .long-row-middle-2,
+main #main-container #portfolio .grid-container .long-row-middle-2,
+main #main-container #contact .grid-container .long-row-middle-2 {
+    height: 20vh;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+  main #main-container #about-me .grid-container .long-row-bottom-title,
+main #main-container #tech-stack .grid-container .long-row-bottom-title,
+main #main-container #portfolio .grid-container .long-row-bottom-title,
+main #main-container #contact .grid-container .long-row-bottom-title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 10vh;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+  main #main-container #about-me .grid-container .grid-item,
+main #main-container #tech-stack .grid-container .grid-item,
+main #main-container #portfolio .grid-container .grid-item,
+main #main-container #contact .grid-container .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
   }
@@ -175,7 +213,7 @@ body {
   /* footer */
   footer {
     font-family: "Proza Libre", sans-serif;
-    height: 20vh;
+    height: 50vh;
     position: fixed;
     bottom: 0;
     border: 0;
@@ -187,10 +225,26 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     background-image: url(./images/Flat-Mountains.svg);
     background-size: 100%;
     background-position: bottom;
     background-repeat: repeat-x;
+  }
+  footer .footer-container .item1 {
+    width: 20vw;
+  }
+  footer .footer-container .item2 {
+    width: 20vw;
+  }
+  footer .footer-container .item3 {
+    height: 100%;
+    width: 60vw;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-image: url(./images/cloudclump.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
   }
 }
