@@ -10,7 +10,7 @@ const Main = () => {
               <div id="title">Aaron Blum</div>
             </div>
           </div>
-          <div className="long-item-top">1</div>
+          <div className="long-item-top"></div>
           <div className="long-item-bottom-title">
             1
           </div>

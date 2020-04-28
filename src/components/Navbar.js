@@ -6,10 +6,10 @@ const Navbar = () => {
   return (
     <div id="navbar-container">
       <AccordionTop />
-      <div id="title-container">
-        {/* <div id="title">Aaron Blum</div> */}
+      <div className="item2">
+        
       </div>
-      <div></div>
+      <div className="item3"></div>
     </div>
   );
 };

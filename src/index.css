@@ -30,15 +30,24 @@ body {
   /* header */
   header {
     font-family: "Space Mono", monospace;
-    height: 0px;
+    height: 15vh;
     position: fixed;
     width: 100%;
     top: 0;
     margin: 0;
     z-index: 1;
     display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+  }
+  header #navbar-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
   }
   header #navbar-container .accordion-button-container {
     outline: none;
@@ -50,15 +59,15 @@ body {
   header #navbar-container .accordion-button-container .close-button {
     filter: drop-shadow(1px 1px 2px #161748);
   }
-  header #navbar-container .accordion-button-container #title-container {
+  header #navbar-container .item2 {
     height: 100%;
-    display: flex;
-    justify-content: center;
+    width: 80%;
   }
-  header #navbar-container .accordion-button-container #title-container #title {
-    color: #09868b;
-    text-shadow: 1px 1px 2px #4a4a66;
-    font-size: 6vw;
+  header #navbar-container .item3 {
+    height: 100%;
+    width: 70%;
+    background-image: url(./images/cloud2.svg);
+    z-index: 1;
   }
 
   /* main */
@@ -116,7 +125,6 @@ body {
   main #section-one .grid-container .long-item-bottom-title {
     grid-column-start: 1;
     grid-column-end: 3;
-    border: 1px solid rgba(0, 0, 0, 0.8);
     border-bottom-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
