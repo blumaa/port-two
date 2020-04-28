@@ -1,6 +1,6 @@
 @import "mixins";
 
-$font-stack: "Space Mono", monospace;
+$font-stack: 'Proza Libre', sans-serif;
 $background-color: #f1f0eb;
 
 .App{
@@ -56,37 +56,84 @@ body {
       // grid-template-columns: 10% 90% 10%;
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
+      // justify-content: space-evenly;
+      // align-items: center;
       .accordion-button-container {
+        // width: 20vw;
+        align-self: flex-start;
         outline: none;
-        .filter {
-          // filter: drop-shadow(1px 1px 2px #4a4a66);
-        }
-        // @include fadein;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
         font-size: 0%;
         padding: 0;
         border: 0;
         // border: 2px solid red;
         background-color: rgba(102, 51, 153, 0);
-        .close-button {
-          // background-size: 8px 8px;
-          filter: drop-shadow(1px 1px 2px #161748);
+        position: absolute;
+        #accordion-icon{
+          padding-top: 20px;
+          margin-left: 2vw;
+          height: 3vh;
         }
-       
+        .filter {
+          // filter: drop-shadow(1px 1px 2px #4a4a66);
+        }
+        // @include fadein;
+        #close-icon {
+          padding-top: 20px;
+          margin-left: 2vw;
+          height: 3vh;
+          // filter: drop-shadow(1px 1px 2px #161748);
+        }
+        #button-container{
+          border: 1px solid red;
+          padding-top: 5px;
+          // margin-left: 10px;
+          position: relative;
+          left: 1.2vw;
+          .button-one{
+            // margin-bottom: 5px;
+            // bottom: 0;
+            // width: 7vw;
+            // height: 3vh;
+            width: 100px;
+            color: rgb(255, 255, 255);
+            background-color: #8076a3;
+            border-radius: 40%;
+            text-align: center;
+            border: 2px solid #ffffff;
+            line-height:49px;
+            font-size: 1.5em;
+            // box-shadow: 2px 2px 10px rgba(109, 109, 109, 0.25) inset,
+            //   1px 1px 5px #f9c5bd inset, 0px 3px 3px rgba(0, 0, 0, 0.5);
+          }
+          .button-two{
+
+          }
+          .button-three{
+
+          }
+          .button-four{
+
+          }
+        }
       }
       .item2{
 
         // border: 1px solid green;
-        height: 100%;
-        width: 80%;
+        // height: 100%;
+        width: 20vw;
       }
       .item3{
         // border: 1px solid blue;
         height: 100%;
-        width: 70%;
+        width: 80vw;
         background-image: url(./images/cloud2.svg);
-        // background-repeat: repeat-x;
+        background-position: center;
+        background-repeat:no-repeat;
+
         z-index: 1;
       }
     }
@@ -127,7 +174,7 @@ body {
         .long-item-top {
           grid-column-start: 1;
           grid-column-end: 3;
-
+          height: 15vh;
           // background-color: rgba(255, 255, 255, 0.8);
           // border: 1px solid rgba(0, 0, 0, 0.8);
           border-top-left-radius: 25px;
@@ -139,12 +186,18 @@ body {
             // background-attachment: fixed;
             // height: 100%;
             background-image: url(./images/pinkcloud.svg);
+            background-size: 100%;
+            background-position: center;
             background-repeat: repeat-x;
-            overflow: visible;
+            // overflow: hidden;
             z-index: 0;
             // border: 1px solid rgba(0, 0, 0, 0.8);
             #title {
               @include aarontitle;
+            }
+            #sub-title{
+              @include sub-title;
+              
             }
           }
           // padding: 20px;

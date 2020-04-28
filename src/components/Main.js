@@ -8,6 +8,7 @@ const Main = () => {
         <div className="long-item-top">
             <div id="title-box">
               <div id="title">Aaron Blum</div>
+              <div id="sub-title">front end developer</div>
             </div>
           </div>
           <div className="long-item-top"></div>

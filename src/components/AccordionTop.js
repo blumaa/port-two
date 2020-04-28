@@ -7,6 +7,8 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import Accordion from "../images/Accordion";
 import Close from "../images/Close";
+import Drawer1 from '../images/drawer1.svg'
+import close from '../images/close.svg'
 
 const AccordionTop = () => {
   const [open, setOpen] = useState(false);
@@ -16,28 +18,31 @@ const AccordionTop = () => {
   };
 
   const menu = (
-    <div id="top-button-container">
-      <div className="one">
-        <InstagramIcon />
+    <div id="button-container">
+      <div className="button-one">
+        {/* <InstagramIcon /> */}
+        Tech Stack
       </div>
-      <div className="two">
-        <LinkedInIcon />
+      <div className="button-two">
+        {/* <LinkedInIcon /> */}
       </div>
-      <div className="three">
-        <MailOutlineIcon />
+      <div className="button-three">
+        {/* <MailOutlineIcon /> */}
       </div>
-      <div className="four">
-        <MailOutlineIcon />
+      <div className="button-four">
+        {/* <MailOutlineIcon /> */}
       </div>
     </div>
   );
 
   return (
+    <>
     <button onClick={handleClick} className="accordion-button-container">
-      {open ? <Close id="close-button" /> : <Accordion className="accordion-button"/>}
+      {open ? <img src={close} id="close-icon" /> :  <img src={Drawer1} id="accordion-icon" />}
 
       {open ? menu : null}
     </button>
+      </>
   );
 };
 export default AccordionTop;
