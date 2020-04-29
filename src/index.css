@@ -137,8 +137,8 @@ main #main-container #tech-stack .grid-container .about-me-top-container #title-
 main #main-container #portfolio .grid-container .about-me-top-container #title-box,
 main #main-container #contact .grid-container .about-me-top-container #title-box {
     background-image: url(./images/pinkcloud.svg);
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: 100%;
+    background-position: top center;
     background-repeat: repeat-x;
     z-index: 0;
   }
