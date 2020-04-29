@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/port-two/static/css/main.c62ba920.chunk.css",
+    "main.js": "/port-two/static/js/main.e2909633.chunk.js",
+    "main.js.map": "/port-two/static/js/main.e2909633.chunk.js.map",
+    "runtime-main.js": "/port-two/static/js/runtime-main.a85c88a6.js",
+    "runtime-main.js.map": "/port-two/static/js/runtime-main.a85c88a6.js.map",
+    "static/css/2.f2ad0615.chunk.css": "/port-two/static/css/2.f2ad0615.chunk.css",
+    "static/js/2.fb5385a3.chunk.js": "/port-two/static/js/2.fb5385a3.chunk.js",
+    "static/js/2.fb5385a3.chunk.js.map": "/port-two/static/js/2.fb5385a3.chunk.js.map",
+    "index.html": "/port-two/index.html",
+    "precache-manifest.8639dca02b0c1181676f2690875b652c.js": "/port-two/precache-manifest.8639dca02b0c1181676f2690875b652c.js",
+    "service-worker.js": "/port-two/service-worker.js",
+    "static/css/2.f2ad0615.chunk.css.map": "/port-two/static/css/2.f2ad0615.chunk.css.map",
+    "static/css/main.c62ba920.chunk.css.map": "/port-two/static/css/main.c62ba920.chunk.css.map",
+    "static/js/2.fb5385a3.chunk.js.LICENSE.txt": "/port-two/static/js/2.fb5385a3.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/port-two/static/media/profile1.6c5dffc5.svg",
+    "static/media/close.svg": "/port-two/static/media/close.681f167f.svg",
+    "static/media/downarrow.svg": "/port-two/static/media/downarrow.676a9022.svg",
+    "static/media/drawer1.svg": "/port-two/static/media/drawer1.3c19c05e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a85c88a6.js",
+    "static/css/2.f2ad0615.chunk.css",
+    "static/js/2.fb5385a3.chunk.js",
+    "static/css/main.c62ba920.chunk.css",
+    "static/js/main.e2909633.chunk.js"
+  ]
+}
