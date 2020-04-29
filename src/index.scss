@@ -126,7 +126,9 @@ body {
         // border: 1px solid blue;
         height: 100%;
         width: 80vw;
-        background-image: url(./images/cloud2.svg);
+        // background-image: url(./images/cloudclump.svg);
+        background-size: 100% 100%;
+        // background-image: url(./images/cloud2.svg);
         background-position: center;
         background-repeat: no-repeat;
 
@@ -149,8 +151,7 @@ body {
     margin: 0;
     // bottom: 0;
     // border: purple 1px solid;
-    #main-container{
-
+    #main-container {
       #about-me,
       #tech-stack,
       #portfolio,
@@ -180,10 +181,11 @@ body {
       height: 100%;
       display: flex;
       flex-direction: row;
+
       background-image: url(./images/Flat-Mountains.svg);
-      background-size: 100%;
-      background-position: bottom;
-      background-repeat: repeat-x;
+      background-size: 80% ;
+      background-position: right bottom;
+      background-repeat: no-repeat;
       .item1 {
         // border: 1px solid green;
         // height: 100%;
@@ -198,12 +200,12 @@ body {
         height: 100%;
         width: 60vw;
         // border: 1px solid rgba(0, 0, 0, 0.8);
-        background-image: url(./images/cloudclump.svg);
+        // background-image: url(./images/cloudclump.svg);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
 
-        z-index: 1; 
+        z-index: 1;
       }
     }
   }

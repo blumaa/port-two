@@ -7,12 +7,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 433.53947 175.40946"
+   viewBox="0 0 408.74568 166.42037"
    version="1.1"
    id="svg3765"
    sodipodi:docname="Flat-Mountains.svg"
-   width="433.53949"
-   height="175.40945"
+   width="408.7457"
+   height="166.42036"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata3771">
@@ -40,9 +40,9 @@
      inkscape:window-height="847"
      id="namedview3767"
      showgrid="false"
-     inkscape:zoom="1.19"
-     inkscape:cx="271.16853"
-     inkscape:cy="77.437813"
+     inkscape:zoom="0.595"
+     inkscape:cx="285.91473"
+     inkscape:cy="180.0132"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -51,43 +51,23 @@
      width="480"
      height="570"
      id="rect3743"
-     x="351.97195"
-     y="-149.92308"
+     x="727.30298"
+     y="-183.73187"
      style="fill:#f1f0eb;fill-opacity:0;stroke-width:0.30000001" />
   <path
-     style="opacity:0.21787708;fill:#c4008c;fill-opacity:1;stroke-width:0.36831445"
-     d="M 433.53949,34.453781 261.51686,177.18283 h 172.02263 z"
-     id="polygon3745"
-     inkscape:connector-curvature="0" />
-  <polygon
-     points="872.9,900 1396,900 957,450 "
-     id="polygon3747"
-     transform="matrix(0.3,0,0,0.22246804,141.52941,-24.81249)"
-     style="fill:none;fill-opacity:1" />
-  <path
      style="opacity:0.58536545;fill:#aa00aa;fill-opacity:1;stroke-width:0.4752458"
-     d="M 192.14964,48.41528 0,175.40946 h 168.46462 z m 161.65787,115.88066 -2.07411,11.11352 h 17.4215 z"
+     d="M 192.14964,39.42619 0,166.42037 h 168.46462 z m 161.65787,115.88066 -2.07411,11.11352 h 17.4215 z"
      id="polygon3749"
      inkscape:connector-curvature="0" />
   <polygon
-     points="816,900 337,900 398,662 "
+     points="337,900 398,662 816,900 "
      id="polygon3751"
-     transform="matrix(0.41954071,0,0,0.53358367,25.172441,-304.8171)"
+     transform="matrix(0.41954071,0,0,0.53358367,25.17244,-313.80619)"
      style="opacity:0.77094972;fill:#aa00aa;fill-opacity:1" />
   <path
      style="opacity:1;fill:#d3006c;stroke-width:0.40667871"
-     d="M 294.09766,94.594867 179.14453,175.4082 h 92.29883 z"
+     d="m 294.09766,85.60578 -114.95313,80.81333 h 92.29883 z"
      id="polygon3753"
-     inkscape:connector-curvature="0" />
-  <path
-     style="fill:#aa00aa;stroke-width:0.47313851"
-     d="M 432.54756,61.75545 329.33945,175.40946 H 433.24679 V 62.54748 Z"
-     id="polygon3761"
-     inkscape:connector-curvature="0" />
-  <path
-     style="fill:#880088;stroke-width:0.47313851"
-     d="m 432.54756,61.75545 -11.74769,113.65401 h 11.85968 V 61.88397 Z"
-     id="polygon3763"
      inkscape:connector-curvature="0" />
   <rect
      style="opacity:0;fill:#9e0071;fill-opacity:1;fill-rule:nonzero;stroke-width:0.79488903;stroke-linecap:square;stroke-linejoin:bevel"
@@ -95,14 +75,14 @@
      width="124.00443"
      height="30.012808"
      x="193.30817"
-     y="96.791405" />
+     y="87.802315" />
   <rect
      style="opacity:0;fill:#9e0071;fill-opacity:1;fill-rule:nonzero;stroke-width:0.79488903;stroke-linecap:square;stroke-linejoin:bevel"
      id="rect4910"
      width="113.07522"
      height="32.137608"
      x="196.25064"
-     y="94.400993" />
+     y="85.411911" />
   <path
      sodipodi:type="star"
      style="opacity:0;fill:#000078;fill-opacity:1;fill-rule:nonzero;stroke-linecap:square;stroke-linejoin:bevel"
@@ -120,7 +100,7 @@
      d="m 186.58252,163.69652 27.25454,-55.786 -30.50416,-54.077563 61.47775,8.68178 42.00451,-45.722065 10.74081,61.151633 56.46437,25.819775 -54.83956,29.112 -7.10761,61.67957 -44.63353,-43.15943 z"
      inkscape:transform-center-x="-8.111804"
      inkscape:transform-center-y="-0.53973226"
-     transform="scale(1,0.63184858)" />
+     transform="matrix(1,0,0,0.63184858,0,-8.98909)" />
   <path
      sodipodi:type="star"
      style="opacity:0;fill:#000078;fill-opacity:1;fill-rule:nonzero;stroke-linecap:square;stroke-linejoin:bevel"
@@ -138,7 +118,7 @@
      d="M 144.12675,137.2142 159.33562,32.21018 263.90018,14.226652 313.31576,108.11624 239.29171,184.12673 Z"
      inkscape:transform-center-x="-4.7272494"
      inkscape:transform-center-y="2.5260625"
-     transform="scale(1,0.63184858)" />
+     transform="matrix(1,0,0,0.63184858,0,-8.98909)" />
   <path
      sodipodi:type="star"
      style="opacity:0;fill:#000078;fill-opacity:1;fill-rule:nonzero;stroke-linecap:square;stroke-linejoin:bevel"
@@ -156,10 +136,25 @@
      d="M 262.24622,122.92215 186.13673,207.50089 82.178446,161.25273 94.038184,48.091057 205.32619,24.401459 Z"
      inkscape:transform-center-x="-6.2271792"
      inkscape:transform-center-y="1.9697998"
-     transform="scale(1,0.63184858)" />
+     transform="matrix(1,0,0,0.63184858,0,-8.98909)" />
   <polygon
-     points="886,900 587,900 641,695 "
+     points="587,900 641,695 886,900 "
      id="polygon3755"
-     transform="matrix(0.41954071,0,0,0.39421099,25.172963,-179.38169)"
+     transform="matrix(0.41954071,0,0,0.39421099,25.17296,-188.37078)"
      style="opacity:0.41340781;fill:#ac0057" />
+  <path
+     style="opacity:0.21787708;fill:#c4008c;fill-opacity:1;stroke-width:0.36831445"
+     d="M 408.74571,23.690065 236.72308,166.41911 h 172.02263 z"
+     id="polygon3745-2"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:#aa00aa;stroke-width:0.47313851"
+     d="M 408.04648,52.765105 304.83837,166.41911 H 408.74571 V 53.557135 Z"
+     id="polygon3761-2"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:#880088;stroke-width:0.47313851"
+     d="M 408.63372,52.765105 396.88603,166.41911 h 11.85968 V 52.893625 Z"
+     id="polygon3763-5"
+     inkscape:connector-curvature="0" />
 </svg>

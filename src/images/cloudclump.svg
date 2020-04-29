@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="734.29218mm"
-   height="916.0069mm"
-   viewBox="0 0 734.29217 916.00689"
+   width="791.22717mm"
+   height="337.32245mm"
+   viewBox="0 0 791.22717 337.32245"
    version="1.1"
    id="svg1755"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="768.91135"
-     inkscape:cy="2530.8856"
+     inkscape:zoom="0.175"
+     inkscape:cx="899.1814"
+     inkscape:cy="1838.4324"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,10 +52,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(213.699,412.44108)">
+     transform="translate(213.699,-166.24336)">
     <g
        transform="matrix(5.9134509,0,0,5.9134509,-1023.4882,289.36029)"
-       style="display:block"
+       style="display:block;opacity:0.53289474"
        id="g94">
       <path
          inkscape:connector-curvature="0"
@@ -66,7 +66,7 @@
     </g>
     <g
        transform="matrix(5.9134509,0,0,5.9134509,-1052.9097,311.03491)"
-       style="display:block"
+       style="display:block;opacity:0.53289474"
        id="g606">
       <path
          inkscape:connector-curvature="0"
@@ -76,8 +76,8 @@
          id="path604" />
     </g>
     <g
-       transform="matrix(5.9134509,0,0,5.9134509,-763.09844,-372.3262)"
-       style="display:block"
+       transform="matrix(5.9134509,0,0,5.9134509,-719.0588,211.54101)"
+       style="display:block;opacity:0.53289474"
        id="g898">
       <path
          inkscape:connector-curvature="0"
@@ -87,8 +87,8 @@
          id="path896" />
     </g>
     <g
-       transform="matrix(5.913451,0,0,5.913451,-887.46332,-359.25921)"
-       style="display:block"
+       transform="matrix(5.913451,0,0,5.913451,-843.42368,224.608)"
+       style="display:block;opacity:0.53289474"
        id="g94-9">
       <path
          inkscape:connector-curvature="0"
@@ -99,7 +99,7 @@
     </g>
     <g
        transform="matrix(5.913451,0,0,5.913451,-1064.6075,315.19361)"
-       style="display:block"
+       style="display:block;opacity:0.53289474"
        id="g898-1">
       <path
          inkscape:connector-curvature="0"
