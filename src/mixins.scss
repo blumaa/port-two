@@ -26,18 +26,16 @@ $fade-in-time: 5s;
       justify-content: flex-end;
       height: 8vh;
       #title-box {
-
         // background-color: #e1e8f0;
         // background-attachment: fixed;
         // height: 100%;
         background-image: url(./images/pinkcloud.svg);
-        background-size: 100%;
+        background-size: 100% 100%;
         background-position: center;
         background-repeat: repeat-x;
         z-index: 0;
         // border: 1px solid rgba(0, 0, 0, 0.8);
         #title {
-
           @include aarontitle;
         }
         #sub-title {
@@ -46,21 +44,21 @@ $fade-in-time: 5s;
       }
       text-align: center;
     }
-    
+
     .long-row-middle-1 {
       height: 62vh;
-      
+
       grid-column-start: 1;
       grid-column-end: 3;
       // background-color: rgba(255, 255, 255, 0.8);
-      
+
       border: 1px solid rgba(0, 0, 0, 0.8);
       border-bottom-left-radius: 25px;
       // border-bottom-right-radius: 25px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      
+
       // padding: 20px;
       // font-size: 30px;
       text-align: center;
@@ -70,14 +68,14 @@ $fade-in-time: 5s;
       grid-column-start: 1;
       grid-column-end: 3;
       // background-color: rgba(255, 255, 255, 0.8);
-      
-      border: 1px solid rgba(0, 0, 0, 0.8);
+
+      // border: 1px solid rgba(0, 0, 0, 0.8);
       border-bottom-left-radius: 25px;
       // border-bottom-right-radius: 25px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      
+
       // padding: 20px;
       // font-size: 30px;
       text-align: center;
@@ -85,19 +83,42 @@ $fade-in-time: 5s;
     .long-row-bottom-title {
       grid-column-start: 1;
       grid-column-end: 3;
-      
+
       height: 10vh;
       // background-color: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(0, 0, 0, 0.8);
+      // border: 1px solid rgba(0, 0, 0, 0.8);
       border-bottom-left-radius: 25px;
       // border-bottom-right-radius: 25px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      
+
       // padding: 20px;
       // font-size: 30px;
       text-align: center;
+    }
+    .about-me-bottom-container {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      height: 50vh;
+      // background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      border-bottom-left-radius: 25px;
+      // border-bottom-right-radius: 25px;
+      // display: flex;
+      // justify-content: flex-end;
+      // align-items: center;
+
+      // padding: 20px;
+      // font-size: 30px;
+      // text-align: center;
+      background-image: url(./images/profile1.svg);
+      background-repeat: no-repeat;
+      // background-position: bottom;;
+      background-size: 100%;
+
+      z-index: 1; 
     }
 
     .grid-item {
@@ -108,8 +129,41 @@ $fade-in-time: 5s;
       // font-size: 30px;
       text-align: center;
     }
+    #about-me-main-container{
+      height: 62vh;
+
+      grid-column-start: 1;
+      grid-column-end: 3;
+      // background-color: rgba(255, 255, 255, 0.8);
+
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      // border-bottom-left-radius: 25px;
+      // border-bottom-right-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      
+      // padding: 20px;
+      // font-size: 30px;
+      // text-align: center;
+      #picture-box{
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        
+      }
+      #title-box{
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        
+      }
+      #description-box{
+        border: 1px solid rgba(0, 0, 0, 0.8);
+
+      }
+    }
   }
 }
+
+
 @mixin aarontitle {
   // border-radius: 10;
   font-family: $font-stack;

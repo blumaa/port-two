@@ -136,7 +136,7 @@ main #main-container #tech-stack .grid-container .long-row-top #title-box,
 main #main-container #portfolio .grid-container .long-row-top #title-box,
 main #main-container #contact .grid-container .long-row-top #title-box {
     background-image: url(./images/pinkcloud.svg);
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: repeat-x;
     z-index: 0;
@@ -181,7 +181,6 @@ main #main-container #contact .grid-container .long-row-middle-2 {
     height: 20vh;
     grid-column-start: 1;
     grid-column-end: 3;
-    border: 1px solid rgba(0, 0, 0, 0.8);
     border-bottom-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
@@ -195,12 +194,25 @@ main #main-container #contact .grid-container .long-row-bottom-title {
     grid-column-start: 1;
     grid-column-end: 3;
     height: 10vh;
-    border: 1px solid rgba(0, 0, 0, 0.8);
     border-bottom-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     text-align: center;
+  }
+  main #main-container #about-me .grid-container .about-me-bottom-container,
+main #main-container #tech-stack .grid-container .about-me-bottom-container,
+main #main-container #portfolio .grid-container .about-me-bottom-container,
+main #main-container #contact .grid-container .about-me-bottom-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 50vh;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 25px;
+    background-image: url(./images/profile1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 1;
   }
   main #main-container #about-me .grid-container .grid-item,
 main #main-container #tech-stack .grid-container .grid-item,
@@ -208,6 +220,37 @@ main #main-container #portfolio .grid-container .grid-item,
 main #main-container #contact .grid-container .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
+  }
+  main #main-container #about-me .grid-container #about-me-main-container,
+main #main-container #tech-stack .grid-container #about-me-main-container,
+main #main-container #portfolio .grid-container #about-me-main-container,
+main #main-container #contact .grid-container #about-me-main-container {
+    height: 62vh;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main #main-container #about-me .grid-container #about-me-main-container #picture-box,
+main #main-container #tech-stack .grid-container #about-me-main-container #picture-box,
+main #main-container #portfolio .grid-container #about-me-main-container #picture-box,
+main #main-container #contact .grid-container #about-me-main-container #picture-box {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  main #main-container #about-me .grid-container #about-me-main-container #title-box,
+main #main-container #tech-stack .grid-container #about-me-main-container #title-box,
+main #main-container #portfolio .grid-container #about-me-main-container #title-box,
+main #main-container #contact .grid-container #about-me-main-container #title-box {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  main #main-container #about-me .grid-container #about-me-main-container #description-box,
+main #main-container #tech-stack .grid-container #about-me-main-container #description-box,
+main #main-container #portfolio .grid-container #about-me-main-container #description-box,
+main #main-container #contact .grid-container #about-me-main-container #description-box {
+    border: 1px solid rgba(0, 0, 0, 0.8);
   }
 
   /* footer */
@@ -240,7 +283,6 @@ main #main-container #contact .grid-container .grid-item {
   footer .footer-container .item3 {
     height: 100%;
     width: 60vw;
-    border: 1px solid rgba(0, 0, 0, 0.8);
     background-image: url(./images/cloudclump.svg);
     background-size: 100%;
     background-position: center;

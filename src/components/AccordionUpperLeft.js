@@ -137,7 +137,7 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
           {state.left ? (
             <img src={close} id="close-icon" />
           ) : (
-            <img src={Drawer1} id="accordion-icon" />
+            <img src={Drawer1} id="accordion-icon" className="animated wobble slower delay-2s" />
           )}
         </button>
 
