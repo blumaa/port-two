@@ -1,7 +1,7 @@
 @import "mixins";
 
 $font-stack: "Proza Libre", sans-serif;
-$background-color: #f1f0eb;
+// $background-color: #f1f0eb;
 
 .App {
   border: 0;
@@ -9,16 +9,15 @@ $background-color: #f1f0eb;
   margin: 0;
 }
 
+
 body {
   background-image: url(./images/Cloud-20s-1084px.svg);
   z-index: -1;
-  background-size: 200%;
+  background-size: 100%;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
   // background-color: $background-color;
-  height: 100vh;
-  width: 100vw;
   /* border: 1px solid blue; */
 
   // position: absolute;
@@ -26,16 +25,15 @@ body {
   flex-direction: column;
   // justify-content: flex-start;
 }
-
-@media only screen and (max-width: 640px) {
+@media (max-width: 600px) {
   /* header */
 
   header {
     font-family: $font-stack;
-    height: 50vh;
+    // height: 25vh;
     position: fixed;
     // overflow: hidden;
-    width: 100%;
+    // width: 100%;
     top: 0;
     margin: 0;
     // background-color: #d6d6d6;
@@ -49,9 +47,9 @@ body {
     // border: 1px solid purple;\
 
     #navbar-container {
-      width: 100%;
+      // width: 100%;
       // border: 1px solid red;
-      height: 100%;
+      // height: 100%;
       // display: grid;
       // grid-template-columns: 10% 90% 10%;
       display: flex;
@@ -139,8 +137,8 @@ body {
 
   /* main */
   main {
-    width: 100vw;
-    height: 100vh;
+    // width: 100vw;
+    // height: 50vh;
     // margin-top: 50px;
     // height: 812px;
     // position: fixed;
@@ -166,13 +164,13 @@ body {
   /* footer */
   footer {
     font-family: $font-stack;
-    height: 50vh;
+    height: 25vh;
     position: fixed;
     bottom: 0;
     border: 0;
     margin: 0;
     // overflow: hidden;
-    width: 100%;
+    // width: 100%;
     // border: 1px solid rgba(0, 0, 0, 0.8);
     z-index: 1;
     .footer-container {
@@ -201,7 +199,7 @@ body {
         width: 60vw;
         // border: 1px solid rgba(0, 0, 0, 0.8);
         // background-image: url(./images/cloudclump.svg);
-        background-size: 100%;
+        // background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
 

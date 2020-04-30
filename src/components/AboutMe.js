@@ -17,10 +17,12 @@ const AboutMe = () => {
           </div>
           <div id="about-me-middle-container">
             {/* <div id="picture-box"></div> */}
-            <div id="title-box" className="animated fadeInRight">
+            {/* <div id="title-box" className="animated fadeInRight"> */}
+            <div id="title-box">
               Hi, my name is Aaron. I'm a front-end developer.
             </div>
-            <div id="main-box-one"  className="animated bounceInLeft slow">
+            <div id="main-box-one"  >
+            {/* <div id="main-box-one"  className="animated bounceInLeft slow"> */}
                 I bring organization and creativity to every project, as well as
                 a relentless drive to realize each clients' dream.
             </div>
@@ -29,7 +31,8 @@ const AboutMe = () => {
           <div className="about-me-bottom-container">
             <div id="bottom-one"></div>
             <div id="bottom-two"></div>
-            <div id="bottom-three" className="animated bounceInLeft slower">
+            <div id="bottom-three" >
+            {/* <div id="bottom-three" className="animated bounceInLeft slower"> */}
               <div id="down-button">
                 <Link
                   to="page2"
