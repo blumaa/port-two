@@ -303,6 +303,150 @@ $fade-in-time: 5s;
   }
 }
 
+@mixin tech-stack-template {
+  // position: fixed;
+  // margin-top: 40px;
+  // height: 100%;
+  // border: purple 1px solid;
+  z-index: 0;
+  .grid-container {
+    border: purple 4px solid;
+    // height: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: auto;
+    // background-color: #2196f3;
+
+    background-image: url(./images/octo2.svg);
+    background-size: 70% ;
+    background-position: top left;
+    background-repeat: no-repeat;
+    overflow: visible;
+    .top-container {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      // border: 1px solid rgba(0, 0, 0, 0.8);
+      border-top-left-radius: 25px;
+      // border-bottom-right-radius: 25px;
+      display: flex;
+      justify-content: flex-end;
+      height: 10vh;
+      // height: 30%;
+      // background-color: green;
+      // z-index: 0;
+      #title-box {
+        // background-color: #e1e8f0;
+        // background-attachment: fixed;
+        // height: 100%;
+        background-image: url(./images/pinkcloud.svg);
+        background-size: 100% ;
+        background-position: top center;
+        background-repeat: repeat-x;
+        z-index: 0;
+        // border: 1px solid rgba(0, 0, 0, 0.8);
+        #title {
+          @include aarontitle;
+        }
+        #sub-title {
+          @include sub-title;
+        }
+      }
+      text-align: center;
+    }
+    
+    .long-row-middle-1{
+      height: 80vh;
+      // height: 40%;
+      // border: 1px solid rgba(0, 0, 0, 0.8);
+      grid-column-start: 1;
+      grid-column-end: 3;
+      // background-color: rgb(109, 109, 109);
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 30% 20% 25% 25%;
+      #front-end{
+        // border: 1px solid rgba(0, 0, 0, 0.8);
+        // background-color: yellow;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: auto;
+        #front-end-title{
+          align-self: center;
+          font-family: $font-stack;
+          color: white;
+          background-color: blue;
+          padding: 5px;
+          writing-mode: vertical-lr;
+          text-orientation: mixed;
+        }
+        #container{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          // flex-direction: row;
+          // flex-wrap: wrap;
+          // background-color: yellow;
+          #icon-container{
+            margin: 2px;
+            background-color: #ffffffe8;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            display: flex;
+            // justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            #icon{
+              // background-color: yellow;
+              padding: 0;
+              margin: 0;
+              height: 8vh;
+            }
+            #icon-title{
+              font-family: $font-stack;
+              padding: 2px;
+              color: rgb(22, 22, 22);
+              text-decoration: underline;
+              // background-color: blue;
+            }
+
+          }
+          #icon-container:hover{
+            transform:scale(1.1,1.1);
+          }
+        }
+      }
+      #back-end{
+        background-color: blue;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+      #database{
+        background-color: grey;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      #other{
+        background-color: yellow;
+        grid-column-start: 3;
+        grid-column-end: 5;
+      }
+    }
+    .long-row-bottom{
+      height: 10vh;
+      // height: 30%;
+      // border: 1px solid rgba(0, 0, 0, 0.8);
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-color: blue;
+    }
+  }
+}
+
 @mixin aarontitle {
   // border-radius: 10;
   font-family: $font-stack;

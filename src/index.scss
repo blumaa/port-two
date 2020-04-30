@@ -151,10 +151,13 @@ body {
     // border: purple 1px solid;
     #main-container {
       #about-me,
-      #tech-stack,
       #portfolio,
       #contact {
         @include main-area-template;
+      }
+      #tech-stack{
+        @include tech-stack-template;
+
       }
     }
   }
