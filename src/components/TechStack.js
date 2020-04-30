@@ -144,7 +144,7 @@ const TechStack = () => {
             {/* <div id="bottom-three" className="animated bounceInLeft slower"> */}
               <div id="down-button">
                 <Link
-                  to="page3"
+                  to="page2"
                   spy={true}
                   smooth={true}
                   offset={0}
