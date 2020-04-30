@@ -78,6 +78,9 @@ body {
     line-height: 49px;
     font-size: 1.5em;
   }
+  header #navbar-container .accordion-button-container #button-container .button-one .MuiButton-root {
+    color: red;
+  }
   header #navbar-container .item2 {
     width: 20vw;
   }
@@ -273,7 +276,6 @@ main #main-container #contact .grid-container .about-me-bottom-container #bottom
     z-index: 0;
   }
   main #main-container #tech-stack .grid-container {
-    border: purple 4px solid;
     height: 100vh;
     display: grid;
     grid-template-columns: auto;
@@ -332,7 +334,7 @@ main #main-container #contact .grid-container .about-me-bottom-container #bottom
     align-self: center;
     font-family: "Proza Libre", sans-serif;
     color: white;
-    background-color: blue;
+    background-color: #d3006cff;
     padding: 5px;
     writing-mode: vertical-lr;
     -webkit-text-orientation: mixed;
@@ -353,7 +355,7 @@ main #main-container #contact .grid-container .about-me-bottom-container #bottom
     align-items: center;
   }
   main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #container #icon-container #icon {
-    padding: 0;
+    padding: 2px;
     margin: 0;
     height: 8vh;
   }
@@ -361,26 +363,170 @@ main #main-container #contact .grid-container .about-me-bottom-container #bottom
     font-family: "Proza Libre", sans-serif;
     padding: 2px;
     color: #161616;
-    text-decoration: underline;
   }
   main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #container #icon-container:hover {
     transform: scale(1.1, 1.1);
   }
   main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end {
-    background-color: blue;
-    border: 1px solid rgba(0, 0, 0, 0.8);
     grid-column-start: 1;
     grid-column-end: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: auto;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #back-end-title {
+    align-self: center;
+    font-family: "Proza Libre", sans-serif;
+    color: white;
+    background-color: #d3006cff;
+    padding: 5px;
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: mixed;
+            text-orientation: mixed;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container {
+    margin: 2px;
+    background-color: #ffffffe8;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container #icon {
+    padding: 2px;
+    margin: 0;
+    height: 8vh;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container #icon-title {
+    font-family: "Proza Libre", sans-serif;
+    padding: 2px;
+    color: #161616;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container:hover {
+    transform: scale(1.1, 1.1);
   }
   main #main-container #tech-stack .grid-container .long-row-middle-1 #database {
-    background-color: grey;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: auto;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #database-title {
+    align-self: center;
+    font-family: "Proza Libre", sans-serif;
+    color: white;
+    background-color: #d3006cff;
+    padding: 5px;
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: mixed;
+            text-orientation: mixed;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container {
+    margin: 2px;
+    background-color: #ffffffe8;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container #icon {
+    padding: 2px;
+    margin: 0;
+    height: 8vh;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container #icon-title {
+    font-family: "Proza Libre", sans-serif;
+    padding: 2px;
+    color: #161616;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container:hover {
+    transform: scale(1.1, 1.1);
   }
   main #main-container #tech-stack .grid-container .long-row-middle-1 #other {
-    background-color: yellow;
-    grid-column-start: 3;
+    z-index: 999;
+    grid-column-start: 1;
     grid-column-end: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: auto;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #other-title {
+    align-self: center;
+    font-family: "Proza Libre", sans-serif;
+    color: white;
+    background-color: #d3006cff;
+    padding: 5px;
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: mixed;
+            text-orientation: mixed;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container {
+    margin: 2px;
+    background-color: #ffffffe8;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container #icon {
+    padding: 2px;
+    margin: 0;
+    height: 8vh;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container #icon-title {
+    font-family: "Proza Libre", sans-serif;
+    padding: 2px;
+    color: #161616;
+  }
+  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container:hover {
+    transform: scale(1.1, 1.1);
+  }
+  main #main-container #tech-stack .grid-container .about-me-bottom-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-two {
+    width: 40%;
+  }
+  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three #down-button {
+    align-self: flex-end;
+  }
+  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three #down-button img {
+    z-index: 999;
+    height: 7vh;
   }
   main #main-container #tech-stack .grid-container .long-row-bottom {
     height: 10vh;
@@ -404,7 +550,6 @@ main #main-container #contact .grid-container .about-me-bottom-container #bottom
     height: 100%;
     display: flex;
     flex-direction: row;
-    background-image: url(./images/Flat-Mountains.svg);
     background-size: 80%;
     background-position: right bottom;
     background-repeat: no-repeat;

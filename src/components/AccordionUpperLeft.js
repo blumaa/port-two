@@ -16,25 +16,33 @@ import TechStack from "./TechStack";
 import AboutMe from "./AboutMe";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-
 const useStyles = makeStyles({
   paper: {
     backgroundColor: "#8076a300",
     marginTop: "10vh",
-    width: "30vw",
+    width: "40vw",
     borderBottomRightRadius: 10,
     borderTopRightRadius: 10,
     color: "white",
     height: "60vw",
     display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "left",
+    boxShadow: "0 0px 0px 0px rgba(255, 105, 135, .3)",
 
-    justifyContent: "center",
-    alignItems: "center",
   },
   list: {
     width: "29vw",
   },
-});
+  root: {
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    borderRadius: 10,
+    border: '1px solid black',
+    color: "white",
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    fontFamily: "'Proza Libre', sans-serif"
+  },
+}, { name: 'MuiButton' });
 
 export default function SwipeableTemporaryDrawer({ flipSwitch }) {
   const classes = useStyles();
@@ -57,7 +65,6 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
     setState({ ...state, [anchor]: open });
   };
 
-
   const list = () => (
     <div
       className={clsx(classes.list, "left")}
@@ -66,18 +73,42 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
     >
       <List>
         <ListItem>
-            <Link
-              to="page1"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={1000}
-              delay={250}
-
-              onClick={toggleDrawer("left", false)}
+          <Link
+            to="page0"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            delay={250}
+            onClick={toggleDrawer("left", false)}
+          >
+            <Button
+              classes={{
+                root: classes.root,
+              }}
             >
-              <ListItemText>About Me</ListItemText>
-            </Link>
+              Home
+            </Button>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link
+            to="page1"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            delay={250}
+            onClick={toggleDrawer("left", false)}
+          >
+            <Button
+              classes={{
+                root: classes.root,
+              }}
+            >
+              About Me
+            </Button>
+          </Link>
         </ListItem>
 
         <ListItem>
@@ -88,48 +119,45 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             offset={0}
             duration={1000}
             delay={250}
-
             onClick={toggleDrawer("left", false)}
           >
             <ListItemText>Tech Stack</ListItemText>
           </Link>
         </ListItem>
         <ListItem>
-            <Link
-              to="page3"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={1000}
-              delay={250}
-              onClick={toggleDrawer("left", false)}
-            >
-              <ListItemText>Portfolio</ListItemText>
-            </Link>
+          <Link
+            to="page3"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            delay={250}
+            onClick={toggleDrawer("left", false)}
+          >
+            <ListItemText>Portfolio</ListItemText>
+          </Link>
         </ListItem>
         <ListItem>
-            <Link
-              to="page4"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={1000}
-              delay={250}
-              onClick={toggleDrawer("left", false)}
-            >
-              <ListItemText>Contact</ListItemText>
-            </Link>
+          <Link
+            to="page4"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            delay={250}
+            onClick={toggleDrawer("left", false)}
+          >
+            <ListItemText>Contact</ListItemText>
+          </Link>
         </ListItem>
       </List>
 
-      {/* <Divider /> */}
     </div>
   );
 
   return (
     <div>
       <React.Fragment>
-
         <button
           onClick={toggleDrawer("left", true)}
           className="accordion-button-container"
@@ -137,7 +165,11 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
           {state.left ? (
             <img src={close} id="close-icon" />
           ) : (
-            <img src={Drawer1} id="accordion-icon" className="animated wobble slower delay-2s" />
+            <img
+              src={Drawer1}
+              id="accordion-icon"
+              className="animated wobble slower delay-2s"
+            />
           )}
         </button>
 
@@ -147,7 +179,6 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
           onClose={toggleDrawer("left", false)}
           onOpen={toggleDrawer("left", true)}
           classes={{
-            root: classes.root,
             paper: classes.paper, // class name, e.g. `classes-nesting-root-x`
           }}
           BackdropProps={{ invisible: true }}
