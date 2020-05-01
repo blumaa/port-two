@@ -18,10 +18,12 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
-  background-color: #272727;
+  background-color: #e3e3e3;
   /* border: 1px solid blue; */
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  color: #3a4a6fff;
 }
 
 @media (max-width: 600px) {
@@ -40,6 +42,7 @@ body {
   header #navbar-container {
     display: flex;
     flex-direction: row;
+    z-index: 999;
   }
   header #navbar-container .accordion-button-container {
     align-self: flex-start;
@@ -51,8 +54,85 @@ body {
     font-size: 0%;
     padding: 0;
     border: 0;
-    background-color: rgba(102, 51, 153, 0);
+    background-color: rgba(218, 112, 214, 0);
     position: absolute;
+  }
+  header #navbar-container .accordion-button-container .burger {
+    height: 3em;
+    width: 3em;
+    position: relative;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s all;
+    -webkit-tap-highlight-color: transparent;
+  }
+  header #navbar-container .accordion-button-container .burger .burger-lines:after {
+    left: 0;
+    top: -1em;
+  }
+  header #navbar-container .accordion-button-container .burger .burger-lines:before {
+    left: 1em;
+    top: 1em;
+  }
+  header #navbar-container .accordion-button-container .burger:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+  header #navbar-container .accordion-button-container .burger .burger-lines {
+    top: 70%;
+    margin-top: -0.125em;
+    left: 40%;
+  }
+  header #navbar-container .accordion-button-container .burger .burger-lines, header #navbar-container .accordion-button-container .burger .burger-lines:after, header #navbar-container .accordion-button-container .burger .burger-lines:before {
+    pointer-events: none;
+    display: block;
+    content: "";
+    width: 100%;
+    border-radius: 0.25em;
+    background-color: white;
+    height: 0.25em;
+    position: absolute;
+    transform: rotate(0);
+  }
+  header #navbar-container .accordion-button-container .burger .burger-lines:after {
+    left: 0;
+    top: -0.6em;
+  }
+  header #navbar-container .accordion-button-container .burger .burger-lines:before {
+    left: 0em;
+    top: 0.7em;
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze {
+    width: 2em;
+    font-size: 12px;
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze .burger-lines, header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:after, header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:before {
+    background-color: #3a4a6fff;
+    transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:after, header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:before {
+    width: 2em;
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines, header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:after, header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:before {
+    transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines {
+    background-color: transparent;
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:before, header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:after {
+    left: 0em;
+    top: 0px;
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:before {
+    transform: rotate(-45deg);
+  }
+  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:after {
+    transform: rotate(45deg);
   }
   header #navbar-container .accordion-button-container #accordion-icon {
     padding-top: 20px;
@@ -92,160 +172,124 @@ body {
 
   /* main */
   main {
+    height: 100vh;
     border: 0;
     padding: 0;
     margin: 0;
   }
   main #main-container #home {
+    height: 100vh;
     z-index: 0;
   }
   main #main-container #home .grid-container {
-    width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
   main #main-container #home .grid-container .top-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border-top-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
-    height: 100%;
+    height: 5vh;
     z-index: 0;
+    overflow: visible;
     text-align: center;
   }
   main #main-container #home .grid-container .top-container #title-box {
-    background-image: url(./images/pinkcloud.svg);
-    background-size: 100%;
-    background-position: top center;
-    background-repeat: repeat-x;
     z-index: 0;
   }
   main #main-container #home .grid-container .top-container #title-box #title {
     font-family: "Proza Libre", sans-serif;
     padding-top: 10px;
     padding-right: 10px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #4a4a66;
-    font-size: 8vw;
-  }
-  main #main-container #home .grid-container .top-container #title-box #sub-title {
-    font-family: "Proza Libre", sans-serif;
-    font-size: 80%;
-    color: #3d7c47ff;
+    color: #384a6cff;
+    font-size: 5vh;
   }
   main #main-container #home .grid-container #about-me-middle-container {
-    height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 2px;
-    margin-left: 2px;
+    height: 75vh;
     font-family: "Proza Libre", sans-serif;
-    color: #414040;
   }
   main #main-container #home .grid-container #about-me-middle-container #title-box {
-    height: 100%;
-    padding: 10px;
-    border-top-left-radius: 40px;
-    box-shadow: 2px 2px 3px 2px rgba(85, 85, 85, 0.747);
-    background-color: #ffffffe8;
-    font-size: 4vh;
-    text-align: center;
+    height: 30%;
+    padding-right: 10px;
+    padding-left: 10px;
     margin-bottom: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #title-box #sub-header {
+    color: #ec6543ff;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one {
-    height: 100%;
-    box-shadow: 2px 2px 3px 2px rgba(85, 85, 85, 0.747);
-    background-color: #ffffffe8;
-    padding-left: 10%;
-    padding-right: 5%;
-    font-size: 2.2vh;
-    border-bottom-right-radius: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-two {
-    height: 25%;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: row;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-two #description-left {
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container {
+    width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-two #description-middle {
-    border: 1px solid rgba(0, 0, 0, 0.8);
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-image {
+    width: 100%;
+    height: 30vh;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-two #description-right {
-    width: 20vw;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
+    border: 1px solid #ec6543ff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 85%;
+    font-size: 2vh;
   }
-  main #main-container #home .grid-container .about-me-bottom-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    height: 100%;
+  main #main-container #home .grid-container .bottom-container {
+    height: 20vh;
     display: flex;
-    justify-content: flex-end;
     flex-direction: row;
-    background-image: url(./images/profile1.svg);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 40%;
   }
-  main #main-container #home .grid-container .about-me-bottom-container #bottom-one {
-    height: 100%;
+  main #main-container #home .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #home .grid-container .about-me-bottom-container #bottom-two {
-    width: 40%;
-    height: 100%;
-  }
-  main #main-container #home .grid-container .about-me-bottom-container #bottom-three {
-    height: 100%;
+  main #main-container #home .grid-container .bottom-container #bottom-two {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #home .grid-container .about-me-bottom-container #bottom-three #down-button {
-    align-self: flex-end;
-    height: 30%;
+  main #main-container #home .grid-container .bottom-container #bottom-two #down-button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  main #main-container #home .grid-container .about-me-bottom-container #bottom-three #down-button img {
+  main #main-container #home .grid-container .bottom-container #bottom-two #down-button img {
     z-index: 999;
-    height: 7vh;
+    height: 4vh;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-three {
+    width: 40%;
   }
   main #main-container #about-me {
+    height: 100vh;
     z-index: 0;
   }
   main #main-container #about-me .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    overflow: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
   main #main-container #about-me .grid-container .about-me-top-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
     border-top-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
-    height: 10vh;
+    height: 100%;
     z-index: 0;
     text-align: center;
   }
@@ -260,19 +304,16 @@ body {
     font-family: "Proza Libre", sans-serif;
     padding-top: 10px;
     padding-right: 10px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #4a4a66;
-    font-size: 8vw;
+    color: #384a6cff;
+    font-size: 5vh;
   }
   main #main-container #about-me .grid-container .about-me-top-container #title-box #sub-title {
     font-family: "Proza Libre", sans-serif;
     font-size: 80%;
-    color: #3d7c47ff;
+    color: #384a6cff;
   }
   main #main-container #about-me .grid-container #about-me-middle-container {
-    height: 80vh;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    height: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -315,10 +356,14 @@ body {
   main #main-container #about-me .grid-container .about-me-bottom-container {
     grid-column-start: 1;
     grid-column-end: 3;
-    height: 10vh;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    background-image: url(./images/profile1.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 40%;
   }
   main #main-container #about-me .grid-container .about-me-bottom-container #bottom-one {
     width: 40%;
@@ -335,27 +380,30 @@ body {
     z-index: 999;
   }
   main #main-container #about-me .grid-container .about-me-bottom-container #bottom-three #down-button {
-    align-self: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   main #main-container #about-me .grid-container .about-me-bottom-container #bottom-three #down-button img {
     z-index: 999;
-    height: 7vh;
+    height: 4vh;
   }
   main #main-container #portfolio {
+    height: 100vh;
     z-index: 1;
   }
   main #main-container #portfolio .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    overflow: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
   main #main-container #portfolio .grid-container .top-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
     border-top-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
-    height: 10vh;
+    height: 100%;
     z-index: 0;
     text-align: center;
   }
@@ -370,17 +418,16 @@ body {
     font-family: "Proza Libre", sans-serif;
     padding-top: 10px;
     padding-right: 10px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #4a4a66;
-    font-size: 8vw;
+    color: #384a6cff;
+    font-size: 5vh;
   }
   main #main-container #portfolio .grid-container .top-container #title-box #sub-title {
     font-family: "Proza Libre", sans-serif;
     font-size: 80%;
-    color: #3d7c47ff;
+    color: #384a6cff;
   }
   main #main-container #portfolio .grid-container #about-me-middle-container {
-    height: 80vh;
+    height: 100%;
     grid-column-start: 1;
     grid-column-end: 3;
     border-radius: 20px;
@@ -424,9 +471,7 @@ body {
     overflow: auto;
   }
   main #main-container #portfolio .grid-container .bottom-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    height: 10vh;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -446,54 +491,55 @@ body {
     z-index: 999;
   }
   main #main-container #portfolio .grid-container .bottom-container #bottom-three #down-button {
-    align-self: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   main #main-container #portfolio .grid-container .bottom-container #bottom-three #down-button img {
     z-index: 999;
-    height: 7vh;
+    height: 4vh;
   }
   main #main-container #contact {
+    height: 100vh;
     z-index: 0;
   }
   main #main-container #contact .grid-container {
-    display: grid;
-    grid-template-columns: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     overflow: auto;
   }
-  main #main-container #contact .grid-container .about-me-top-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  main #main-container #contact .grid-container .top-container {
     border-top-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
-    height: 10vh;
+    height: 100%;
     z-index: 0;
     text-align: center;
   }
-  main #main-container #contact .grid-container .about-me-top-container #title-box {
+  main #main-container #contact .grid-container .top-container #title-box {
     background-image: url(./images/pinkcloud.svg);
     background-size: 100%;
     background-position: top center;
     background-repeat: repeat-x;
     z-index: 0;
   }
-  main #main-container #contact .grid-container .about-me-top-container #title-box #title {
+  main #main-container #contact .grid-container .top-container #title-box #title {
     font-family: "Proza Libre", sans-serif;
     padding-top: 10px;
     padding-right: 10px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #4a4a66;
-    font-size: 8vw;
+    color: #384a6cff;
+    font-size: 5vh;
   }
-  main #main-container #contact .grid-container .about-me-top-container #title-box #sub-title {
+  main #main-container #contact .grid-container .top-container #title-box #sub-title {
     font-family: "Proza Libre", sans-serif;
     font-size: 80%;
-    color: #3d7c47ff;
+    color: #384a6cff;
   }
-  main #main-container #contact .grid-container #about-me-middle-container {
-    height: 80vh;
-    grid-column-start: 1;
-    grid-column-end: 3;
+  main #main-container #contact .grid-container #middle-container {
+    height: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -504,7 +550,7 @@ body {
     font-family: "Proza Libre", sans-serif;
     color: #414040;
   }
-  main #main-container #contact .grid-container #about-me-middle-container #title-box-one {
+  main #main-container #contact .grid-container #middle-container #title-box-one {
     box-shadow: 2px 2px 3px 2px rgba(85, 85, 85, 0.747);
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -514,7 +560,7 @@ body {
     display: flex;
     overflow: auto;
   }
-  main #main-container #contact .grid-container #about-me-middle-container #main-box-one {
+  main #main-container #contact .grid-container #middle-container #main-box-one {
     height: 20%;
     font-size: 2.2vh;
     border-bottom-right-radius: 40px;
@@ -523,52 +569,45 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
-  main #main-container #contact .grid-container #about-me-middle-container #main-box-two {
-    box-shadow: 2px 2px 3px 2px rgba(85, 85, 85, 0.747);
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
-    background-color: #ffffffe8;
-    padding: 15px;
-    font-size: 2vh;
-    display: flex;
-    overflow: auto;
-  }
-  main #main-container #contact .grid-container .about-me-bottom-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    height: 10vh;
+  main #main-container #contact .grid-container .bottom-container {
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
   }
-  main #main-container #contact .grid-container .about-me-bottom-container #bottom-one {
+  main #main-container #contact .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #contact .grid-container .about-me-bottom-container #bottom-two {
+  main #main-container #contact .grid-container .bottom-container #bottom-two {
     width: 40%;
   }
-  main #main-container #contact .grid-container .about-me-bottom-container #bottom-three {
+  main #main-container #contact .grid-container .bottom-container #bottom-three {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #contact .grid-container .about-me-bottom-container #bottom-three #down-button {
-    align-self: center;
+  main #main-container #contact .grid-container .bottom-container #bottom-three #down-button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  main #main-container #contact .grid-container .about-me-bottom-container #bottom-three #down-button img {
+  main #main-container #contact .grid-container .bottom-container #bottom-three #down-button img {
     z-index: 999;
-    height: 7vh;
+    height: 4vh;
   }
   main #main-container #tech-stack {
+    height: 100vh;
     z-index: 0;
   }
   main #main-container #tech-stack .grid-container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     background-image: url(./images/octo2.svg);
     background-size: 70%;
     background-position: top left;
@@ -581,7 +620,7 @@ body {
     border-top-left-radius: 25px;
     display: flex;
     justify-content: flex-end;
-    height: 10vh;
+    height: 100%;
     text-align: center;
   }
   main #main-container #tech-stack .grid-container .top-container #title-box {
@@ -595,17 +634,16 @@ body {
     font-family: "Proza Libre", sans-serif;
     padding-top: 10px;
     padding-right: 10px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #4a4a66;
-    font-size: 8vw;
+    color: #384a6cff;
+    font-size: 5vh;
   }
   main #main-container #tech-stack .grid-container .top-container #title-box #sub-title {
     font-family: "Proza Libre", sans-serif;
     font-size: 80%;
-    color: #3d7c47ff;
+    color: #384a6cff;
   }
   main #main-container #tech-stack .grid-container .long-row-middle-1 {
-    height: 80vh;
+    height: 100%;
     grid-column-start: 1;
     grid-column-end: 3;
     display: grid;
@@ -795,11 +833,15 @@ body {
   }
   main #main-container #tech-stack .grid-container .about-me-bottom-container {
     grid-column-start: 1;
-    grid-column-end: 5;
-    height: 10vh;
+    grid-column-end: 3;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+  }
+  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-one {
+    width: 40%;
+    border-bottom-left-radius: 25px;
   }
   main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-two {
     width: 40%;
@@ -812,11 +854,14 @@ body {
     z-index: 999;
   }
   main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three #down-button {
-    align-self: flex-end;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three #down-button img {
     z-index: 999;
-    height: 7vh;
+    height: 4vh;
   }
 
   /* footer */
@@ -826,7 +871,6 @@ body {
     bottom: 0;
     border: 0;
     margin: 0;
-    border: 1px solid white;
   }
   footer .footer-container {
     width: 100%;

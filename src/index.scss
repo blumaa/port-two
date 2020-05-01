@@ -1,14 +1,14 @@
 @import "mixins";
 
 $font-stack: "Proza Libre", sans-serif;
-$background-color: #272727;
+$background-color: #e3e3e3;
+$main-text-color: #3a4a6fff;
 
 .App {
   border: 0;
   padding: 0;
   margin: 0;
 }
-
 
 body {
   // background-image: url(./images/Cloud-20s-1084px.svg);
@@ -19,18 +19,19 @@ body {
   padding: 0;
   background-color: $background-color;
   /* border: 1px solid blue; */
-
+  height: 100vh;
   // position: absolute;
   display: flex;
   flex-direction: column;
   // justify-content: flex-start;
+  color: $main-text-color;
 }
 @media (max-width: 600px) {
   /* header */
 
   header {
     font-family: $font-stack;
-    // height: 25vh;
+    // height: 10vh;
     position: fixed;
     // overflow: hidden;
     // width: 100%;
@@ -44,7 +45,7 @@ body {
     flex-direction: center;
     justify-content: center;
     align-items: center;
-    // border: 1px solid purple;\
+    // border: 3px solid purple;
 
     #navbar-container {
       // width: 100%;
@@ -54,9 +55,10 @@ body {
       // grid-template-columns: 10% 90% 10%;
       display: flex;
       flex-direction: row;
+      z-index: 999;
       // justify-content: space-evenly;
       // align-items: center;
-     
+
       .accordion-button-container {
         // width: 20vw;
         align-self: flex-start;
@@ -69,9 +71,112 @@ body {
         padding: 0;
         border: 0;
         // border: 2px solid red;
-        background-color: rgba(102, 51, 153, 0);
+        background-color: rgba(218, 112, 214, 0);
         position: absolute;
-        
+        .burger {
+          
+          height: 3em;
+          width: 3em;
+          position: relative;
+          font-size: 12px;
+          cursor: pointer;
+          transition: 0.2s all;
+          -webkit-tap-highlight-color: transparent;
+          
+          // border: 2px solid red;
+          .burger-lines:after {
+            left: 0;
+            top: -1em;
+          }
+          .burger-lines:before {
+            left: 1em;
+            top: 1em;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 150%;
+            width: 150%;
+            top: -25%;
+            left: -25%;
+          }
+          .burger-lines {
+            top: 70%;
+            margin-top: -0.125em;
+            left: 40%;
+            &,
+            &:after,
+            &:before {
+              pointer-events: none;
+              display: block;
+              content: "";
+              width: 100%;
+              border-radius: 0.25em;
+              background-color: white;
+              height: 0.25em;
+              position: absolute;
+              transform: rotate(0);
+            }
+            &:after {
+              left: 0;
+              top: -.6em;
+            }
+            &:before {
+              left: 0em;
+              top: .7em;
+            }
+          }
+        }
+
+        .burger-squeeze {
+          // border: 2px solid red;
+          width: 2em;
+          font-size: 12px;
+          .burger-lines {
+            // border: 2px solid red;
+            &,
+            &:after,
+            &:before {
+              background-color: $main-text-color;
+              // background-color: #ec6543ff;
+              // border: 2px solid red;
+              transition: 0.2s top 0.2s, 0.1s left, 0.2s transform,
+                0.4s background-color 0.2s;
+            }
+            &:after,
+            &:before {
+              width: 2em;
+            }
+          }
+
+          &.open {
+            .burger-lines {
+              &,
+              &:after,
+              &:before {
+                transition: 0.2s background-color, 0.2s top, 0.2s left,
+                  0.2s transform 0.15s;
+              }
+              & {
+                background-color: transparent;
+              }
+              &:before,
+              &:after {
+                left: 0em;
+                top: 0px;
+              }
+              &:before {
+                transform: rotate(-45deg);
+              }
+              &:after {
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+
         #accordion-icon {
           padding-top: 20px;
           margin-left: 2vw;
@@ -93,7 +198,7 @@ body {
           // margin-left: 10px;
           position: relative;
           left: 1.2vw;
-          
+
           .button-one {
             // margin-bottom: 5px;
             // bottom: 0;
@@ -109,7 +214,6 @@ body {
             font-size: 1.5em;
             // box-shadow: 2px 2px 10px rgba(109, 109, 109, 0.25) inset,
             //   1px 1px 5px #f9c5bd inset, 0px 3px 3px rgba(0, 0, 0, 0.5);
-            
           }
           .button-two {
           }
@@ -142,7 +246,7 @@ body {
   /* main */
   main {
     // width: 100vw;
-    // height: 50vh;
+    height: 100vh;
     // margin-top: 50px;
     // height: 812px;
     // position: fixed;
@@ -152,23 +256,22 @@ body {
     padding: 0;
     margin: 0;
     // bottom: 0;
-    // border: purple 1px solid;
+    // border: purple 3px solid;
     #main-container {
-      #home{
+      #home {
         @include home-template;
       }
-      #about-me{
+      #about-me {
         @include about-me-template;
       }
-      #portfolio{
-        @include portfolio-template
+      #portfolio {
+        @include portfolio-template;
       }
       #contact {
-        @include about-me-template;
+        @include contact;
       }
-      #tech-stack{
+      #tech-stack {
         @include tech-stack-template;
-
       }
     }
   }
@@ -178,14 +281,14 @@ body {
   /* footer */
   footer {
     font-family: $font-stack;
-    // height: 21vh;
+    // height: 25vh;
     position: fixed;
     bottom: 0;
     border: 0;
     margin: 0;
     // overflow: hidden;
     // width: 100%;
-    border: 1px solid white;
+    // border: 5px solid white;
     // z-index: 1;
     .footer-container {
       // border: 1px solid rgba(0, 0, 0, 0.8);
@@ -195,7 +298,7 @@ body {
       flex-direction: row;
 
       // background-image: url(./images/Flat-Mountains.svg);
-      background-size: 80% ;
+      background-size: 80%;
       background-position: right bottom;
       background-repeat: no-repeat;
       .item1 {

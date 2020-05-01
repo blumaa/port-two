@@ -15,8 +15,8 @@ import { Route, NavLink } from "react-router-dom";
 import TechStack from "./TechStack";
 import AboutMe from "./AboutMe";
 import { Link, animateScroll as scroll } from "react-scroll";
-
-
+import Burger from "@animated-burgers/burger-squeeze";
+import "@animated-burgers/burger-squeeze/dist/styles.css";
 
 const useStyles = makeStyles({
   paper: {
@@ -29,18 +29,17 @@ const useStyles = makeStyles({
     height: "100vw",
     display: "flex",
     boxShadow: "0 0px 0px 0px rgba(255, 105, 135, .3)",
-
   },
   list: {
     width: "29vw",
   },
   root: {
-    backgroundColor: '#d3006cff',
+    backgroundColor: "#d3006cff",
     borderRadius: 10,
-    border: '0px solid black',
+    border: "0px solid black",
     color: "white",
     boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-    fontFamily: "'Proza Libre', sans-serif"
+    fontFamily: "'Proza Libre', sans-serif",
   },
 });
 
@@ -91,7 +90,6 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             </Button>
           </Link>
         </ListItem>
-       
 
         <ListItem>
           <Link
@@ -170,25 +168,22 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
           </Link>
         </ListItem>
       </List>
-
     </div>
   );
 
   return (
     <div>
       <React.Fragment>
+        
+
         <button
           onClick={toggleDrawer("left", true)}
           className="accordion-button-container"
         >
           {state.left ? (
-            <img src={close} id="close-icon" />
+            <Burger isOpen={ true } />
           ) : (
-            <img
-              src={Drawer1}
-              id="accordion-icon"
-              className="animated wobble slower delay-2s"
-            />
+            <Burger isOpen={ false } />
           )}
         </button>
 

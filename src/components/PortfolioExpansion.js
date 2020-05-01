@@ -81,7 +81,8 @@ export default function CustomizedExpansionPanels() {
   return (
     <div>
       <ExpansionPanel
-        
+        square
+        onChange={handleChange("panel1")}
       >
         <ExpansionPanelSummary
           aria-controls="panel1d-content"
@@ -99,7 +100,7 @@ export default function CustomizedExpansionPanels() {
               width: "100%",
               justifyContent: "space-evenly",
               marginBottom: "10px",
-              alignItems: 'center'
+              alignItems: "center",
             }}
           >
             <a href="https://www.tp-report.com" target="_blank">
@@ -130,7 +131,7 @@ export default function CustomizedExpansionPanels() {
               users to report and check if stores do or do not have toilet
               paper.{" "}
             </Typography>
-              <img src={tpreportimg} style={{ height: "60vw"}} />
+            <img src={tpreportimg} style={{ height: "60vw" }} />
             <Typography variant="body1" gutterBottom>
               <Divider />
               Front end: React, React hooks/redux, Apollo/GraphQL, Material Ui,
@@ -256,8 +257,8 @@ export default function CustomizedExpansionPanels() {
               Ruby on Rails API backend with endpoints for Users, Matches,
               Reviews, and Messages. React and Redux with Semantic-React for
               styling. JSON Web Tokens and localStorage to store encrypted user
-              information client-side. Matching, likes, messages,
-              and Active Storage for uploading pictures.
+              information client-side. Matching, likes, messages, and Active
+              Storage for uploading pictures.
             </Typography>
           </div>
         </ExpansionPanelDetails>

@@ -30,7 +30,7 @@ const Portfolio = () => {
             </div>
           </div>
           <div id="about-me-middle-container">
-            <PortfolioExpansion />
+            {/* <PortfolioExpansion /> */}
           </div>
           <div className="bottom-container">
             <div id="bottom-one"></div>

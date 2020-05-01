@@ -1,30 +1,88 @@
 import React from "react";
+import downarrow from "../images/downarrow.svg";
+import { Link } from "react-scroll";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import GitHubIcon from '@material-ui/icons/GitHub';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: "#d3006cff",
+    borderRadius: 10,
+    border: "0px solid black",
+    color: "white",
+    boxShadow: "2px 2px 3px 2px rgba(85, 85, 85, 0.747)",
+    fontFamily: "'Proza Libre', sans-serif",
+  },
+});
 
 const Contact = () => {
+  const classes = useStyles();
+
   return (
     <>
-      <div id="tech-stack">
+      <div id="contact">
         <div className="grid-container">
-          <div className="long-row-top">
+          <div className="top-container">
             <div id="title-box">
               <div id="title">Contact</div>
               {/* <div id="sub-title">front end developer</div> */}
             </div>
           </div>
-          <div className="long-row-middle-1">
-            Interested in collaborating on new projects, hiring me or just want
-            to grab a coffee?
+          <div id="middle-container">
+            <div id="title-box-one">Contact Details</div>
+            <div id="main-box-one">
+              You can reach me at blumaa@gmail.com. You can connect to me on
+              these platforms:
+            </div>
+            <div id="icon-box">
+
+            <a
+              href="https://github.com/blumaa"
+              target="_blank"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href="https://github.com/blumaa"
+              target="_blank"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://github.com/blumaa"
+              target="_blank"
+            >
+              <InstagramIcon />
+            </a>
+            </div>
           </div>
-          <div className="long-row-middle-2">
-            I am a software developer from Australia based in Berlin, Germany.
-            I'm passionate about developing modular scalable software that can
-            be optimised to solve complex issues. I'm most experienced in using
-            PostgresSQL, Ruby on Rails and Node.js to create RESTful APIs and
-            service-oriented architectures (SOA) on the backend with React-Redux
-            and JavaScript for dynamic frontend views. Recently I've worked with
-            Jest-Enzyme for testing and I love learning new technologies.
+          <div className="bottom-container">
+            <div id="bottom-one"></div>
+            <div id="bottom-two"></div>
+            <div id="bottom-three">
+              {/* <div id="bottom-three" className="animated bounceInLeft slower"> */}
+              <div id="down-button">
+                <Link
+                  to="page0"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1000}
+                  delay={250}
+                >
+                  <img
+                    src={downarrow}
+                    id="accordion-icon"
+                    // className="animated wobble slower delay-2s"
+                    style={{ transform: "rotate(180deg)" }}
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="long-row-bottom-title">long-row-bottom</div>
         </div>
       </div>
     </>
