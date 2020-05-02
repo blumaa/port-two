@@ -3,30 +3,30 @@ import debtcrusherimg from "../../images/debtcrusher.svg";
 import Chip from "@material-ui/core/Chip";
 import LinkIcon from "@material-ui/icons/Link";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Button from "@material-ui/core/Button";
+
 const DebtCrusher = () => {
   return (
     <div id="project-container">
       <div id="project-title">debtCrusher</div>
       <div id="project-links">
-        <a href="https://debt-crusher-frontend.herokuapp.com/" target="_blank">
-          <Chip
-            variant="outlined"
-            size="small"
-            icon={<LinkIcon />}
-            label="debtCrusher"
-          />
-        </a>
-        <a
+      <Button
+          variant="link"
+          color="default"
+          startIcon={<LinkIcon style={{ color: "#384a6cff" }} />}
+          href="https://debt-crusher-frontend.herokuapp.com/"
+          target="_blank"
+          style={{ color: "#384a6cff" }}
+        >debtCrusher</Button>
+      <Button
+          variant="link"
+          color="default"
+          startIcon={<GitHubIcon style={{ color: "#384a6cff" }} />}
           href="https://github.com/blumaa/debtcrusher-frontend"
           target="_blank"
-        >
-          <Chip
-            variant="outlined"
-            size="small"
-            icon={<GitHubIcon />}
-            label="repository"
-          />
-        </a>
+          style={{ color: "#384a6cff" }}
+        >repo</Button>
+      
       </div>
       <div id="project-picture">
         {" "}

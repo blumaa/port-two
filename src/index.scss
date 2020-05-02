@@ -78,6 +78,17 @@ body {
         // position: absolute;
         z-index: 900;
         @include burger;
+        background-color: #e3e3e3;
+        #burger-button{
+          background-color: #e3e3e3;
+          margin: 3vh 0vw 0vw 4vw;
+          div {
+            width: 25px;
+            height: 3px;
+            background-color: $main-text-color;
+            margin: 5px 0 ;
+          }
+        }
         
         #accordion-icon {
           padding-top: 20px;

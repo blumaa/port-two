@@ -19,8 +19,8 @@ import Burger from "@animated-burgers/burger-squeeze";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
 
 const useStyles = makeStyles({
-  top:{
-    display: 'flex'
+  top: {
+    display: "flex",
   },
   paper: {
     backgroundColor: "#384a6cff",
@@ -168,7 +168,15 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
           onClick={toggleDrawer("left", true)}
           className="accordion-button-container"
         >
-          {state.left ? <Burger isOpen={true} /> : <Burger isOpen={false} />}
+          {state.left ? (
+            <Burger isOpen={true} />
+          ) : (
+            <div id="burger-button">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          )}
         </button>
 
         {/* <Button onClick={toggleDrawer("left", true)}>Left</Button> */}

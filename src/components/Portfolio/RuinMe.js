@@ -3,28 +3,31 @@ import Chip from "@material-ui/core/Chip";
 import LinkIcon from "@material-ui/icons/Link";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import ruinemeimg from "../../images/ruinmeimg.svg";
+import Button from "@material-ui/core/Button";
+
 
 const RuinMe = () => {
   return (
     <div id="project-container">
       <div id="project-title">Ruin Me</div>
       <div id="project-links">
-        <a href="https://youtu.be/QhCrI42wkWc" target="_blank">
-          <Chip
-            variant="outlined"
-            size="small"
-            icon={<LinkIcon />}
-            label="demo"
-          />
-        </a>
-        <a href="https://github.com/blumaa/ruinme-frontend" target="_blank">
-          <Chip
-            variant="outlined"
-            size="small"
-            icon={<GitHubIcon />}
-            label="repository"
-          />
-        </a>
+      <Button
+          variant="link"
+          color="default"
+          startIcon={<LinkIcon style={{ color: "#384a6cff" }} />}
+          href="https://youtu.be/QhCrI42wkWc"
+          target="_blank"
+          style={{ color: "#384a6cff" }}
+        >demo</Button>
+      <Button
+          variant="link"
+          color="default"
+          startIcon={<GitHubIcon style={{ color: "#384a6cff" }} />}
+          href="https://github.com/blumaa/ruinme-frontend"
+          target="_blank"
+          style={{ color: "#384a6cff" }}
+        >repo</Button>
+       
       </div>
       <div id="project-picture">
         {" "}
