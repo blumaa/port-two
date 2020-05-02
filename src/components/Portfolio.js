@@ -1,24 +1,31 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Link } from "react-scroll";
+import reactlogo from "../images/react2.svg";
+import js from "../images/js.svg";
+import redux2 from "../images/redux2.svg";
+import apollo from "../images/apollo.svg";
+import graphqllogo from "../images/graphql.svg";
+import csslogo from "../images/css3.svg";
+import htmllogo from "../images/html5-2.svg";
+import sasslogo from "../images/sass.svg";
+import materialuilogo from "../images/material-ui.svg";
 import downarrow from "../images/downarrow.svg";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import PortfolioExpansion from './PortfolioExpansion'
+import nodelogo from "../images/nodejs.svg";
+import rubylogo from "../images/ruby.svg";
+import railslogo from "../images/rails2.svg";
+import mongologo from "../images/mongodb.svg";
+import postgreslogo from "../images/postgres.svg";
+import inkscapelogo from "../images/inkscape-logo.svg";
+import jestlogo from "../images/jest.svg";
+import websocketlogo from "../images/websocket.svg";
+import sqllogo from "../images/sql.svg";
+import stripelogo from "../images/stripe.svg";
+import { Link } from "react-scroll";
+import TPReport from "./Portfolio/TPReport";
+import DebtCrusher from "./Portfolio/DebtCrusher";
+import RuinMe from "./Portfolio/RuinMe";
 
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: "#d3006cff",
-    borderRadius: 10,
-    border: "0px solid black",
-    color: "white",
-    boxShadow: "2px 2px 3px 2px rgba(85, 85, 85, 0.747)",
-    fontFamily: "'Proza Libre', sans-serif",
-  },
-});
-const Portfolio = () => {
-  const classes = useStyles();
-
+const Portofolio = () => {
   return (
     <>
       <div id="portfolio">
@@ -26,17 +33,16 @@ const Portfolio = () => {
           <div className="top-container">
             <div id="title-box">
               <div id="title">Portfolio</div>
-              {/* <div id="sub-title">front end developer</div> */}
             </div>
           </div>
-          <div id="about-me-middle-container">
-            {/* <PortfolioExpansion /> */}
+          <div id="middle-container">
+            <TPReport />
+            <DebtCrusher />
+            <RuinMe />
           </div>
           <div className="bottom-container">
             <div id="bottom-one"></div>
-            <div id="bottom-two"></div>
-            <div id="bottom-three">
-              {/* <div id="bottom-three" className="animated bounceInLeft slower"> */}
+            <div id="bottom-two">
               <div id="down-button">
                 <Link
                   to="page3"
@@ -45,14 +51,11 @@ const Portfolio = () => {
                   offset={0}
                   duration={500}
                 >
-                  <img
-                    src={downarrow}
-                    id="accordion-icon"
-                    className="animated wobble slower delay-2s"
-                  />
+                  <img src={downarrow} id="accordion-icon" />
                 </Link>
-              </div>
+              </div>{" "}
             </div>
+            <div id="bottom-three"></div>
           </div>
         </div>
       </div>
@@ -60,4 +63,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Portofolio;

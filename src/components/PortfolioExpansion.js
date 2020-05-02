@@ -197,7 +197,7 @@ export default function CustomizedExpansionPanels() {
             <Typography variant="body1" gutterBottom>
               <Divider />
               <img src={debtcrusherimg} style={{ height: "40vw" }} />
-              Front end: React, Redux, JWT Token Authorization, Stripe Payment
+              Front end: React, Redux, JWT Login Authentication, Stripe Payment
               Integration, Semantic UI
             </Typography>
             <Typography variant="body1" gutterBottom>

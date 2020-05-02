@@ -20,6 +20,7 @@ body {
   background-color: $background-color;
   /* border: 1px solid blue; */
   height: 100vh;
+  width: 100vw;
   // position: absolute;
   display: flex;
   flex-direction: column;
@@ -163,10 +164,10 @@ body {
         @include home-template;
       }
       #about-me {
-        @include about-me-template;
+        @include aboutme-master;
       }
       #portfolio {
-        @include portfolio-template;
+        @include portfolio-master;
       }
       #contact {
         @include contact;
