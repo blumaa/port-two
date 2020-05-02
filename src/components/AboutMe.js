@@ -81,7 +81,7 @@ const AboutMe = () => {
             <div id="bottom-two">
               <div id="down-button">
                 <Link
-                  to="page3"
+                  to="page4"
                   spy={true}
                   smooth={true}
                   offset={0}

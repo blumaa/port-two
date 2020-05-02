@@ -7,7 +7,7 @@ import ruinemeimg from "../../images/ruinmeimg.svg";
 const RuinMe = () => {
   return (
     <div id="project-container">
-      <div id="project-title">Ruin Me Dating App</div>
+      <div id="project-title">Ruin Me</div>
       <div id="project-links">
         <a href="https://youtu.be/QhCrI42wkWc" target="_blank">
           <Chip
