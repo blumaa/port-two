@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Home";
 import AboutMe from "./AboutMe";
 import TechStack from "./TechStack";
+import TechStack2 from "./TechStack2/TechStack2"
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -24,6 +25,7 @@ const Main = ({ show }) => {
       <div id="page4">
         <Contact />
       </div>
+     
       {/* <Route path="/" exact render={(props) => <AboutMe {...props} show={show}/>} />
       <Route path="/TechStack" component={TechStack} />
       <Route path="/Portfolio" component={Portfolio} />

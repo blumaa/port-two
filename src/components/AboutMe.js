@@ -83,8 +83,7 @@ const AboutMe = () => {
                   spy={true}
                   smooth={true}
                   offset={0}
-                  duration={1000}
-                  delay={250}
+                  duration={500}
                 >
                   <img
                     src={downarrow}

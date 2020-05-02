@@ -19,26 +19,22 @@ import Burger from "@animated-burgers/burger-squeeze";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
 
 const useStyles = makeStyles({
+  top:{
+    display: 'flex'
+  },
   paper: {
-    backgroundColor: "#8076a300",
-    marginTop: "7vh",
+    backgroundColor: "#384a6cff",
     width: "50vw",
-    borderBottomRightRadius: 10,
-    borderTopRightRadius: 10,
     color: "white",
-    height: "100vw",
     display: "flex",
-    boxShadow: "0 0px 0px 0px rgba(255, 105, 135, .3)",
+    boxShadow: "4px 3px 100px 0px #000000",
   },
   list: {
-    width: "29vw",
+    width: "100vw",
   },
   root: {
-    backgroundColor: "#d3006cff",
     borderRadius: 10,
-    border: "0px solid black",
-    color: "white",
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    color: "#e3e3e3",
     fontFamily: "'Proza Libre', sans-serif",
   },
 });
@@ -66,7 +62,6 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
 
   const list = () => (
     <div
-      className={clsx(classes.list, "left")}
       onClick={toggleDrawer("left", false)}
       onKeyDown={toggleDrawer("left", false)}
     >
@@ -77,8 +72,7 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             spy={true}
             smooth={true}
             offset={0}
-            duration={1000}
-            delay={250}
+            duration={500}
             onClick={toggleDrawer("left", false)}
           >
             <Button
@@ -97,8 +91,7 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             spy={true}
             smooth={true}
             offset={0}
-            duration={1000}
-            delay={250}
+            duration={500}
             onClick={toggleDrawer("left", false)}
           >
             <Button
@@ -116,8 +109,7 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             spy={true}
             smooth={true}
             offset={0}
-            duration={1000}
-            delay={250}
+            duration={500}
             onClick={toggleDrawer("left", false)}
           >
             <Button
@@ -135,8 +127,7 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             spy={true}
             smooth={true}
             offset={0}
-            duration={1000}
-            delay={250}
+            duration={500}
             onClick={toggleDrawer("left", false)}
           >
             <Button
@@ -154,8 +145,7 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             spy={true}
             smooth={true}
             offset={0}
-            duration={1000}
-            delay={250}
+            duration={500}
             onClick={toggleDrawer("left", false)}
           >
             <Button
@@ -173,33 +163,28 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
 
   return (
     <div>
-      <React.Fragment>
-        
-
+      <>
         <button
           onClick={toggleDrawer("left", true)}
           className="accordion-button-container"
         >
-          {state.left ? (
-            <Burger isOpen={ true } />
-          ) : (
-            <Burger isOpen={ false } />
-          )}
+          {state.left ? <Burger isOpen={true} /> : <Burger isOpen={false} />}
         </button>
 
         {/* <Button onClick={toggleDrawer("left", true)}>Left</Button> */}
         <SwipeableDrawer
+          transitionDuration={200}
           open={state["left"]}
           onClose={toggleDrawer("left", false)}
           onOpen={toggleDrawer("left", true)}
           classes={{
             paper: classes.paper, // class name, e.g. `classes-nesting-root-x`
           }}
-          BackdropProps={{ invisible: true }}
+          BackdropProps={{ invisible: false }}
         >
           {list()}
         </SwipeableDrawer>
-      </React.Fragment>
+      </>
     </div>
   );
 }

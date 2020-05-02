@@ -42,22 +42,95 @@ body {
   header #navbar-container {
     display: flex;
     flex-direction: row;
+    z-index: 1;
+  }
+  header #navbar-container #menu-container .burger {
     z-index: 999;
+    height: 3em;
+    width: 3em;
+    position: relative;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s all;
+    -webkit-tap-highlight-color: transparent;
+  }
+  header #navbar-container #menu-container .burger .burger-lines:after {
+    left: 0;
+    top: -1em;
+  }
+  header #navbar-container #menu-container .burger .burger-lines:before {
+    left: 1em;
+    top: 1em;
+  }
+  header #navbar-container #menu-container .burger:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+  header #navbar-container #menu-container .burger .burger-lines {
+    top: 70%;
+    margin-top: -0.125em;
+    left: 40%;
+  }
+  header #navbar-container #menu-container .burger .burger-lines, header #navbar-container #menu-container .burger .burger-lines:after, header #navbar-container #menu-container .burger .burger-lines:before {
+    pointer-events: none;
+    display: block;
+    content: "";
+    width: 100%;
+    border-radius: 0.25em;
+    background-color: white;
+    height: 0.25em;
+    position: absolute;
+    transform: rotate(0);
+  }
+  header #navbar-container #menu-container .burger .burger-lines:after {
+    left: 0;
+    top: -0.6em;
+  }
+  header #navbar-container #menu-container .burger .burger-lines:before {
+    left: 0em;
+    top: 0.7em;
+  }
+  header #navbar-container #menu-container .burger-squeeze {
+    width: 2em;
+    font-size: 12px;
+  }
+  header #navbar-container #menu-container .burger-squeeze .burger-lines, header #navbar-container #menu-container .burger-squeeze .burger-lines:after, header #navbar-container #menu-container .burger-squeeze .burger-lines:before {
+    background-color: #3a4a6fff;
+    transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
+  }
+  header #navbar-container #menu-container .burger-squeeze .burger-lines:after, header #navbar-container #menu-container .burger-squeeze .burger-lines:before {
+    width: 2em;
+  }
+  header #navbar-container #menu-container .burger-squeeze.open .burger-lines, header #navbar-container #menu-container .burger-squeeze.open .burger-lines:after, header #navbar-container #menu-container .burger-squeeze.open .burger-lines:before {
+    transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
+  }
+  header #navbar-container #menu-container .burger-squeeze.open .burger-lines {
+    background-color: transparent;
+  }
+  header #navbar-container #menu-container .burger-squeeze.open .burger-lines:before, header #navbar-container #menu-container .burger-squeeze.open .burger-lines:after {
+    left: 0em;
+    top: 0px;
+  }
+  header #navbar-container #menu-container .burger-squeeze.open .burger-lines:before {
+    transform: rotate(-45deg);
+  }
+  header #navbar-container #menu-container .burger-squeeze.open .burger-lines:after {
+    transform: rotate(45deg);
   }
   header #navbar-container .accordion-button-container {
-    align-self: flex-start;
     outline: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
     font-size: 0%;
     padding: 0;
     border: 0;
-    background-color: rgba(218, 112, 214, 0);
-    position: absolute;
+    z-index: 900;
   }
   header #navbar-container .accordion-button-container .burger {
+    z-index: 999;
     height: 3em;
     width: 3em;
     position: relative;
@@ -200,8 +273,6 @@ body {
   }
   main #main-container #home .grid-container .top-container #title-box #title {
     font-family: "Proza Libre", sans-serif;
-    padding-top: 10px;
-    padding-right: 10px;
     color: #384a6cff;
     font-size: 5vh;
   }
@@ -240,11 +311,17 @@ body {
     height: 30vh;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
-    border: 1px solid #ec6543ff;
     border-radius: 10px;
     padding: 10px;
-    width: 85%;
+    width: 65%;
     font-size: 2vh;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-two {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
   }
   main #main-container #home .grid-container .bottom-container {
     height: 20vh;
@@ -269,6 +346,7 @@ body {
     align-items: center;
   }
   main #main-container #home .grid-container .bottom-container #bottom-two #down-button img {
+    cursor: pointer;
     z-index: 999;
     height: 4vh;
   }
@@ -302,8 +380,6 @@ body {
   }
   main #main-container #about-me .grid-container .about-me-top-container #title-box #title {
     font-family: "Proza Libre", sans-serif;
-    padding-top: 10px;
-    padding-right: 10px;
     color: #384a6cff;
     font-size: 5vh;
   }
@@ -386,6 +462,7 @@ body {
     align-items: center;
   }
   main #main-container #about-me .grid-container .about-me-bottom-container #bottom-three #down-button img {
+    cursor: pointer;
     z-index: 999;
     height: 4vh;
   }
@@ -416,8 +493,6 @@ body {
   }
   main #main-container #portfolio .grid-container .top-container #title-box #title {
     font-family: "Proza Libre", sans-serif;
-    padding-top: 10px;
-    padding-right: 10px;
     color: #384a6cff;
     font-size: 5vh;
   }
@@ -497,6 +572,7 @@ body {
     align-items: center;
   }
   main #main-container #portfolio .grid-container .bottom-container #bottom-three #down-button img {
+    cursor: pointer;
     z-index: 999;
     height: 4vh;
   }
@@ -528,8 +604,6 @@ body {
   }
   main #main-container #contact .grid-container .top-container #title-box #title {
     font-family: "Proza Libre", sans-serif;
-    padding-top: 10px;
-    padding-right: 10px;
     color: #384a6cff;
     font-size: 5vh;
   }
@@ -596,6 +670,7 @@ body {
     align-items: center;
   }
   main #main-container #contact .grid-container .bottom-container #bottom-three #down-button img {
+    cursor: pointer;
     z-index: 999;
     height: 4vh;
   }
@@ -604,264 +679,132 @@ body {
     z-index: 0;
   }
   main #main-container #tech-stack .grid-container {
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    background-image: url(./images/octo2.svg);
-    background-size: 70%;
-    background-position: top left;
-    background-repeat: no-repeat;
-    overflow: visible;
   }
   main #main-container #tech-stack .grid-container .top-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border-top-left-radius: 25px;
     display: flex;
-    justify-content: flex-end;
-    height: 100%;
+    justify-content: center;
     text-align: center;
+    height: 5vh;
+    z-index: 0;
+    overflow: visible;
   }
   main #main-container #tech-stack .grid-container .top-container #title-box {
-    background-image: url(./images/pinkcloud.svg);
-    background-size: 100%;
-    background-position: top center;
-    background-repeat: repeat-x;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
     z-index: 0;
   }
   main #main-container #tech-stack .grid-container .top-container #title-box #title {
+    align-self: flex-start;
+    color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
-    padding-top: 10px;
-    padding-right: 10px;
-    color: #384a6cff;
+  }
+  main #main-container #tech-stack .grid-container #middle-container {
+    height: 75vh;
+    font-family: "Proza Libre", sans-serif;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container {
+    margin-top: 1.5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-title {
+    color: #ec6543ff;
     font-size: 5vh;
+    padding-bottom: 20px;
   }
-  main #main-container #tech-stack .grid-container .top-container #title-box #sub-title {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container {
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon {
+    margin: 0;
+    height: 8vh;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon-title {
     font-family: "Proza Libre", sans-serif;
-    font-size: 80%;
-    color: #384a6cff;
+    color: #161616;
   }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container:hover {
+    transform: scale(1.1, 1.1);
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container {
+    width: 6%;
     height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 30% 20% 25% 25%;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end {
-    grid-column-start: 1;
-    grid-column-end: 5;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: auto;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #front-end-title {
-    align-self: center;
-    font-family: "Proza Libre", sans-serif;
-    color: white;
-    background-color: #d3006cff;
-    padding: 5px;
-    writing-mode: vertical-lr;
-    -webkit-text-orientation: mixed;
-            text-orientation: mixed;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #container {
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #container #icon-container {
-    margin: 2px;
-    background-color: #ffffffe8;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #container #icon-container #icon {
-    padding: 2px;
-    margin: 0;
-    height: 8vh;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #container #icon-container #icon-title {
-    font-family: "Proza Libre", sans-serif;
-    padding: 2px;
-    color: #161616;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #front-end #container #icon-container:hover {
-    transform: scale(1.1, 1.1);
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: auto;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #back-end-title {
-    align-self: center;
-    font-family: "Proza Libre", sans-serif;
-    color: white;
-    background-color: #d3006cff;
-    padding: 5px;
-    writing-mode: vertical-lr;
-    -webkit-text-orientation: mixed;
-            text-orientation: mixed;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container {
-    margin: 2px;
-    background-color: #ffffffe8;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container #icon {
-    padding: 2px;
-    margin: 0;
-    height: 8vh;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container #icon-title {
-    font-family: "Proza Libre", sans-serif;
-    padding: 2px;
-    color: #161616;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #back-end #container #icon-container:hover {
-    transform: scale(1.1, 1.1);
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #database {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: auto;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #database-title {
-    align-self: center;
-    font-family: "Proza Libre", sans-serif;
-    color: white;
-    background-color: #d3006cff;
-    padding: 5px;
-    writing-mode: vertical-lr;
-    -webkit-text-orientation: mixed;
-            text-orientation: mixed;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container {
-    margin: 2px;
-    background-color: #ffffffe8;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container #icon {
-    padding: 2px;
-    margin: 0;
-    height: 8vh;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container #icon-title {
-    font-family: "Proza Libre", sans-serif;
-    padding: 2px;
-    color: #161616;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #database #container #icon-container:hover {
-    transform: scale(1.1, 1.1);
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #other {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container #last-button img {
+    cursor: pointer;
     z-index: 999;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: auto;
+    height: 4vh;
+    transform: rotate(90deg);
   }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #other-title {
-    align-self: center;
-    font-family: "Proza Libre", sans-serif;
-    color: white;
-    background-color: #d3006cff;
-    padding: 5px;
-    writing-mode: vertical-lr;
-    -webkit-text-orientation: mixed;
-            text-orientation: mixed;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container {
-    margin: 2px;
-    background-color: #ffffffe8;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container #icon {
-    padding: 2px;
-    margin: 0;
-    height: 8vh;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container #icon-title {
-    font-family: "Proza Libre", sans-serif;
-    padding: 2px;
-    color: #161616;
-  }
-  main #main-container #tech-stack .grid-container .long-row-middle-1 #other #container #icon-container:hover {
-    transform: scale(1.1, 1.1);
-  }
-  main #main-container #tech-stack .grid-container .about-me-bottom-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container {
+    width: 6%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container #next-button img {
+    cursor: pointer;
+    z-index: 999;
+    height: 4vh;
+    transform: rotate(-90deg);
+  }
+  main #main-container #tech-stack .grid-container .bottom-container {
+    height: 20vh;
+    display: flex;
     flex-direction: row;
   }
-  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-one {
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-two {
-    width: 40%;
-  }
-  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three {
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-two {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three #down-button {
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container .about-me-bottom-container #bottom-three #down-button img {
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button img {
+    cursor: pointer;
     z-index: 999;
     height: 4vh;
+  }
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-three {
+    width: 40%;
   }
 
   /* footer */
