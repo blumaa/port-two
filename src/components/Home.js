@@ -48,6 +48,7 @@ const Home = () => {
                 startIcon={<GitHubIcon />}
                 href="https://github.com/blumaa"
                 target="_blank"
+                style={{ color: "#384a6cff" }}
               />
               <Button
                 variant="link"
@@ -55,6 +56,7 @@ const Home = () => {
                 startIcon={<LinkedInIcon />}
                 href="https://www.linkedin.com/in/aaron-blum-0904/"
                 target="_blank"
+                style={{ color: "#384a6cff" }}
               />
               <Button
                 variant="link"
@@ -62,6 +64,7 @@ const Home = () => {
                 startIcon={<InstagramIcon />}
                 href="https://www.instagram.com/xblumaa/"
                 target="_blank"
+                style={{ color: "#384a6cff" }}
               />
             </div>
           </div>
