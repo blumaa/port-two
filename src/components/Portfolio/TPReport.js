@@ -1,5 +1,6 @@
 import React from "react";
 import tpreportimg from "../../images/tpreport.svg";
+import tpmobile from "../../images/tpmobile.svg";
 import Chip from "@material-ui/core/Chip";
 import LinkIcon from "@material-ui/icons/Link";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -31,6 +32,7 @@ const TPReport = () => {
       <div id="project-picture">
         {" "}
         <img src={tpreportimg} />
+        <img src={tpmobile} />
       </div>
       <div id="project-description">
         During this strange, Corona-virus time I wanted to create an easy to use

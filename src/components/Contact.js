@@ -36,7 +36,7 @@ const Contact = () => {
           </div>
           <div id="middle-container">
             <div id="description-one">
-              <div id="title">Send me an email or connect with me!</div>
+              <div id="title">If you are interested in hiring me, have projects or ideas you'd like to discuss, or you just want to say hi, send me an email or connect with me a different way!</div>
               <div id="email-buttons">
                 <div id="email-text">
                   <Button

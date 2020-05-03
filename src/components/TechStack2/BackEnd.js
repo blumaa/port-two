@@ -9,28 +9,29 @@ const BackEnd = () => {
     <div id="individual-stack-container">
       <div id="stack-title"> backend</div>
       <div id="stack-icon-container">
-        <div id="icon-container">
-          <img src={nodelogo} id="icon" />
-          <div id="icon-title">Node Js</div>
-        </div>
-        <div id="icon-container">
-          <img src={rubylogo} id="icon" />
-          <div id="icon-title">Ruby</div>
-        </div>
-        <div id="icon-container">
-          <img src={railslogo} id="icon" />
-          <div id="icon-title">Ruby on Rails</div>
-        </div>
-        <div id="icon-container">
-          <img src={mongologo} id="icon" />
-          <div id="icon-title">Mongo DB</div>
-        </div>
-        <div id="icon-container">
-          <img src={postgreslogo} id="icon" />
-          <div id="icon-title">PostgresQL</div>
+        <div>
+          <div id="icon-container">
+            <img src={nodelogo} id="icon" />
+            <div id="icon-title">Node Js</div>
+          </div>
+          <div id="icon-container">
+            <img src={rubylogo} id="icon" />
+            <div id="icon-title">Ruby</div>
+          </div>
+          <div id="icon-container">
+            <img src={railslogo} id="icon" />
+            <div id="icon-title">Ruby on Rails</div>
+          </div>
+          <div id="icon-container">
+            <img src={mongologo} id="icon" />
+            <div id="icon-title">Mongo DB</div>
+          </div>
+          <div id="icon-container">
+            <img src={postgreslogo} id="icon" />
+            <div id="icon-title">PostgresQL</div>
+          </div>
         </div>
       </div>
-      
     </div>
   );
 };

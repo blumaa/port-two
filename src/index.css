@@ -6,6 +6,14 @@
     opacity: 1;
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .App {
   border: 0;
   padding: 0;
@@ -21,7 +29,6 @@ body {
   background-color: #e3e3e3;
   /* border: 1px solid blue; */
   height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   color: #3a4a6fff;
@@ -380,11 +387,9 @@ body {
     width: 40%;
   }
   main #main-container #about-me {
-    height: 100vh;
     z-index: 0;
   }
   main #main-container #about-me .grid-container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -393,7 +398,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 7vh;
+    height: 8vh;
     z-index: 0;
     overflow: visible;
     margin-bottom: 10px;
@@ -410,16 +415,17 @@ body {
     font-family: "Proza Libre", sans-serif;
   }
   main #main-container #about-me .grid-container #middle-container {
-    height: 75vh;
+    height: 85vh;
     font-family: "Proza Libre", sans-serif;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 90%;
+    align-self: center;
   }
   main #main-container #about-me .grid-container #middle-container #description-one {
-    width: 80%;
-    font-size: 2vh;
+    font-size: 2.25vh;
     display: flex;
     align-items: center;
   }
@@ -434,11 +440,10 @@ body {
     font-family: "Proza Libre", sans-serif;
   }
   main #main-container #about-me .grid-container #middle-container #description-two {
-    width: 80%;
-    font-size: 2vh;
+    font-size: 2.25vh;
   }
   main #main-container #about-me .grid-container .bottom-container {
-    height: 18vh;
+    height: 7vh;
     display: flex;
     flex-direction: row;
   }
@@ -528,29 +533,47 @@ body {
   main #main-container #portfolio .grid-container #middle-container #project-container #project-title {
     color: #ec6543ff;
     font-size: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 5px;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-links {
+    width: 100%;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-picture {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-bottom: 5px;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-picture img {
     box-shadow: 2px 2px 10px 0.5px rgba(124, 124, 124, 0.568);
-    border-radius: 10px;
-    height: 40vw;
+    height: 50vw;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-description {
     font-size: 2vh;
     margin-bottom: 10px;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container {
-    font-size: 2vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
+  }
+  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-frontend {
+    width: 45%;
+  }
+  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-backend {
+    width: 45%;
   }
   main #main-container #portfolio .grid-container .bottom-container {
     display: flex;
@@ -596,11 +619,9 @@ body {
     width: 40%;
   }
   main #main-container #contact {
-    height: 100vh;
     z-index: 0;
   }
   main #main-container #contact .grid-container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -706,11 +727,9 @@ body {
     width: 40%;
   }
   main #main-container #tech-stack {
-    height: 100vh;
     z-index: 0;
   }
   main #main-container #tech-stack .grid-container {
-    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -742,47 +761,49 @@ body {
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container {
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container {
-    margin-top: 1.5vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-title {
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     color: #ec6543ff;
     font-size: 5vh;
     padding-bottom: 20px;
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
+    height: 70%;
     width: 90%;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
     display: flex;
     flex-direction: row;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
     margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
     margin: 0;
     height: 8vh;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon-title {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
     font-family: "Proza Libre", sans-serif;
     color: #161616;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container:hover {
-    transform: scale(1.1, 1.1);
-  }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container {
-    width: 6%;
+    width: 10%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -795,7 +816,7 @@ body {
     transform: rotate(90deg);
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container {
-    width: 6%;
+    width: 10%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -883,231 +904,36 @@ body {
     z-index: 1;
   }
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 601px) {
   header {
     font-family: "Proza Libre", sans-serif;
     position: fixed;
     top: 0;
     margin: 0;
     z-index: 1;
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-    align-items: center;
   }
   header #navbar-container {
     display: flex;
     flex-direction: row;
     z-index: 1;
   }
-  header #navbar-container #menu-container .burger {
-    z-index: 999;
-    height: 3em;
-    width: 3em;
-    position: relative;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.2s all;
-    -webkit-tap-highlight-color: transparent;
-  }
-  header #navbar-container #menu-container .burger .burger-lines:after {
-    left: 0;
-    top: -1em;
-  }
-  header #navbar-container #menu-container .burger .burger-lines:before {
-    left: 1em;
-    top: 1em;
-  }
-  header #navbar-container #menu-container .burger:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 150%;
-    width: 150%;
-    top: -25%;
-    left: -25%;
-  }
-  header #navbar-container #menu-container .burger .burger-lines {
-    top: 70%;
-    margin-top: -0.125em;
-    left: 40%;
-  }
-  header #navbar-container #menu-container .burger .burger-lines, header #navbar-container #menu-container .burger .burger-lines:after, header #navbar-container #menu-container .burger .burger-lines:before {
-    pointer-events: none;
-    display: block;
-    content: "";
-    width: 100%;
-    border-radius: 0.25em;
-    background-color: white;
-    height: 0.25em;
-    position: absolute;
-    transform: rotate(0);
-  }
-  header #navbar-container #menu-container .burger .burger-lines:after {
-    left: 0;
-    top: -0.6em;
-  }
-  header #navbar-container #menu-container .burger .burger-lines:before {
-    left: 0em;
-    top: 0.7em;
-  }
-  header #navbar-container #menu-container .burger-squeeze {
-    width: 2em;
-    font-size: 12px;
-  }
-  header #navbar-container #menu-container .burger-squeeze .burger-lines, header #navbar-container #menu-container .burger-squeeze .burger-lines:after, header #navbar-container #menu-container .burger-squeeze .burger-lines:before {
-    background-color: #3a4a6fff;
-    transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
-  }
-  header #navbar-container #menu-container .burger-squeeze .burger-lines:after, header #navbar-container #menu-container .burger-squeeze .burger-lines:before {
-    width: 2em;
-  }
-  header #navbar-container #menu-container .burger-squeeze.open .burger-lines, header #navbar-container #menu-container .burger-squeeze.open .burger-lines:after, header #navbar-container #menu-container .burger-squeeze.open .burger-lines:before {
-    transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
-  }
-  header #navbar-container #menu-container .burger-squeeze.open .burger-lines {
-    background-color: transparent;
-  }
-  header #navbar-container #menu-container .burger-squeeze.open .burger-lines:before, header #navbar-container #menu-container .burger-squeeze.open .burger-lines:after {
-    left: 0em;
-    top: 0px;
-  }
-  header #navbar-container #menu-container .burger-squeeze.open .burger-lines:before {
-    transform: rotate(-45deg);
-  }
-  header #navbar-container #menu-container .burger-squeeze.open .burger-lines:after {
-    transform: rotate(45deg);
-  }
   header #navbar-container .accordion-button-container {
     outline: none;
-    font-size: 0%;
     padding: 0;
     border: 0;
     z-index: 900;
     background-color: #e3e3e3;
   }
-  header #navbar-container .accordion-button-container .burger {
-    z-index: 999;
-    height: 3em;
-    width: 3em;
-    position: relative;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.2s all;
-    -webkit-tap-highlight-color: transparent;
-  }
-  header #navbar-container .accordion-button-container .burger .burger-lines:after {
-    left: 0;
-    top: -1em;
-  }
-  header #navbar-container .accordion-button-container .burger .burger-lines:before {
-    left: 1em;
-    top: 1em;
-  }
-  header #navbar-container .accordion-button-container .burger:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 150%;
-    width: 150%;
-    top: -25%;
-    left: -25%;
-  }
-  header #navbar-container .accordion-button-container .burger .burger-lines {
-    top: 70%;
-    margin-top: -0.125em;
-    left: 40%;
-  }
-  header #navbar-container .accordion-button-container .burger .burger-lines, header #navbar-container .accordion-button-container .burger .burger-lines:after, header #navbar-container .accordion-button-container .burger .burger-lines:before {
-    pointer-events: none;
-    display: block;
-    content: "";
-    width: 100%;
-    border-radius: 0.25em;
-    background-color: white;
-    height: 0.25em;
-    position: absolute;
-    transform: rotate(0);
-  }
-  header #navbar-container .accordion-button-container .burger .burger-lines:after {
-    left: 0;
-    top: -0.6em;
-  }
-  header #navbar-container .accordion-button-container .burger .burger-lines:before {
-    left: 0em;
-    top: 0.7em;
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze {
-    width: 2em;
-    font-size: 12px;
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze .burger-lines, header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:after, header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:before {
-    background-color: #3a4a6fff;
-    transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:after, header #navbar-container .accordion-button-container .burger-squeeze .burger-lines:before {
-    width: 2em;
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines, header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:after, header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:before {
-    transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines {
-    background-color: transparent;
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:before, header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:after {
-    left: 0em;
-    top: 0px;
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:before {
-    transform: rotate(-45deg);
-  }
-  header #navbar-container .accordion-button-container .burger-squeeze.open .burger-lines:after {
-    transform: rotate(45deg);
-  }
   header #navbar-container .accordion-button-container #burger-button {
+    cursor: pointer;
     background-color: #e3e3e3;
-    margin: 3vh 0vw 0vw 4vw;
+    margin: 2vh 0vw 0vw 2vw;
   }
   header #navbar-container .accordion-button-container #burger-button div {
     width: 25px;
     height: 3px;
     background-color: #3a4a6fff;
     margin: 5px 0;
-  }
-  header #navbar-container .accordion-button-container #accordion-icon {
-    padding-top: 20px;
-    margin-left: 2vw;
-    height: 3vh;
-  }
-  header #navbar-container .accordion-button-container #close-icon {
-    padding-top: 20px;
-    margin-left: 2vw;
-    height: 3vh;
-  }
-  header #navbar-container .accordion-button-container #button-container {
-    padding-top: 5px;
-    position: relative;
-    left: 1.2vw;
-  }
-  header #navbar-container .accordion-button-container #button-container .button-one {
-    width: 100px;
-    color: white;
-    background-color: #8076a3;
-    border-radius: 40%;
-    text-align: center;
-    line-height: 49px;
-    font-size: 1.5em;
-  }
-  header #navbar-container .item2 {
-    width: 20vw;
-  }
-  header #navbar-container .item3 {
-    height: 100%;
-    width: 80vw;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
   }
 
   /* main */
@@ -1118,7 +944,6 @@ body {
     margin: 0;
   }
   main #main-container #home {
-    height: 100vh;
     z-index: 0;
   }
   main #main-container #home .grid-container {
@@ -1127,31 +952,12 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
   }
-  main #main-container #home .grid-container .top-container {
-    display: flex;
-    justify-content: flex-end;
-    height: 5vh;
-    z-index: 0;
-    overflow: visible;
-    text-align: center;
-  }
-  main #main-container #home .grid-container .top-container #title-box {
-    z-index: 0;
-  }
-  main #main-container #home .grid-container .top-container #title-box #title {
-    font-family: "Proza Libre", sans-serif;
-    color: #384a6cff;
-    font-size: 5vh;
-  }
   main #main-container #home .grid-container #about-me-middle-container {
-    height: 75vh;
+    height: 85vh;
     font-family: "Proza Libre", sans-serif;
   }
   main #main-container #home .grid-container #about-me-middle-container #title-box {
     height: 30%;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1160,44 +966,36 @@ body {
   main #main-container #home .grid-container #about-me-middle-container #title-box #sub-header {
     color: #ec6543ff;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container {
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-image {
-    width: 100%;
     height: 30vh;
+    margin-right: 20px;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
+    align-self: center;
     border-radius: 10px;
-    padding: 10px;
-    width: 65%;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 25%;
     font-size: 2vh;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-two {
-    margin-top: 1vh;
+    margin-top: 3vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
   }
   main #main-container #home .grid-container .bottom-container {
-    height: 20vh;
+    height: 10vh;
     display: flex;
     flex-direction: row;
   }
   main #main-container #home .grid-container .bottom-container #bottom-one {
     width: 40%;
-    border-bottom-left-radius: 25px;
   }
   main #main-container #home .grid-container .bottom-container #bottom-two {
     width: 20%;
@@ -1235,11 +1033,9 @@ body {
     width: 40%;
   }
   main #main-container #about-me {
-    height: 100vh;
     z-index: 0;
   }
   main #main-container #about-me .grid-container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1248,7 +1044,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 7vh;
+    height: 8vh;
     z-index: 0;
     overflow: visible;
     margin-bottom: 10px;
@@ -1265,16 +1061,17 @@ body {
     font-family: "Proza Libre", sans-serif;
   }
   main #main-container #about-me .grid-container #middle-container {
-    height: 75vh;
+    height: 85vh;
     font-family: "Proza Libre", sans-serif;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 50vw;
+    align-self: center;
   }
   main #main-container #about-me .grid-container #middle-container #description-one {
-    width: 80%;
-    font-size: 2vh;
+    font-size: 2.25vh;
     display: flex;
     align-items: center;
   }
@@ -1289,11 +1086,10 @@ body {
     font-family: "Proza Libre", sans-serif;
   }
   main #main-container #about-me .grid-container #middle-container #description-two {
-    width: 80%;
-    font-size: 2vh;
+    font-size: 2.25vh;
   }
   main #main-container #about-me .grid-container .bottom-container {
-    height: 18vh;
+    height: 7vh;
     display: flex;
     flex-direction: row;
   }
@@ -1383,29 +1179,49 @@ body {
   main #main-container #portfolio .grid-container #middle-container #project-container #project-title {
     color: #ec6543ff;
     font-size: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 5px;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-links {
+    width: 100%;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-picture {
-    margin-bottom: 5px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-picture img {
     box-shadow: 2px 2px 10px 0.5px rgba(124, 124, 124, 0.568);
-    border-radius: 10px;
-    height: 40vw;
+    height: 30vw;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-description {
+    width: 50%;
     font-size: 2vh;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container {
-    font-size: 2vh;
+    width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
+  }
+  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-frontend {
+    padding: 5px;
+  }
+  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-backend {
+    padding: 5px;
   }
   main #main-container #portfolio .grid-container .bottom-container {
     display: flex;
@@ -1451,11 +1267,9 @@ body {
     width: 40%;
   }
   main #main-container #contact {
-    height: 100vh;
     z-index: 0;
   }
   main #main-container #contact .grid-container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1489,32 +1303,30 @@ body {
     flex-direction: column;
   }
   main #main-container #contact .grid-container #middle-container #description-one {
-    width: 80%;
+    width: 50vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   main #main-container #contact .grid-container #middle-container #description-one #title {
-    align-self: flex-start;
+    width: 30vw;
   }
   main #main-container #contact .grid-container #middle-container #description-one #email-buttons {
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: center;
-    text-align: center;
   }
   main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-text {
     font-size: 2.5vh;
-    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: #3a4a6fff;
   }
   main #main-container #contact .grid-container #middle-container #links {
-    width: 100%;
-    height: 10%;
+    width: 50vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -1561,11 +1373,12 @@ body {
     width: 40%;
   }
   main #main-container #tech-stack {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     z-index: 0;
   }
   main #main-container #tech-stack .grid-container {
-    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -1593,51 +1406,62 @@ body {
   main #main-container #tech-stack .grid-container #middle-container {
     height: 75vh;
     font-family: "Proza Libre", sans-serif;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container {
     height: 100%;
+    width: 50vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container {
-    margin-top: 1.5vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-title {
+    height: 40vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     color: #ec6543ff;
     font-size: 5vh;
     padding-bottom: 20px;
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
+    height: 60vh;
     width: 90%;
+  }
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
     display: flex;
     flex-direction: row;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
     margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
     margin: 0;
     height: 8vh;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon-title {
+  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
     font-family: "Proza Libre", sans-serif;
     color: #161616;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container:hover {
-    transform: scale(1.1, 1.1);
-  }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container {
-    width: 6%;
+    width: 10%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -1650,7 +1474,7 @@ body {
     transform: rotate(90deg);
   }
   main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container {
-    width: 6%;
+    width: 10%;
     height: 100%;
     display: flex;
     justify-content: center;

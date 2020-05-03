@@ -1,4 +1,5 @@
 @import "mixins";
+@import "desktopmixins";
 
 $font-stack: "Proza Libre", sans-serif;
 $background-color: #e3e3e3;
@@ -20,7 +21,7 @@ body {
   background-color: $background-color;
   /* border: 1px solid blue; */
   height: 100vh;
-  width: 100vw;
+  // width: 100vw;
   // position: absolute;
   display: flex;
   flex-direction: column;
@@ -128,12 +129,6 @@ body {
             // box-shadow: 2px 2px 10px rgba(109, 109, 109, 0.25) inset,
             //   1px 1px 5px #f9c5bd inset, 0px 3px 3px rgba(0, 0, 0, 0.5);
           }
-          .button-two {
-          }
-          .button-three {
-          }
-          .button-four {
-          }
         }
       }
       .item2 {
@@ -172,7 +167,7 @@ body {
     // border: purple 3px solid;
     #main-container {
       #home {
-        @include home-template;
+        @include home-master
       }
       #about-me {
         @include aboutme-master;
@@ -239,7 +234,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 601px) {
   header {
     font-family: $font-stack;
     // height: 10vh;
@@ -251,47 +246,27 @@ body {
     // background-color: #d6d6d6;
     // box-shadow: 1px 1px 5px rgb(124, 124, 124);
     z-index: 1;
-    // background-color: orange;
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-    align-items: center;
-    // border: 3px solid purple;
 
     #navbar-container {
       // width: 100%;
       // border: 1px solid red;
-      // height: 100%;
-      // display: grid;
-      // grid-template-columns: 10% 90% 10%;
       display: flex;
       flex-direction: row;
       z-index: 1;
       // justify-content: space-evenly;
       // align-items: center;
-      #menu-container{
-        @include burger
-      }
       .accordion-button-container {
         // width: 20vw;
-        // align-self: flex-start;
         outline: none;
-        // display: flex;
-        // justify-content: flex-start;
-        // align-items: center;
-        // flex-direction: column;
-        font-size: 0%;
         padding: 0;
         border: 0;
         // border: 2px solid red;
-        // background-color: rgba(218, 112, 214, 0);
-        // position: absolute;
         z-index: 900;
-        @include burger;
         background-color: #e3e3e3;
         #burger-button{
+          cursor: pointer;
           background-color: #e3e3e3;
-          margin: 3vh 0vw 0vw 4vw;
+          margin: 2vh 0vw 0vw 2vw;
           div {
             width: 25px;
             height: 3px;
@@ -300,68 +275,6 @@ body {
           }
         }
         
-        #accordion-icon {
-          padding-top: 20px;
-          margin-left: 2vw;
-          height: 3vh;
-        }
-        .filter {
-          // filter: drop-shadow(1px 1px 2px #4a4a66);
-        }
-        // @include fadein;
-        #close-icon {
-          padding-top: 20px;
-          margin-left: 2vw;
-          height: 3vh;
-          // filter: drop-shadow(1px 1px 2px #161748);
-        }
-        #button-container {
-          // border: 1px solid red;
-          padding-top: 5px;
-          // margin-left: 10px;
-          position: relative;
-          left: 1.2vw;
-          
-          .button-one {
-            // margin-bottom: 5px;
-            // bottom: 0;
-            // width: 7vw;
-            // height: 3vh;
-            width: 100px;
-            color: rgb(255, 255, 255);
-            background-color: #8076a3;
-            border-radius: 40%;
-            text-align: center;
-            // border: 2px solid #ffffff;
-            line-height: 49px;
-            font-size: 1.5em;
-            // box-shadow: 2px 2px 10px rgba(109, 109, 109, 0.25) inset,
-            //   1px 1px 5px #f9c5bd inset, 0px 3px 3px rgba(0, 0, 0, 0.5);
-          }
-          .button-two {
-          }
-          .button-three {
-          }
-          .button-four {
-          }
-        }
-      }
-      .item2 {
-        // border: 1px solid green;
-        // height: 100%;
-        width: 20vw;
-      }
-      .item3 {
-        // border: 1px solid blue;
-        height: 100%;
-        width: 80vw;
-        // background-image: url(./images/cloudclump.svg);
-        background-size: 100% 100%;
-        // background-image: url(./images/cloud2.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-
-        z-index: 1;
       }
     }
   }
@@ -382,19 +295,19 @@ body {
     // border: purple 3px solid;
     #main-container {
       #home {
-        @include home-template;
+        @include home-master-desktop;
       }
       #about-me {
-        @include aboutme-master;
+        @include aboutme-master-desktop;
       }
       #portfolio {
-        @include portfolio-master;
+        @include portfolio-master-desktop;
       }
       #contact {
-        @include contact-master;
+        @include contact-master-desktop;
       }
       #tech-stack {
-        @include tech-stack-master;
+        @include tech-stack-master-desktop;
       }
     }
   }

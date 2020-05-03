@@ -2,11 +2,11 @@ $fade-in-time: 5s;
 $stand-out-color: #384a6cff;
 $stand-in-color: #ec6543ff;
 
-@mixin home-master {
+@mixin home-master-desktop {
   // position: fixed;
   // margin-top: 40px;
-  height: 100vh;
-  // border: purple 1px solid;
+  //   height: 100vh;
+  //   border: purple 1px solid;
   z-index: 0;
   .grid-container {
     // height: 91%;
@@ -18,41 +18,19 @@ $stand-in-color: #ec6543ff;
     justify-content: space-evenly;
     flex-direction: column;
     .top-container {
-      // background-color: rgba(255, 255, 255, 0.8);
-      // border: 3px solid white;
-      display: flex;
-      justify-content: flex-end;
-      // height: 8vh;
-      height: 5vh;
-      z-index: 0;
-      overflow: visible;
-      #title-box {
-        // background-color: #e1e8f0;
-        // background-attachment: fixed;
-        // height: 100%;
-        // background-image: url(./images/pinkcloud.svg);
-        // background-size: 100%;
-        // background-position: top center;
-        // background-repeat: repeat-x;
-        z-index: 0;
-        // border: 1px solid rgba(0, 0, 0, 0.8);
-        #title {
-          @include aarontitle;
-        }
-      }
-      text-align: center;
+      //   border: 3px solid white;
     }
     #about-me-middle-container {
-      // border: 1px solid purple;
+      //   border: 1px solid purple;
       // height: 58vh;
-      height: 75vh;
+      height: 85vh;
       font-family: $font-stack;
       #title-box {
         height: 30%;
-        padding-right: 10px;
-        padding-left: 10px;
+        // padding-right: 10px;
+        // padding-left: 10px;
         // border: 1px solid rgba(0, 0, 0, 0.8);
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -74,39 +52,41 @@ $stand-in-color: #ec6543ff;
         // height: 80%;
         // background: linear-gradient(white, rgba(255, 192, 203, 0));
         // border-bottom-right-radius: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         // background-image: url(./images/profile1.svg);
         // background-repeat: no-repeat;
         // background-position: left bottom;
         // background-size: 40%;
         #main-box-image-container {
-          // border: 1px solid red;
+          //   border: 1px solid red;
           // height: 100%;
-          width: 100%;
+          //   width: 100%;
           display: flex;
-          align-items: center;
-          justify-content: center;
+          //   align-items: center;
+          //   justify-content: center;
           flex-direction: column;
           #main-box-image {
-            width: 100%;
+            // width: 50%;
             // border: 1px solid red;
             height: 30vh;
+            margin-right: 20px;
           }
           #main-box-text {
             // border: 1px solid $stand-in-color;
+            // color: red;
+            align-self: center;
+            // text-align: center;
             border-radius: 10px;
-            padding: 10px;
-            width: 65%;
+            margin-top: 10px;
+            margin-left: 20px;
+            width: 25%;
             font-size: 2vh;
             // height: 100%;
           }
         }
       }
       #main-box-two {
-        margin-top: 1vh;
+        // border: 1px solid $stand-in-color;
+        margin-top: 3vh;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -114,9 +94,9 @@ $stand-in-color: #ec6543ff;
       }
     }
     .bottom-container {
-      // border: 2px solid red;
+      //   border: 1px solid red;
       // height: 31vh;
-      height: 20vh;
+      height: 10vh;
       // background-color: rgba(255, 255, 255, 0.8);
       // border: 1px solid rgba(0, 0, 0, 0.8);
       // border-bottom-right-radius: 25px;
@@ -126,16 +106,16 @@ $stand-in-color: #ec6543ff;
       // padding: 20px;
       // font-size: 30px;
       // text-align: center;
-      // background-image: url(./images/profile1.svg);
-      // background-repeat: no-repeat;
-      // background-position: left bottom;
-      // background-size: 40%;
+      //   background-image: url(./images/profile1.svg);
+      //   background-repeat: no-repeat;
+      //   background-position: left bottom;
+      //   background-size: 10%;
       #bottom-one {
         // height: 100%;
         // background: linear-gradient( rgba(255, 192, 203, 0), white);
         width: 40%;
         // border: 1px solid green;
-        border-bottom-left-radius: 25px;
+        // border-bottom-left-radius: 25px;
       }
       #bottom-two {
         width: 20%;
@@ -158,15 +138,18 @@ $stand-in-color: #ec6543ff;
   }
 }
 
-@mixin tech-stack-master {
+@mixin tech-stack-master-desktop {
   // position: fixed;
   // margin-top: 40px;
   // height: 100vh;
   // border: purple 1px solid;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   z-index: 0;
   .grid-container {
     // height: 91%;
-    // border: purple 1px solid;
+    //   border: purple 1px solid;
 
     // height: 100vh;
 
@@ -212,36 +195,40 @@ $stand-in-color: #ec6543ff;
       // height: 58vh;
       height: 75vh;
       font-family: $font-stack;
+      width: 50vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
       #tech-stack-container {
         height: 100%;
+        width: 50vw;
         // border: 1px solid purple;
-        // width: 90%;
         display: flex;
-        // justify-content: flex-start;
-        // flex-direction: row;
+        justify-content: center;
+        flex-direction: row;
         #individual-stack-container {
           // margin-top: 1.5vh;
-          // height: 100%;
+          height: 100%;
+          width: 100%;
           // border: 1px solid rgba(0, 0, 0, 0.8);
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
           align-items: center;
           #stack-title {
-            height: 30%;
+            height: 40vh;
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
-            // border: 1px solid rgba(0, 0, 0, 0.8);
+            //   border: 1px solid rgba(0, 0, 0, 0.8);
             color: $stand-in-color;
             font-size: 5vh;
             padding-bottom: 20px;
           }
           #stack-icon-container {
-            height: 70%;
+            height: 60vh;
             width: 90%;
-            div{
-
+            div {
               // border: 1px solid rgba(0, 0, 0, 0.8);
               display: flex;
               flex-direction: row;
@@ -337,7 +324,7 @@ $stand-in-color: #ec6543ff;
   }
 }
 
-@mixin portfolio-master {
+@mixin portfolio-master-desktop {
   // position: fixed;
   // margin-top: 40px;
   // height: 100vh;
@@ -426,8 +413,8 @@ $stand-in-color: #ec6543ff;
           justify-content: center;
         }
         #project-picture {
-          // border: 1px solid purple;
-          width: 100%;
+          //   border: 1px solid purple;
+          width: 75%;
           display: flex;
           align-items: center;
           justify-content: space-evenly;
@@ -437,28 +424,35 @@ $stand-in-color: #ec6543ff;
             // width: 80vw;
             // border: 1px solid purple;
             box-shadow: 2px 2px 10px 0.5px rgba(124, 124, 124, 0.568);
-            
+
             // border-radius: 10px;
-            height: 50vw;
+            height: 30vw;
           }
-          margin-bottom: 5px;
+          margin-bottom: 20px;
         }
         #project-description {
+          width: 50%;
+          //   border: 1px solid purple;
           font-size: 2vh;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
         #project-info-container {
+          width: 70%;
+        //   border: 1px solid purple;
           // font-size: 2vh;
           display: flex;
           flex-direction: row;
           justify-content: space-evenly;
           align-items: flex-start;
           #project-frontend {
-            width: 45%;
-            
-          }
-          #project-backend {
-            width: 45%;
+            // border: 1px solid purple;
+            // width: 45%;
+            padding: 5px;
+        }
+        #project-backend {
+            // border: 1px solid purple;
+            padding: 5px;
+            // width: 45%;
           }
         }
       }
@@ -495,7 +489,7 @@ $stand-in-color: #ec6543ff;
     }
   }
 }
-@mixin aboutme-master {
+@mixin aboutme-master-desktop {
   // position: fixed;
   // margin-top: 40px;
   // height: 100vh;
@@ -552,7 +546,7 @@ $stand-in-color: #ec6543ff;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 90%;
+      width: 50vw;
       align-self: center;
       #description-one {
         // border: 1px solid purple;
@@ -609,7 +603,7 @@ $stand-in-color: #ec6543ff;
     }
   }
 }
-@mixin contact-master {
+@mixin contact-master-desktop {
   // position: fixed;
   // margin-top: 40px;
   // height: 100vh;
@@ -659,7 +653,7 @@ $stand-in-color: #ec6543ff;
       }
     }
     #middle-container {
-      // border: 1px solid purple;
+    //   border: 1px solid purple;
       height: 75vh;
       font-family: $font-stack;
       display: flex;
@@ -667,26 +661,29 @@ $stand-in-color: #ec6543ff;
       align-items: center;
       flex-direction: column;
       #description-one {
-        width: 80%;
+        width: 50vw;
         // border: 1px solid purple;
         // font-size: 2vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         #title {
-          align-self: flex-start;
+            width: 30vw;
+            // border: 1px solid purple;
         }
         #email-buttons {
           width: 100%;
           height: 10vh;
           display: flex;
           justify-content: center;
-          text-align: center;
-          // border: 1px solid purple;
+        //   text-align: center;
+        //   border: 1px solid purple;
           #email-text {
+            // border: 1px solid purple;
             font-size: 2.5vh;
 
-            width: 100%;
+            // width: 100%;
             // border: 1px solid purple;
             display: flex;
             justify-content: flex-start;
@@ -696,8 +693,8 @@ $stand-in-color: #ec6543ff;
         }
       }
       #links {
-        width: 100%;
-        height: 10%;
+        width: 50vw;
+        // height: 10%;
         // border: 1px solid purple;
         display: flex;
         flex-wrap: wrap;
@@ -787,9 +784,9 @@ $stand-in-color: #ec6543ff;
       // background-color: blue;
     }
   }
-  // #icon-container:hover {
-  //   transform: scale(1.1, 1.1);
-  // }
+  //   #icon-container:hover {
+  //     transform: scale(1.1, 1.1);
+  //   }
 }
 
 @mixin downbutton {

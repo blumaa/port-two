@@ -11,19 +11,19 @@ const TechStack2 = () => {
 
   const handleBackClick = (e) => {
     e.preventDefault();
-    console.log("back");
+    // console.log("back");
     setStack((prevState) => {
       return prevState === 0 ? 2 : prevState - 1;
     });
-    console.log(stack);
+    // console.log(stack);
   };
   const handleNextClick = (e) => {
     e.preventDefault();
-    console.log("next");
+    // console.log("next");
     setStack((prevState) => {
       return prevState === 2 ? 0 : prevState + 1;
     });
-    console.log(stack);
+    // console.log(stack);
   };
 
   let stackRender;

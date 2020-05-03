@@ -14,42 +14,44 @@ const FrontEnd = () => {
     <div id="individual-stack-container">
       <div id="stack-title"> frontend</div>
       <div id="stack-icon-container">
-        <div id="icon-container">
-          <img src={js} id="icon" />
-          <div id="icon-title">JavaScript</div>
-        </div>
-        <div id="icon-container">
-          <img src={reactlogo} id="icon" />
-          <div id="icon-title">React</div>
-        </div>
-        <div id="icon-container">
-          <img src={redux2} id="icon" />
-          <div id="icon-title">Redux</div>
-        </div>
-        <div id="icon-container">
-          <img src={graphqllogo} id="icon" />
-          <div id="icon-title">GraphQL</div>
-        </div>
-        <div id="icon-container">
-          <img src={apollo} id="icon" />
-          <div id="icon-title">Apollo</div>
-        </div>
+        <div>
+          <div id="icon-container">
+            <img src={js} id="icon" />
+            <div id="icon-title">JavaScript</div>
+          </div>
+          <div id="icon-container">
+            <img src={reactlogo} id="icon" />
+            <div id="icon-title">React</div>
+          </div>
+          <div id="icon-container">
+            <img src={redux2} id="icon" />
+            <div id="icon-title">Redux</div>
+          </div>
+          <div id="icon-container">
+            <img src={graphqllogo} id="icon" />
+            <div id="icon-title">GraphQL</div>
+          </div>
+          <div id="icon-container">
+            <img src={apollo} id="icon" />
+            <div id="icon-title">Apollo</div>
+          </div>
 
-        <div id="icon-container">
-          <img src={csslogo} id="icon" />
-          <div id="icon-title">CSS3</div>
-        </div>
-        <div id="icon-container">
-          <img src={htmllogo} id="icon" />
-          <div id="icon-title">HTML5</div>
-        </div>
-        <div id="icon-container">
-          <img src={sasslogo} id="icon" />
-          <div id="icon-title">SASS</div>
-        </div>
-        <div id="icon-container">
-          <img src={materialuilogo} id="icon" />
-          <div id="icon-title">Material UI</div>
+          <div id="icon-container">
+            <img src={csslogo} id="icon" />
+            <div id="icon-title">CSS3</div>
+          </div>
+          <div id="icon-container">
+            <img src={htmllogo} id="icon" />
+            <div id="icon-title">HTML5</div>
+          </div>
+          <div id="icon-container">
+            <img src={sasslogo} id="icon" />
+            <div id="icon-title">SASS</div>
+          </div>
+          <div id="icon-container">
+            <img src={materialuilogo} id="icon" />
+            <div id="icon-title">Material UI</div>
+          </div>
         </div>
       </div>
     </div>
