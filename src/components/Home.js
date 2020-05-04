@@ -8,7 +8,8 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Button from "@material-ui/core/Button";
-import ProfileImage from "./ProfileImage"
+import ProfileImage from "./ProfileImage";
+import rocket from '../images/rocket.svg'
 
 const Home = () => {
   return (
@@ -71,7 +72,11 @@ const Home = () => {
           </div>
           {/* <div className="long-row-middle-2">long-row-middle</div> */}
           <div className="bottom-container">
-            <div id="bottom-one"></div>
+            <div id="bottom-one">
+              <div className="home-animation">
+                <img src={rocket} />
+              </div>
+            </div>
             <div id="bottom-two">
               {/* <div class="container">
                 <div class="bar1"></div>

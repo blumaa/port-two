@@ -136,7 +136,7 @@ body {
     padding: 0;
     border: 0;
     z-index: 900;
-    background-color: #e3e3e3;
+    background-color: #e3e3e300;
   }
   header #navbar-container .accordion-button-container .burger {
     z-index: 999;
@@ -217,7 +217,7 @@ body {
     transform: rotate(45deg);
   }
   header #navbar-container .accordion-button-container #burger-button {
-    background-color: #e3e3e3;
+    background-color: #e3e3e300;
     margin: 3vh 0vw 0vw 4vw;
   }
   header #navbar-container .accordion-button-container #burger-button div {
@@ -349,7 +349,129 @@ body {
   }
   main #main-container #home .grid-container .bottom-container #bottom-one {
     width: 40%;
-    border-bottom-left-radius: 25px;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation {
+    position: relative;
+    left: -50px;
+    animation: moveabout 5s ease;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation img {
+    height: 70px;
+  }
+  @keyframes moveabout {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+      left: 20px;
+    }
+    20% {
+      left: 19px;
+      bottom: 1px;
+    }
+    21% {
+      left: 20px;
+      bottom: 0px;
+    }
+    22% {
+      left: 21px;
+      bottom: -1px;
+    }
+    23% {
+      left: 20px;
+      bottom: 0px;
+    }
+    24% {
+      left: 19px;
+      bottom: 1px;
+    }
+    25% {
+      left: 20px;
+      bottom: 0px;
+    }
+    26% {
+      left: 21px;
+      bottom: -1px;
+    }
+    27% {
+      left: 20px;
+      bottom: 0px;
+    }
+    28% {
+      left: 19px;
+      bottom: 1px;
+    }
+    29% {
+      left: 20px;
+      bottom: 0px;
+    }
+    30% {
+      left: 21px;
+      bottom: -1px;
+    }
+    31% {
+      left: 20px;
+      bottom: 0px;
+    }
+    32% {
+      left: 19px;
+      bottom: 1px;
+    }
+    33% {
+      left: 20px;
+      bottom: 0px;
+    }
+    34% {
+      left: 21px;
+      bottom: -1px;
+    }
+    35% {
+      left: 20px;
+      bottom: 0px;
+    }
+    36% {
+      left: 19px;
+      bottom: 1px;
+    }
+    37% {
+      left: 20px;
+      bottom: 0px;
+    }
+    38% {
+      left: 21px;
+      bottom: -1px;
+    }
+    39% {
+      left: 20px;
+      bottom: 0px;
+    }
+    40% {
+      left: 19px;
+      bottom: 1px;
+    }
+    41% {
+      left: 20px;
+      bottom: 0px;
+    }
+    42% {
+      left: 21px;
+      bottom: -1px;
+    }
+    43% {
+      left: 20px;
+      bottom: 0px;
+      transform: translateY(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+      left: 20px;
+      transform: translateY(-90vh);
+    }
   }
   main #main-container #home .grid-container .bottom-container #bottom-two {
     width: 20%;
@@ -922,11 +1044,11 @@ body {
     padding: 0;
     border: 0;
     z-index: 900;
-    background-color: #e3e3e3;
+    background-color: #e3e3e300;
   }
   header #navbar-container .accordion-button-container #burger-button {
     cursor: pointer;
-    background-color: #e3e3e3;
+    background-color: #e3e3e300;
     margin: 2vh 0vw 0vw 2vw;
   }
   header #navbar-container .accordion-button-container #burger-button div {
@@ -999,6 +1121,129 @@ body {
   main #main-container #home .grid-container .bottom-container #bottom-one {
     width: 40%;
   }
+  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation {
+    position: relative;
+    left: -50px;
+    animation: moveabout 5s ease;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation img {
+    height: 70px;
+  }
+  @keyframes moveabout {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+      left: 20px;
+    }
+    20% {
+      left: 19px;
+      bottom: 1px;
+    }
+    21% {
+      left: 20px;
+      bottom: 0px;
+    }
+    22% {
+      left: 21px;
+      bottom: -1px;
+    }
+    23% {
+      left: 20px;
+      bottom: 0px;
+    }
+    24% {
+      left: 19px;
+      bottom: 1px;
+    }
+    25% {
+      left: 20px;
+      bottom: 0px;
+    }
+    26% {
+      left: 21px;
+      bottom: -1px;
+    }
+    27% {
+      left: 20px;
+      bottom: 0px;
+    }
+    28% {
+      left: 19px;
+      bottom: 1px;
+    }
+    29% {
+      left: 20px;
+      bottom: 0px;
+    }
+    30% {
+      left: 21px;
+      bottom: -1px;
+    }
+    31% {
+      left: 20px;
+      bottom: 0px;
+    }
+    32% {
+      left: 19px;
+      bottom: 1px;
+    }
+    33% {
+      left: 20px;
+      bottom: 0px;
+    }
+    34% {
+      left: 21px;
+      bottom: -1px;
+    }
+    35% {
+      left: 20px;
+      bottom: 0px;
+    }
+    36% {
+      left: 19px;
+      bottom: 1px;
+    }
+    37% {
+      left: 20px;
+      bottom: 0px;
+    }
+    38% {
+      left: 21px;
+      bottom: -1px;
+    }
+    39% {
+      left: 20px;
+      bottom: 0px;
+    }
+    40% {
+      left: 19px;
+      bottom: 1px;
+    }
+    41% {
+      left: 20px;
+      bottom: 0px;
+    }
+    42% {
+      left: 21px;
+      bottom: -1px;
+    }
+    43% {
+      left: 20px;
+      bottom: 0px;
+      transform: translateY(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+      left: 20px;
+      transform: translateY(-90vh);
+    }
+  }
   main #main-container #home .grid-container .bottom-container #bottom-two {
     width: 20%;
     display: flex;
@@ -1030,37 +1275,6 @@ body {
   }
   main #main-container #home .grid-container .bottom-container #bottom-two #down-button img:hover:after {
     width: 100%;
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .container {
-    cursor: pointer;
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .bar1, main #main-container #home .grid-container .bottom-container #bottom-two .bar2, main #main-container #home .grid-container .bottom-container #bottom-two .bar3 {
-    width: 35px;
-    height: 5px;
-    margin: 10px;
-    background-color: #333;
-    transition: 1s;
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .bar1 {
-    transform: rotate(45deg) translate(42px, 50px);
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .bar2 {
-    opacity: 0;
-    transform: rotate(90deg) translate(80px, -5px);
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .bar3 {
-    transform: rotate(-45deg) translate(-13px, 36px);
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .container:hover .bar1 {
-    transform: rotate(45deg) translate(70px, 80px);
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .container:hover .bar2 {
-    opacity: 1;
-    transform: rotate(90deg) translate(40px, 2px);
-    width: 50px;
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two .container:hover .bar3 {
-    transform: rotate(-45deg) translate(-43px, 65px);
   }
   main #main-container #home .grid-container .bottom-container #bottom-three {
     width: 40%;

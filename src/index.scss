@@ -79,9 +79,9 @@ body {
         // position: absolute;
         z-index: 900;
         @include burger;
-        background-color: #e3e3e3;
+        background-color: #e3e3e300;
         #burger-button{
-          background-color: #e3e3e3;
+          background-color: #e3e3e300;
           margin: 3vh 0vw 0vw 4vw;
           div {
             width: 25px;
@@ -262,10 +262,10 @@ body {
         border: 0;
         // border: 2px solid red;
         z-index: 900;
-        background-color: #e3e3e3;
+        background-color: #e3e3e300;
         #burger-button{
           cursor: pointer;
-          background-color: #e3e3e3;
+          background-color: #e3e3e300;
           margin: 2vh 0vw 0vw 2vw;
           div {
             width: 25px;
