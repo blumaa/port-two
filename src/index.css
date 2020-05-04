@@ -968,6 +968,8 @@ body {
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-image {
@@ -1028,6 +1030,37 @@ body {
   }
   main #main-container #home .grid-container .bottom-container #bottom-two #down-button img:hover:after {
     width: 100%;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .container {
+    cursor: pointer;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .bar1, main #main-container #home .grid-container .bottom-container #bottom-two .bar2, main #main-container #home .grid-container .bottom-container #bottom-two .bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 10px;
+    background-color: #333;
+    transition: 1s;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .bar1 {
+    transform: rotate(45deg) translate(42px, 50px);
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .bar2 {
+    opacity: 0;
+    transform: rotate(90deg) translate(80px, -5px);
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .bar3 {
+    transform: rotate(-45deg) translate(-13px, 36px);
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .container:hover .bar1 {
+    transform: rotate(45deg) translate(70px, 80px);
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .container:hover .bar2 {
+    opacity: 1;
+    transform: rotate(90deg) translate(40px, 2px);
+    width: 50px;
+  }
+  main #main-container #home .grid-container .bottom-container #bottom-two .container:hover .bar3 {
+    transform: rotate(-45deg) translate(-43px, 65px);
   }
   main #main-container #home .grid-container .bottom-container #bottom-three {
     width: 40%;

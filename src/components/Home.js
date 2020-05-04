@@ -8,6 +8,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Button from "@material-ui/core/Button";
+import ProfileImage from "./ProfileImage"
 
 const Home = () => {
   return (
@@ -32,7 +33,7 @@ const Home = () => {
             {/* <div id="main-box-one"  > */}
             <div id="main-box-one">
               <div id="main-box-image-container">
-                <img src={profilepic} id="main-box-image" />
+                <ProfileImage image={profilepic} />
                 <div id="main-box-text">
                   <Typography variant="body1">
                     I bring creativity and organization to every project, as
@@ -72,6 +73,11 @@ const Home = () => {
           <div className="bottom-container">
             <div id="bottom-one"></div>
             <div id="bottom-two">
+              {/* <div class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div> */}
               <div id="down-button">
                 <Link
                   to="page1"

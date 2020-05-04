@@ -54,26 +54,30 @@ const AboutMe = () => {
               <Button
                 href="https://drive.google.com/file/d/1V2xJxaN_0R-Slf_geAREuNoO8YLOIkQt/view?usp=sharing"
                 target="_blank"
-                startIcon={<CloudDownloadIcon style={{ color: "#ec6543ff"}}/>}
+                startIcon={<CloudDownloadIcon style={{ color: "#ec6543ff" }} />}
                 size="small"
-                style={{ color: "#384a6cff"}}
-
+                style={{ color: "#384a6cff" }}
               >
                 Formal CV
               </Button>
               <Button
-                startIcon={<GitHubIcon style={{ color: "#ec6543ff"}}/>}
+                startIcon={<GitHubIcon style={{ color: "#ec6543ff" }} />}
                 href="https://github.com/blumaa"
                 target="_blank"
                 size="small"
-                style={{ color: "#384a6cff"}}
-              >My GitHub</Button>
+                style={{ color: "#384a6cff" }}
+              >
+                My GitHub
+              </Button>
             </div>
             <div id="description-two">
               I have a background in education and music that pushes me to think
               outside the coding box. I love learning languages (I speak Spanish
               and I'm learning Deutsch). This helps drive me to increase my
-              knowledge of Javascript, Ruby, and many other web frameworks.
+              knowledge of Javascript, Ruby, and many other web frameworks. My
+              experience as a teacher of English as a Second Language for over
+              ten years transformed me into an excellent manager, communicator,
+              and made me really comfortable working closely with people.
             </div>
           </div>
           <div className="bottom-container">

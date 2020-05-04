@@ -15,6 +15,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.13.1",
     "react-google-slides": "^2.0.0",
+    "react-lazy-load-image-component": "^1.4.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",

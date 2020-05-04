@@ -57,12 +57,12 @@ $stand-in-color: #ec6543ff;
         // background-position: left bottom;
         // background-size: 40%;
         #main-box-image-container {
-          //   border: 1px solid red;
+            // border: 1px solid red;
           // height: 100%;
           //   width: 100%;
           display: flex;
-          //   align-items: center;
-          //   justify-content: center;
+            align-items: center;
+            justify-content: center;
           flex-direction: column;
           #main-box-image {
             // width: 50%;
@@ -128,6 +128,7 @@ $stand-in-color: #ec6543ff;
         align-items: center;
         z-index: 999;
         @include downbutton;
+        @include animated-arrow()
       }
       #bottom-three {
         // height: 100%;
@@ -136,6 +137,47 @@ $stand-in-color: #ec6543ff;
       }
     }
   }
+}
+
+@mixin animated-arrow{
+  .container {
+    cursor: pointer;
+    
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 10px;
+    background-color: #333;
+    transition: 1s;
+  }
+  .bar1{
+      transform: rotate(45deg) translate(42px, 50px)
+  
+  }
+  .bar2{
+    opacity: 0;
+    transform: rotate(90deg) translate(80px, -5px);
+  }
+  .bar3{
+      transform: rotate(-45deg) translate(-13px, 36px);
+  }
+  
+  .container:hover .bar1{
+      transform: rotate(45deg) translate(70px, 80px);
+  }
+  
+  .container:hover .bar2{
+    opacity: 1;
+    transform: rotate(90deg) translate(40px, 2px);
+      width: 50px
+  }
+  
+  .container:hover .bar3{
+    transform: rotate(-45deg) translate(-43px, 65px);
+    }
+  
 }
 
 @mixin tech-stack-master-desktop {
@@ -438,7 +480,7 @@ $stand-in-color: #ec6543ff;
         }
         #project-info-container {
           width: 70%;
-        //   border: 1px solid purple;
+          //   border: 1px solid purple;
           // font-size: 2vh;
           display: flex;
           flex-direction: row;
@@ -448,8 +490,8 @@ $stand-in-color: #ec6543ff;
             // border: 1px solid purple;
             // width: 45%;
             padding: 5px;
-        }
-        #project-backend {
+          }
+          #project-backend {
             // border: 1px solid purple;
             padding: 5px;
             // width: 45%;
@@ -653,7 +695,7 @@ $stand-in-color: #ec6543ff;
       }
     }
     #middle-container {
-    //   border: 1px solid purple;
+      //   border: 1px solid purple;
       height: 75vh;
       font-family: $font-stack;
       display: flex;
@@ -669,16 +711,16 @@ $stand-in-color: #ec6543ff;
         justify-content: center;
         align-items: center;
         #title {
-            width: 30vw;
-            // border: 1px solid purple;
+          width: 30vw;
+          // border: 1px solid purple;
         }
         #email-buttons {
           width: 100%;
           height: 10vh;
           display: flex;
           justify-content: center;
-        //   text-align: center;
-        //   border: 1px solid purple;
+          //   text-align: center;
+          //   border: 1px solid purple;
           #email-text {
             // border: 1px solid purple;
             font-size: 2.5vh;
