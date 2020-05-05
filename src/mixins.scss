@@ -26,6 +26,7 @@ $stand-in-color: #ec6543ff;
       height: 5vh;
       z-index: 0;
       overflow: visible;
+      text-align: center;
       #title-box {
         // background-color: #e1e8f0;
         // background-attachment: fixed;
@@ -35,12 +36,18 @@ $stand-in-color: #ec6543ff;
         // background-position: top center;
         // background-repeat: repeat-x;
         z-index: 0;
-        // border: 1px solid rgba(0, 0, 0, 0.8);
         #title {
+          // border: 1px solid rgba(0, 0, 0, 0.8);
           @include aarontitle;
         }
       }
-      text-align: center;
+      #lng-container{
+        display: flex;
+        flex-direction: column;
+        height: 8vh;
+        // border: 1px solid rgba(0, 0, 0, 0.8);
+
+      }
     }
     #about-me-middle-container {
       // border: 1px solid purple;
@@ -260,8 +267,8 @@ $stand-in-color: #ec6543ff;
             transform: translateY(0);
             opacity: 1;
           }
-          70%{
-            opacity: .5;
+          80% {
+            opacity: 1;
           }
 
           100% {
@@ -296,7 +303,8 @@ $stand-in-color: #ec6543ff;
 @mixin tech-stack-master {
   // position: fixed;
   // margin-top: 40px;
-  // height: 100vh;
+  height: 100vh;
+  width: 100vw;
   // border: purple 1px solid;
   z-index: 0;
   .grid-container {
@@ -573,7 +581,7 @@ $stand-in-color: #ec6543ff;
             box-shadow: 2px 2px 10px 0.5px rgba(124, 124, 124, 0.568);
 
             // border-radius: 10px;
-            height: 50vw;
+            height: 45vw;
           }
           margin-bottom: 5px;
         }

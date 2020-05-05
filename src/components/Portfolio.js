@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { useMappedState } from "redux-react-hook";
 import downarrow from "../images/downarrow.svg";
 import { Link } from "react-scroll";
 import TPReport from "./Portfolio/TPReport";
 import DebtCrusher from "./Portfolio/DebtCrusher";
 import RuinMe from "./Portfolio/RuinMe";
-import Divider from '@material-ui/core/Divider';
-
 
 const Portofolio = () => {
+  const mapState = useCallback((state) => {
+    return {
+      language: state.languageState,
+      theme: state.themeState,
+    };
+  }, []);
+
+  const { theme } = useMappedState(mapState);
   return (
     <>
-      <div id="portfolio">
+      <div id="portfolio" style={{backgroundColor: theme.theme.backgroundColor}}>
         <div className="grid-container">
           <div className="top-container">
             <div id="title-box">
-              <div id="title">Portfolio</div>
+              <div id="title" style={{color: theme.theme.mainText}}>Portfolio</div>
             </div>
           </div>
           <div id="middle-container">

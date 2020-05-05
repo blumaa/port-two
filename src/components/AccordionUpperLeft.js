@@ -1,22 +1,18 @@
-import React, { useState } from "react";
-import clsx from "clsx";
+import React, { useState, useCallback } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import Drawer1 from "../images/drawer1.svg";
-import close from "../images/close.svg";
-import { Route, NavLink } from "react-router-dom";
-import TechStack from "./TechStack";
-import AboutMe from "./AboutMe";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Burger from "@animated-burgers/burger-squeeze";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
+import { useDispatch } from "redux-react-hook";
+import * as actions from "../constants/action_types";
+import { useMappedState } from "redux-react-hook";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { withStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   top: {
@@ -40,13 +36,24 @@ const useStyles = makeStyles({
 });
 
 export default function SwipeableTemporaryDrawer({ flipSwitch }) {
+  const dispatch = useDispatch();
+
   const classes = useStyles();
   const [state, setState] = useState({
     top: false,
     left: false,
-    bottom: false,
+    checked: false,
     right: false,
   });
+
+  const mapState = useCallback((state) => {
+    return {
+      language: state.languageState,
+      theme: state.themeState,
+    };
+  }, []);
+
+  const { theme } = useMappedState(mapState);
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -161,8 +168,37 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
     </div>
   );
 
+  const handleThemeChange = () => {
+    // console.log("theme change");
+    // console.log(theme.theme.backgroundColor);
+    theme.theme.backgroundColor === "#e3e3e3"
+      ? dispatch({ type: actions.SET_DARK_MODE })
+      : dispatch({ type: actions.SET_LIGHT_MODE });
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        checked: !prevState.checked,
+      };
+    });
+  };
+
+  const CustomSwitch = withStyles({
+    switchBase: {
+      color: theme.theme.mainText,
+      '&$checked': {
+        color: theme.theme.mainText,
+      },
+      '&$checked + $track': {
+        backgroundColor: theme.theme.buttonText,
+      },
+    },
+    checked: {},
+    track: {},
+  })(Switch);
+  
   return (
-    <div>
+    <div id="up-left-button-container">
       <>
         <button
           onClick={toggleDrawer("left", true)}
@@ -171,15 +207,26 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
           {state.left ? (
             <Burger isOpen={true} />
           ) : (
-            <div id="burger-button">
-              <div></div>
-              <div></div>
-              <div></div>
+            <div id="burger-button" >
+              <div style={{backgroundColor: theme.theme.mainText}}></div>
+              <div style={{backgroundColor: theme.theme.mainText}}></div>
+              <div style={{backgroundColor: theme.theme.mainText}}></div>
             </div>
           )}
         </button>
+        <FormControlLabel
+          control={
+            <CustomSwitch 
+            size="small" 
+              checked={state.checked}
+              onChange={handleThemeChange}
+              name="checked"
+            />
+          }
+          style={{color: theme.theme.mainText}}
 
-        {/* <Button onClick={toggleDrawer("left", true)}>Left</Button> */}
+        />
+
         <SwipeableDrawer
           transitionDuration={200}
           open={state["left"]}

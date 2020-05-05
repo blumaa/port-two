@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import FrontEnd from "./FrontEnd";
 import BackEnd from "./BackEnd";
 import Database from "./Database";
@@ -8,6 +8,8 @@ import Button from "@material-ui/core/Button";
 
 const TechStack2 = () => {
   const [stack, setStack] = useState(0);
+
+ 
 
   const handleBackClick = (e) => {
     e.preventDefault();

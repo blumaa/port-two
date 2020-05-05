@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback} from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import reactlogo from "../images/react2.svg";
 import js from "../images/js.svg";
@@ -22,15 +22,25 @@ import sqllogo from "../images/sql.svg";
 import stripelogo from "../images/stripe.svg";
 import { Link } from "react-scroll";
 import TechStack2 from "./TechStack2/TechStack2";
+import { useMappedState } from "redux-react-hook";
 
 const TechStack = () => {
+
+  const mapState = useCallback((state) => {
+    return {
+      language: state.languageState,
+      theme: state.themeState
+    };
+  }, []);
+
+  const { theme } = useMappedState(mapState);
   return (
     <>
-      <div id="tech-stack">
+      <div id="tech-stack" style={{backgroundColor: theme.theme.backgroundColor}}>
         <div className="grid-container">
           <div className="top-container">
             <div id="title-box">
-              <div id="title">Tech Stack</div>
+              <div id="title" style={{color: theme.theme.mainText}}>Tech Stack</div>
             </div>
           </div>
           <div id="middle-container">

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
+import { useMappedState } from "redux-react-hook";
 import downarrow from "../images/downarrow.svg";
 import { Link } from "react-scroll";
 import { makeStyles } from "@material-ui/core/styles";
@@ -11,6 +12,35 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 
 const Contact = () => {
+  const mapState = useCallback((state) => {
+    return {
+      language: state.languageState,
+      theme: state.themeState,
+    };
+  }, []);
+
+  const { language, theme } = useMappedState(mapState);
+
+  let title;
+
+  if (language.language === "spanish") {
+    title = "Contacto"
+  } else if (language.language === "deutsch") {
+    title = "Kontakt"
+  } else {
+    title = "Contact"
+  }
+
+  let description;
+
+  if (language.language === "spanish") {
+    description = "Si estás interesado en contratarme, tienes proyectos o ideas que te gustaría discutir, o simplemente quieres saludar, envíame un correo electrónico o conéctate conmigo de otra manera!";
+  } else if (language.language === "deutsch") {
+    description = "Wenn Sie daran interessiert sind, mich einzustellen, wenn Sie Projekte oder Ideen haben, die Sie gerne diskutieren möchten, oder wenn Sie einfach nur hallo sagen wollen, schicken Sie mir eine E-Mail oder verbinden Sie sich auf eine andere Art und Weise mit mir!";
+  } else {
+    description = "If you are interested in hiring me, have projects or ideas you'd like to discuss, or you just want to say hi, send me an email or connect with me a different way!"
+  }
+
   const [copySuccess, setCopySuccess] = useState("");
 
   function copyToClipboard(e) {
@@ -27,32 +57,52 @@ const Contact = () => {
   }
   return (
     <>
-      <div id="contact">
+      <div
+        id="contact"
+        style={{ backgroundColor: theme.theme.backgroundColor }}
+      >
         <div className="grid-container">
           <div className="top-container">
             <div id="title-box">
-              <div id="title">Contact</div>
+              <div id="title" style={{ color: theme.theme.mainText }}>
+                {title}
+              </div>
             </div>
           </div>
           <div id="middle-container">
-            <div id="description-one">
-              <div id="title">If you are interested in hiring me, have projects or ideas you'd like to discuss, or you just want to say hi, send me an email or connect with me a different way!</div>
+            <div id="description-one" style={{ color: theme.theme.mainText }}>
+              <div id="title">
+                {description}
+              </div>
               <div id="email-buttons">
-                <div id="email-text">
+                <div id="email-text" style={{ color: theme.theme.mainText }}>
                   <Button
                     color="default"
                     href="mailto:blumaa@gmail.com"
                     target="_blank"
-                    startIcon={<EmailIcon style={{ color: "#384a6cff" }} />}
+                    startIcon={
+                      <EmailIcon style={{ color: theme.theme.mainText }} />
+                    }
                   />
                   blumaa@gmail.com
                 </div>
                 {document.queryCommandSupported("copy") && (
                   <>
                     <Button onClick={copyToClipboard}>
-                      <FileCopyOutlinedIcon style={{ color: "#ec6543ff" }} />
+                      <FileCopyOutlinedIcon
+                        style={{ color: theme.theme.buttonText }}
+                      />
                     </Button>
-                    {copySuccess}
+                    <div
+                      style={{
+                        height: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      {copySuccess}
+                    </div>
                   </>
                 )}
               </div>
@@ -64,21 +114,27 @@ const Contact = () => {
               <Button
                 variant="link"
                 color="default"
-                startIcon={<GitHubIcon style={{ color: "#384a6cff" }} />}
+                startIcon={
+                  <GitHubIcon style={{ color: theme.theme.mainText }} />
+                }
                 href="https://github.com/blumaa"
                 target="_blank"
               />
               <Button
                 variant="link"
                 color="default"
-                startIcon={<LinkedInIcon style={{ color: "#384a6cff" }}/>}
+                startIcon={
+                  <LinkedInIcon style={{ color: theme.theme.mainText }} />
+                }
                 href="https://www.linkedin.com/in/aaron-blum-0904/"
                 target="_blank"
               />
               <Button
                 variant="link"
                 color="default"
-                startIcon={<InstagramIcon style={{ color: "#384a6cff" }}/>}
+                startIcon={
+                  <InstagramIcon style={{ color: theme.theme.mainText }} />
+                }
                 href="https://www.instagram.com/xblumaa/"
                 target="_blank"
               />

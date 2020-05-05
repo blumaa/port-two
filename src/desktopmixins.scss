@@ -19,7 +19,18 @@ $light-gray: rgb(48, 48, 48);
     justify-content: space-evenly;
     flex-direction: column;
     .top-container {
-      //   border: 3px solid white;
+      // border: 3px solid white;
+      display: flex;
+      justify-content: flex-end;
+      #title-box {
+
+      }
+      #lng-container {
+        display: flex;
+        flex-direction: column;
+        height: 8vh;
+        // border: 1px solid rgba(0, 0, 0, 0.8);
+      }
     }
     #about-me-middle-container {
       //   border: 1px solid purple;
@@ -258,8 +269,8 @@ $light-gray: rgb(48, 48, 48);
             transform: translateY(0);
             opacity: 1;
           }
-          70% {
-            opacity: 0.5;
+          80% {
+            opacity: 1;
           }
 
           100% {
@@ -998,6 +1009,7 @@ $light-gray: rgb(48, 48, 48);
       // box-shadow: 5px 5px 10px 2px rgba(124, 124, 124, 0.568);
       // display: inline-block;
       position: relative;
+
     }
 
     img:after {
