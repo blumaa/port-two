@@ -21,7 +21,7 @@ const RuinMe = () => {
   if (language.language === "spanish") {
     description = "Una aplicación para la gente que quiere mejorar en las citas. Los usuarios pueden dejar sus comentarios pero sólo ver los comentarios de ellos mismos."
   } else if (language.language === "deutsch") {
-    description = "Eine App für Menschen, die sich besser verabreden wollen. Benutzer können Bewertungen hinterlassen, sehen aber nur Bewertungen von sich selbst."
+    description = "Eine App für Menschen, die ihre Erfolgschancen bei der Partnersuche verbessern wollen. Benutzer können Bewertungen hinterlassen, sehen aber nur Bewertungen über sich selbst."
   } else {
     description =
     "An app for people who want to get better at dating. Users can leave reviews but only see reviews of their self."

@@ -38,7 +38,7 @@ const Home = () => {
   if (lng === "spanish") {
     titleText = "Hola, soy Aaron";
   } else if (lng === "deutsch") {
-    titleText = "Hallo, ich heise Aaron";
+    titleText = "Hallo, ich heiße Aaron";
   } else if (lng === "english") {
     titleText = "Hi, I'm Aaron";
   }
@@ -46,7 +46,7 @@ const Home = () => {
   if (lng === "spanish") {
     subtTitleText = "desarrollador, profesor, escritor";
   } else if (lng === "deutsch") {
-    subtTitleText = "entwickler, pädagoge, schriftsteller";
+    subtTitleText = "Entwickler, Pädagoge, Schriftsteller";
   } else {
     subtTitleText = "developer, educator, writer";
   }
@@ -56,7 +56,7 @@ const Home = () => {
       "Llevo creatividad y organización a cada proyecto, así como un motivacion infinita para realizar el sueño de cada cliente.";
   } else if (lng === "deutsch") {
     description =
-      "Ich bringe Kreativität und Organisation in jedes Projekt ein, ebenso wie den unermüdlichen Drang, den Traum jedes Kunden zu verwirklichen.";
+      "Ich bringe Kreativität und Organisation in jedes Projekt ein, ebenso wie den unermüdlichen Drang, den Wunsch jedes Kunden zu verwirklichen.";
   } else {
     description =
       "I bring creativity and organization to every project, as well as a relentless drive to realize each clients' dream.";

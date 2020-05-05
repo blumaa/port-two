@@ -13,7 +13,8 @@ $stand-in-color: #ec6543ff;
     // border: purple 1px solid;
 
     height: 100vh;
-
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -304,12 +305,14 @@ $stand-in-color: #ec6543ff;
   // position: fixed;
   // margin-top: 40px;
   height: 100vh;
-  width: 100vw;
+  // width: 100vw;
   // border: purple 1px solid;
   z-index: 0;
   .grid-container {
     // height: 91%;
     // border: purple 1px solid;
+    margin: 0;
+    padding: 0;
 
     // height: 100vh;
 
@@ -382,7 +385,7 @@ $stand-in-color: #ec6543ff;
           }
           #stack-icon-container {
             height: 70%;
-            width: 90%;
+            // width: 90%;
             div {
               // border: 1px solid rgba(0, 0, 0, 0.8);
               display: flex;
@@ -395,7 +398,7 @@ $stand-in-color: #ec6543ff;
           }
         }
         #last-button-container {
-          width: 10%;
+          // width: 5%;
           height: 100%;
           // border: 1px solid rgba(0, 0, 0, 0.8);
           display: flex;
@@ -415,7 +418,7 @@ $stand-in-color: #ec6543ff;
         }
         #next-button-container {
           // margin-right: 3px;
-          width: 10%;
+          // width: 5%;
           height: 100%;
           // border: 1px solid rgba(0, 0, 0, 0.8);
           display: flex;
@@ -489,6 +492,8 @@ $stand-in-color: #ec6543ff;
   .grid-container {
     // height: 100%;
     // border: purple 1px solid;
+    margin: 0;
+    padding: 0;
 
     // height: 100vh;
 
@@ -646,6 +651,8 @@ $stand-in-color: #ec6543ff;
   .grid-container {
     // border: purple 1px solid;
     // height: 100vh;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: column;
@@ -760,6 +767,8 @@ $stand-in-color: #ec6543ff;
   .grid-container {
     // border: purple 1px solid;
     // height: 100vh;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: column;
@@ -1672,8 +1681,8 @@ $stand-in-color: #ec6543ff;
 @mixin burger {
   .burger {
     z-index: 999;
-    height: 3em;
-    width: 3em;
+    // height: 3em;
+    // width: 3em;
     position: relative;
     font-size: 12px;
     cursor: pointer;

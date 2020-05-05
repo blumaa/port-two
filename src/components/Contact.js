@@ -36,7 +36,7 @@ const Contact = () => {
   if (language.language === "spanish") {
     description = "Si estás interesado en contratarme, tienes proyectos o ideas que te gustaría discutir, o simplemente quieres saludar, envíame un correo electrónico o conéctate conmigo de otra manera!";
   } else if (language.language === "deutsch") {
-    description = "Wenn Sie daran interessiert sind, mich einzustellen, wenn Sie Projekte oder Ideen haben, die Sie gerne diskutieren möchten, oder wenn Sie einfach nur hallo sagen wollen, schicken Sie mir eine E-Mail oder verbinden Sie sich auf eine andere Art und Weise mit mir!";
+    description = "Wenn Sie daran interessiert sind, mich einzustellen, oder wenn Sie Projekte oder Ideen haben, die Sie gerne besprechen möchten, oder wenn Sie einfach nur hallo sagen wollen, schicken Sie mir eine E-Mail oder verbinden Sie sich auf eine andere Art und Weise mit mir!";
   } else {
     description = "If you are interested in hiring me, have projects or ideas you'd like to discuss, or you just want to say hi, send me an email or connect with me a different way!"
   }

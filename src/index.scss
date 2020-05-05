@@ -27,7 +27,7 @@ body {
   padding: 0;
   // border: 1px solid blue;
   height: 100vh;
-  width: 100vw;
+  // width: 100vw;
   // position: absolute;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,8 @@ body {
     // overflow: hidden;
     width: 100%;
     // top: 0;
-    // margin: 0;
+    margin: 0;
+    padding: 0;
     // background-color: #d6d6d6;
     // box-shadow: 1px 1px 5px rgb(124, 124, 124);
     z-index: 1;
@@ -104,7 +105,7 @@ body {
         }
       }
       .language {
-        margin-right: 4vw;
+        // margin-right: 4vw;
         display: flex;
         flex-direction: column;
         // border: 2px solid red;
@@ -128,6 +129,8 @@ body {
     // bottom: 0;
     // border: purple 1px solid;
     #main-container {
+      margin: 0;
+      padding: 0;
       #home {
         @include home-master;
       }

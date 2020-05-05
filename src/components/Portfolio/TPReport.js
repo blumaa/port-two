@@ -21,7 +21,7 @@ const TPReport = () => {
   if (language.language === "spanish") {
     description = "Durante esta extraña época del virus de la Corona quise crear una aplicación fácil de usar que ayudara a aumentar el distanciamiento social permitiendo a los usuarios informar y comprobar si las tiendas tienen o no papel higiénico.";
   } else if (language.language === "deutsch") {
-    description = "Während dieser merkwürdigen Zeit des Corona-Virus wollte ich eine einfach zu bedienende App entwickeln, die die soziale Distanzierung erhöhen würde, indem sie es den Benutzern ermöglicht, zu melden und zu überprüfen, ob es in den Geschäften Toilettenpapier gibt oder nicht.";
+    description = "Während dieser merkwürdigen Zeit des Coronavirus habe ich eine einfach zu bedienende App entwickelt, die die soziale Distanzierung unterstützt, indem sie unnötige Supermarkt-Besuche vermeidet:  Sie ermöglicht Nutzern zu melden und zu überprüfen, ob es in den Geschäften Toilettenpapier gibt oder nicht.";
   } else {
     description =
       "During this strange, Corona-virus time I wanted to create an easy to use app that would help increase social distancing by allowing users to report and check if stores do or do not have toilet paper.";
