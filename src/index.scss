@@ -27,7 +27,7 @@ body {
   padding: 0;
   // border: 1px solid blue;
   height: 100vh;
-  // width: 100vw;
+  width: 100vw;
   // position: absolute;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ body {
     // height: 10vh;
     position: fixed;
     // overflow: hidden;
-    // width: 100%;
+    width: 100%;
     // top: 0;
     // margin: 0;
     // background-color: #d6d6d6;
@@ -50,13 +50,13 @@ body {
     z-index: 1;
     // background-color: orange;
     display: flex;
-    flex-direction: center;
-    justify-content: center;
-    align-items: center;
-    // border: 3px solid purple;
+    // flex-direction: center;
+    // justify-content: flex-start;
+    // align-items: center;
+    // border: 1px solid purple;
 
     #navbar-container {
-      // width: 100%;
+      width: 100%;
       // border: 1px solid red;
       // height: 100%;
       // display: grid;
@@ -64,19 +64,20 @@ body {
       display: flex;
       // flex-direction: row;
       z-index: 1;
-      // justify-content: space-evenly;
+      justify-content: space-between;
       // #menu-container {
       //   @include burger;
       // }
-      width: 30vw;
-      margin: 1vh 0vw 0vw 0vw;
+      // width: 30vw;
+      // margin: 0vh 0vw 0vw 2vw;
       #up-left-button-container {
-        width: 100%;
+        margin-left: 2vw;
+        // width: 80%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         // border: 2px solid red;
         .accordion-button-container {
-          // width: 20vw;
+          width: 10vw;
           // align-self: flex-start;
           outline: none;
           // display: flex;
@@ -102,9 +103,16 @@ body {
           }
         }
       }
+      .language {
+        margin-right: 4vw;
+        display: flex;
+        flex-direction: column;
+        // border: 2px solid red;
+        // align-self: flex-end;
+      }
     }
   }
-
+  
   /* main */
   main {
     // width: 100vw;
@@ -192,7 +200,7 @@ body {
     // height: 10vh;
     position: fixed;
     // overflow: hidden;
-    // width: 100%;
+    width: 100%;
     top: 0;
     margin: 0;
     // background-color: #d6d6d6;
@@ -200,11 +208,12 @@ body {
     z-index: 1;
 
     #navbar-container {
+      width: 100%;
       // border: 1px solid red;
       display: flex;
       flex-direction: row;
       z-index: 1;
-      // justify-content: space-evenly;
+      justify-content: space-between;
       // align-items: center;
       // border: 1px solid red;
       #up-left-button-container {
@@ -231,6 +240,12 @@ body {
             }
           }
         }
+      }
+      .language {
+        display: flex;
+        flex-direction: column;
+        // border: 2px solid red;
+        // align-self: flex-end;
       }
     }
   }

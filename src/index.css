@@ -31,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -40,24 +41,23 @@ body {
   header {
     font-family: "Proza Libre", sans-serif;
     position: fixed;
+    width: 100%;
     z-index: 1;
     display: flex;
-    flex-direction: center;
-    justify-content: center;
-    align-items: center;
   }
   header #navbar-container {
-    display: flex;
-    z-index: 1;
-    width: 30vw;
-    margin: 1vh 0vw 0vw 0vw;
-  }
-  header #navbar-container #up-left-button-container {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    z-index: 1;
+    justify-content: space-between;
+  }
+  header #navbar-container #up-left-button-container {
+    margin-left: 2vw;
+    display: flex;
+    justify-content: flex-start;
   }
   header #navbar-container #up-left-button-container .accordion-button-container {
+    width: 10vw;
     outline: none;
     font-size: 0%;
     padding: 0;
@@ -73,6 +73,11 @@ body {
     height: 3px;
     background-color: #3a4a6fff;
     margin: 5px 0;
+  }
+  header #navbar-container .language {
+    margin-right: 4vw;
+    display: flex;
+    flex-direction: column;
   }
 
   /* main */
@@ -841,14 +846,17 @@ body {
   header {
     font-family: "Proza Libre", sans-serif;
     position: fixed;
+    width: 100%;
     top: 0;
     margin: 0;
     z-index: 1;
   }
   header #navbar-container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     z-index: 1;
+    justify-content: space-between;
   }
   header #navbar-container #up-left-button-container {
     width: 10vw;
@@ -871,6 +879,10 @@ body {
     width: 25px;
     height: 3px;
     margin: 5px 0;
+  }
+  header #navbar-container .language {
+    display: flex;
+    flex-direction: column;
   }
 
   /* main */

@@ -5,8 +5,6 @@ import { Link } from "react-scroll";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
-import Avatar from "@material-ui/core/Avatar";
-import Chip from "@material-ui/core/Chip";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles({
@@ -44,13 +42,13 @@ const AboutMe = () => {
 
   if (language.language === "spanish") {
     description =
-      "Soy un desarrollador de software de Chicago, Illinois, EE.UU., actualmente vivo en Berlín, Alemania. Tengo mucha experiencia en la creación de aplicaciones organizadas y dinámicas de una sola página usando React-Redux, Javascript y SASS para un estilo extra. Utilizo MongoDB, Node.js, PostgresQL y Ruby on Rails para crear arquitecturas orientadas a servicios RESTful (SOA) en el backend. Recientemente he trabajado con GraphQL y Apollo para obtener una API única y me encanta aprender nuevas tecnologías.";
+      "Soy un desarrollador de software de Chicago, Illinois, EE.UU., pero vivo en Berlín, Alemania. Tengo mucha experiencia en la creación de aplicaciones organizadas y dinámicas de una sola página usando React-Redux, Javascript y SASS para un estilo extra. Utilizo MongoDB, Node.js, PostgresQL y Ruby on Rails para crear arquitecturas orientadas a servicios RESTful (SOA) en el backend. Recientemente he trabajado con GraphQL y Apollo para obtener una API única y me encanta aprender nuevas tecnologías.";
   } else if (language.language === "deutsch") {
     description =
-      "Ich bin ein Softwareentwickler aus Chicago, Illinois, USA, und lebe derzeit in Berlin, Deutschland. Ich bin am erfahrensten in der Erstellung organisierter, dynamischer, einseitiger Anwendungen unter Verwendung von React-Redux, Javascript und SASS für zusätzliches Styling. Ich verwende MongoDB, Node.js, PostgresQL und Ruby on Rails, um RESTful serviceorientierte Architekturen (SOA) auf dem Backend zu erstellen. In letzter Zeit habe ich mit GraphQL und Apollo für einzigartiges API-Holen gearbeitet, und ich liebe es, neue Technologien zu erlernen.";
+      "Ich bin ein Softwareentwickler aus Chicago, Illinois, USA, und lebe in Berlin, Deutschland. Ich bin am erfahrensten in der Erstellung organisierter, dynamischer, einseitiger Anwendungen unter Verwendung von React-Redux, Javascript und SASS für zusätzliches Styling. Ich verwende MongoDB, Node.js, PostgresQL und Ruby on Rails, um RESTful serviceorientierte Architekturen (SOA) auf dem Backend zu erstellen. In letzter Zeit habe ich mit GraphQL und Apollo für einzigartiges API-Holen gearbeitet, und ich liebe es, neue Technologien zu erlernen.";
   } else {
     description =
-      "I'm a software developer from Chicago, Illinois, USA, currently living in Berlin, Germany. I am most experienced in creating organized, dynamic, single page applications using React-Redux, Javascript, and SASS for extra styling. I use MongoDB, Node.js, PostgresQL, and Ruby on Rails to create RESTful service oriented architectures (SOA) on the backend. Recently I've worked with GraphQL and Apollo for unique API fetching and I love learning new technologies.";
+      "I'm a software developer from Chicago, Illinois, USA, but I live in Berlin, Germany. I am most experienced in creating organized, dynamic, single page applications using React-Redux, Javascript, and SASS for extra styling. I use MongoDB, Node.js, PostgresQL, and Ruby on Rails to create RESTful service oriented architectures (SOA) on the backend. Recently I've worked with GraphQL and Apollo for unique API fetching and I love learning new technologies.";
   }
 
   if (language.language === "spanish") {
@@ -91,7 +89,7 @@ const AboutMe = () => {
               /> */}
 
               <Button
-                href="https://drive.google.com/file/d/1V2xJxaN_0R-Slf_geAREuNoO8YLOIkQt/view?usp=sharing"
+                href="https://drive.google.com/file/d/1PbPFIueXuMEAL3Hy7GiRXmqh6HBAhHsL/view?usp=sharing"
                 target="_blank"
                 startIcon={
                   <CloudDownloadIcon

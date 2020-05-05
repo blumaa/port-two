@@ -69,7 +69,7 @@ const Home = () => {
           <div className="top-container">
             <div id="title-box"></div>
             <div id="lng-container">
-              <LanguageSwitch />
+              {/* <LanguageSwitch /> */}
             </div>
           </div>
           <div id="about-me-middle-container">
