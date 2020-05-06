@@ -33,7 +33,7 @@ const AboutMe = () => {
   let description2;
 
   if (language.language === "spanish") {
-    title = "Sobre Yo";
+    title = "Sobre mí";
   } else if (language.language === "deutsch") {
     title = "Über mich";
   } else {
@@ -52,7 +52,7 @@ const AboutMe = () => {
   }
 
   if (language.language === "spanish") {
-    description2 = "Tengo una formación en educación y música que me empuja a pensar fuera de la caja de códigos. Me encanta aprender idiomas (hablo español y estoy aprendiendo alemán). Esto me ayuda a aumentar mi conocimiento de Javascript, Ruby, y muchos otros marcos de trabajo web.Mi experiencia como profesora de inglés como segunda lengua durante más de diez años me transformó en una excelente director, comunicador, y me hizo sentir muy cómodo trabajando de cerca con la gente."
+    description2 = "Tengo una formación en educación y música que me empuja a pensar fuera de la caja de códigos. Me encanta aprender idiomas (hablo español y estoy aprendiendo alemán). Esto me ayuda a aumentar mi conocimiento de Javascript, Ruby, y muchos otros marcos de trabajo web.Mi experiencia como profesora de inglés como segunda lengua durante más de diez años me transformó en un excelente director, comunicador, y me hizo sentir muy cómodo trabajando de cerca con la gente."
   } else if (language.language === "deutsch") {
     description2 = "Ich habe einen pädagogischen und musikalischen Hintergrund, was meine Arbeit als Entwickler um zusätzliche Perspektiven bereichert. Ich liebe es, Sprachen zu lernen (ich spreche Spanisch und ich lerne Deutsch). Das hilft mir, meine Kenntnisse in Javascript, Ruby und vielen anderen Web-Frameworks zu erweitern. Meine mehr als zehnjährige Berufserfahrung als Lehrer für Englisch als Zweitsprache hat mich zu einem ausgezeichneten Teamleiter und Kommunikator gemacht, der sich in der  engen Zusammenarbeit mit anderen Menschen sehr wohl fühlt."
   } else {
@@ -67,7 +67,7 @@ const AboutMe = () => {
         id="about-me"
         style={{ backgroundColor: theme.theme.backgroundColor }}
       >
-        <div className="grid-container">
+        <div className="grid-container" data-aos="fade-in">
           <div className="top-container">
             <div id="title-box">
               <div id="title" style={{ color: theme.theme.mainText }}>

@@ -4,6 +4,8 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
 import { useMappedState } from "redux-react-hook";
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-165021071-1');
 
 function App() {
   const mapState = useCallback((state) => {

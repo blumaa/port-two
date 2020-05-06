@@ -53,7 +53,7 @@ const Home = () => {
 
   if (lng === "spanish") {
     description =
-      "Llevo creatividad y organización a cada proyecto, así como un motivacion infinita para realizar el sueño de cada cliente.";
+      "Llevo creatividad y organización a cada proyecto, así como una motivación infinita para realizar el sueño de cada cliente.";
   } else if (lng === "deutsch") {
     description =
       "Ich bringe Kreativität und Organisation in jedes Projekt ein, ebenso wie den unermüdlichen Drang, den Wunsch jedes Kunden zu verwirklichen.";
@@ -152,6 +152,7 @@ const Home = () => {
                     src={downarrow}
                     id="accordion-icon"
                     style={{ fill: theme.theme.mainText }}
+                    
                   />
                 </Link>
               </div>

@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   function languageReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
       case "SET_LANGUAGE": {
-        console.log('reducer', action)
+        // console.log('reducer', action)
         return {
           ...state,
           language: action.language

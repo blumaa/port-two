@@ -378,7 +378,7 @@ body {
     align-self: center;
   }
   main #main-container #about-me .grid-container #middle-container #description-one {
-    font-size: 2.25vh;
+    font-size: 2vh;
     display: flex;
     align-items: center;
   }
@@ -393,7 +393,7 @@ body {
     font-family: "Proza Libre", sans-serif;
   }
   main #main-container #about-me .grid-container #middle-container #description-two {
-    font-size: 2.25vh;
+    font-size: 2vh;
   }
   main #main-container #about-me .grid-container .bottom-container {
     height: 7vh;

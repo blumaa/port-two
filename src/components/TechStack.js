@@ -36,8 +36,8 @@ const TechStack = () => {
   const { theme } = useMappedState(mapState);
   return (
     <>
-      <div id="tech-stack" style={{backgroundColor: theme.theme.backgroundColor}}>
-        <div className="grid-container">
+      <div id="tech-stack" style={{backgroundColor: theme.theme.backgroundColor}} >
+        <div className="grid-container" data-aos="fade-in">
           <div className="top-container">
             <div id="title-box">
               <div id="title" style={{color: theme.theme.mainText}}>Tech Stack</div>

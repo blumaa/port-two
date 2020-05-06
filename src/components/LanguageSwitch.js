@@ -18,10 +18,10 @@ const LanguageSwitch = () => {
   // console.log(language);
 
   const handleLngChange = (lng) => {
-    console.log(lng);
+    // console.log(lng);
 
     let newLanguage = lng;
-    console.log(newLanguage);
+    // console.log(newLanguage);
     dispatch({ type: actions.SET_LANGUAGE, language: newLanguage });
   };
   return (

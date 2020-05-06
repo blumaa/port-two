@@ -45,14 +45,14 @@ const Contact = () => {
 
   function copyToClipboard(e) {
     let str = "blumaa@gmail.com";
-    var el = document.createElement("textarea");
+    var el = document.createElement("input");
     el.value = str;
-    el.setAttribute("readonly", "");
+    // el.setAttribute("readonly", "");
     el.style = { position: "absolute", left: "-9999px" };
     document.body.appendChild(el);
+    // console.log(el.value)
     el.select();
     document.execCommand("copy");
-
     setCopySuccess("Copied!");
   }
   return (
@@ -61,7 +61,7 @@ const Contact = () => {
         id="contact"
         style={{ backgroundColor: theme.theme.backgroundColor }}
       >
-        <div className="grid-container">
+        <div className="grid-container" data-aos="fade-in">
           <div className="top-container">
             <div id="title-box">
               <div id="title" style={{ color: theme.theme.mainText }}>
@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
                 {document.queryCommandSupported("copy") && (
                   <>
-                    <Button onClick={copyToClipboard}>
+                    <Button onClick={()=>copyToClipboard()}>
                       <FileCopyOutlinedIcon
                         style={{ color: theme.theme.buttonText }}
                       />
