@@ -23,7 +23,6 @@ $light-gray: rgb(48, 48, 48);
       display: flex;
       justify-content: flex-end;
       #title-box {
-
       }
       #lng-container {
         display: flex;
@@ -80,6 +79,7 @@ $light-gray: rgb(48, 48, 48);
             // width: 50%;
             // border: 1px solid red;
             height: 30vh;
+            // width: 30vw;
             margin-right: 20px;
           }
           #main-box-text {
@@ -951,7 +951,19 @@ $light-gray: rgb(48, 48, 48);
             height: 4vh;
             // box-shadow: 5px 5px 10px 2px rgba(124, 124, 124, 0.568);
             // display: inline-block;
-            transform: rotate(180deg);
+          }
+          img:hover {
+            animation: scaleupup 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+      
+          }
+      
+          @keyframes scaleupup{
+            0% {
+            }
+            100% {
+              transform: scale(1.5);
+              transform: translateY(-10px)
+            }
           }
         } // height: 100%;
         width: 20%;
@@ -1009,21 +1021,19 @@ $light-gray: rgb(48, 48, 48);
       // box-shadow: 5px 5px 10px 2px rgba(124, 124, 124, 0.568);
       // display: inline-block;
       position: relative;
+    }
+    img:hover {
+      animation: scaleup 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
 
     }
 
-    img:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 100%;
-      width: 0;
-      height: 2px;
-      background-color: black;
-      transition: width 0.3s ease-in-out;
-    }
-    img:hover:after {
-      width: 100%;
+    @keyframes scaleup{
+      0% {
+      }
+      100% {
+        transform: scale(1.5);
+        transform: translateY(5px)
+      }
     }
   }
 }

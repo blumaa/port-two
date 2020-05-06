@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { useMappedState } from "redux-react-hook";
-import downarrow from "../images/downarrow.svg";
+import uparrow from "../images/uparrow.svg";
 import { Link } from "react-scroll";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -48,8 +48,8 @@ const Contact = () => {
     var el = document.createElement("input");
     el.value = str;
     // el.setAttribute("readonly", "");
-    el.style = { position: "absolute", left: "-9999px" };
-    document.body.appendChild(el);
+    el.style = { position: "float", display: "none" };
+    // document.body.appendChild(el);
     // console.log(el.value)
     el.select();
     document.execCommand("copy");
@@ -152,7 +152,7 @@ const Contact = () => {
                   offset={0}
                   duration={500}
                 >
-                  <img src={downarrow} id="accordion-icon" />
+                  <img src={uparrow} id="accordion-icon" />
                 </Link>
               </div>{" "}
             </div>

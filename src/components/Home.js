@@ -3,7 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import Typography from "@material-ui/core/Typography";
 import downarrow from "../images/downarrow.svg";
 import { Link } from "react-scroll";
-import profilepic from "../images/profile1.svg";
+import profilepic from "../images/profile2.png";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
