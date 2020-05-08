@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useMappedState } from "redux-react-hook";
 import uparrow from "../images/uparrow.svg";
 import { Link } from "react-scroll";
@@ -10,8 +10,12 @@ import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const Contact = () => {
+  const [email] = useState("blumaa@gmail.com");
+  const [copied, setCopied] = useState(false);
+
   const mapState = useCallback((state) => {
     return {
       language: state.languageState,
@@ -24,37 +28,31 @@ const Contact = () => {
   let title;
 
   if (language.language === "spanish") {
-    title = "Contacto"
+    title = "Contacto";
   } else if (language.language === "deutsch") {
-    title = "Kontakt"
+    title = "Kontakt";
   } else {
-    title = "Contact"
+    title = "Contact";
   }
 
   let description;
 
   if (language.language === "spanish") {
-    description = "Si estás interesado en contratarme, tienes proyectos o ideas que te gustaría discutir, o simplemente quieres saludar, envíame un correo electrónico o conéctate conmigo de otra manera!";
+    description =
+      "Si estás interesado en contratarme, tienes proyectos o ideas que te gustaría discutir, o simplemente quieres saludar, envíame un correo electrónico o conéctate conmigo de otra manera!";
   } else if (language.language === "deutsch") {
-    description = "Wenn Sie daran interessiert sind, mich einzustellen, oder wenn Sie Projekte oder Ideen haben, die Sie gerne besprechen möchten, oder wenn Sie einfach nur hallo sagen wollen, schicken Sie mir eine E-Mail oder verbinden Sie sich auf eine andere Art und Weise mit mir!";
+    description =
+      "Wenn Sie daran interessiert sind, mich einzustellen, oder wenn Sie Projekte oder Ideen haben, die Sie gerne besprechen möchten, oder wenn Sie einfach nur hallo sagen wollen, schicken Sie mir eine E-Mail oder verbinden Sie sich auf eine andere Art und Weise mit mir!";
   } else {
-    description = "If you are interested in hiring me, have projects or ideas you'd like to discuss, or you just want to say hi, send me an email or connect with me a different way!"
+    description =
+      "If you are interested in hiring me, have projects or ideas you'd like to discuss, or you just want to say hi, send me an email or connect with me a different way!";
   }
 
-  const [copySuccess, setCopySuccess] = useState("");
+  const handleCopy = () => {
+    setCopied(true);
+    setTimeout(()=>setCopied(false), 2000);
+  };
 
-  function copyToClipboard(e) {
-    let str = "blumaa@gmail.com";
-    var el = document.createElement("input");
-    el.value = str;
-    // el.setAttribute("readonly", "");
-    el.style = { position: "float", display: "none" };
-    // document.body.appendChild(el);
-    // console.log(el.value)
-    el.select();
-    document.execCommand("copy");
-    setCopySuccess("Copied!");
-  }
   return (
     <>
       <div
@@ -63,54 +61,42 @@ const Contact = () => {
       >
         <div className="grid-container" data-aos="fade-in">
           <div className="top-container">
+            
+          </div>
+          <div id="middle-container">
+            <div id="description-one" style={{ color: theme.theme.mainText }}>
             <div id="title-box">
               <div id="title" style={{ color: theme.theme.mainText }}>
                 {title}
               </div>
             </div>
-          </div>
-          <div id="middle-container">
-            <div id="description-one" style={{ color: theme.theme.mainText }}>
-              <div id="title">
-                {description}
-              </div>
               <div id="email-buttons">
+                <div id="email-icon">
+                  <EmailIcon style={{ color: theme.theme.mainText }} />
+                </div>
                 <div id="email-text" style={{ color: theme.theme.mainText }}>
-                  <Button
-                    color="default"
-                    href="mailto:blumaa@gmail.com"
-                    target="_blank"
-                    startIcon={
-                      <EmailIcon style={{ color: theme.theme.mainText }} />
-                    }
-                  />
                   blumaa@gmail.com
                 </div>
-                {document.queryCommandSupported("copy") && (
-                  <>
-                    <Button onClick={()=>copyToClipboard()}>
-                      <FileCopyOutlinedIcon
-                        style={{ color: theme.theme.buttonText }}
-                      />
-                    </Button>
-                    <div
-                      style={{
-                        height: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      {copySuccess}
-                    </div>
-                  </>
-                )}
+                <div id="copy-button">
+                  <CopyToClipboard text={email} onCopy={() => handleCopy()}>
+                    <FileCopyOutlinedIcon
+                      style={{ color: theme.theme.buttonText }}
+                    />
+                  </CopyToClipboard>
+                  <div
+                    style={{
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    {copied ? "Copied!" : ""}
+                  </div>
+                </div>
               </div>
-            </div>
-            {/* <div id="description-two">
-              Connect with me:
-            </div> */}
-            <div id="links">
+              <div id="title">{description}</div>
+              <div id="links">
               <Button
                 variant="link"
                 color="default"
@@ -139,7 +125,11 @@ const Contact = () => {
                 target="_blank"
               />
             </div>
-            <div></div>
+            </div>
+            {/* <div id="description-two">
+              Connect with me:
+            </div> */}
+           
           </div>
           <div className="bottom-container">
             <div id="bottom-one"></div>
@@ -152,7 +142,7 @@ const Contact = () => {
                   offset={0}
                   duration={500}
                 >
-                  <img src={uparrow} id="accordion-icon" />
+                  <img src={uparrow} />
                 </Link>
               </div>{" "}
             </div>

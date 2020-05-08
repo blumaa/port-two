@@ -1,0 +1,99 @@
+<svg id="baselayer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e8e8e8;
+      }
+
+      .cls-2 {
+        fill: #cdcdcd;
+      }
+
+      .cls-3 {
+        fill: #324d5b;
+      }
+
+      .cls-4 {
+        fill: #e2574c;
+      }
+
+      .cls-5 {
+        fill: #cb4e44;
+      }
+
+      .cls-6 {
+        fill: #2d4552;
+      }
+
+      .cls-7 {
+        fill: #e4e7e7;
+      }
+
+      .cls-8 {
+        fill: #d8dbdb;
+      }
+
+      .cls-9 {
+        fill: #3db39e;
+      }
+
+      .cls-10 {
+        fill: #3aaa96;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-12 {
+        fill: #f2f2f2;
+      }
+
+      .cls-13 {
+        fill: #2f4956;
+      }
+    </style>
+  </defs>
+  <title>ufo-orbitting-moon</title>
+  <g id="moon">
+    <path id="circlebackground" class="cls-1" d="M550,311c0,127-103,230-230,230S90,438,90,311,193,81,320,81C446.81,81.53,549.47,184.19,550,311Z" transform="translate(-90 -81)"/>
+    <g id="innerobjects">
+      <path id="shine2" class="cls-2" d="M118,277.31a7.1,7.1,0,0,1-1.38-.14,7,7,0,0,1-5.49-8.24h0a213.68,213.68,0,0,1,38.25-85.35,7,7,0,0,1,11.2,8.4,199.39,199.39,0,0,0-35.73,79.73,7,7,0,0,1-6.85,5.61Z" transform="translate(-90 -81)"/>
+      <path id="shine1" class="cls-2" d="M185.05,162.48a7,7,0,0,1-4.59-12.28,214.51,214.51,0,0,1,22.37-17,7,7,0,0,1,7.72,11.68,200.14,200.14,0,0,0-20.91,15.89A7,7,0,0,1,185.05,162.48Z" transform="translate(-90 -81)"/>
+      <circle id="hole6" class="cls-2" cx="167.99" cy="171.08" r="35.38"/>
+      <path id="hole5" class="cls-2" d="M545.6,356a228.89,228.89,0,0,1-23.32,64.6A35.39,35.39,0,1,1,545.6,356Z" transform="translate(-90 -81)"/>
+      <circle id="hole4" class="cls-2" cx="186.02" cy="319.89" r="35.38"/>
+      <circle id="hole3" class="cls-2" cx="298.74" cy="343.89" r="24"/>
+      <circle id="hole2" class="cls-2" cx="326.77" cy="183.17" r="24"/>
+      <circle id="hole1" class="cls-2" cx="306.72" cy="125.51" r="12"/>
+    </g>
+  </g>
+  <g id="ufo">
+    <path id="wheels" class="cls-3" d="M325.58,376.06a19.22,19.22,0,1,0,19.22,19.21A19.27,19.27,0,0,0,325.58,376.06Zm51.25-12.82a19.22,19.22,0,1,0,19.22,19.22A19.28,19.28,0,0,0,376.83,363.24Zm-102.5,0a19.22,19.22,0,1,0,19.22,19.22A19.28,19.28,0,0,0,274.33,363.24Z" transform="translate(-90 -81)"/>
+    <path id="base" class="cls-4" d="M266.64,314.24c32.51-20,85.21-20,117.72,0s32.51,52.53,0,72.39c-32.51,20-85.21,20-117.72,0S234.13,334.25,266.64,314.24Z" transform="translate(-90 -81)"/>
+    <path id="baseshadow" class="cls-5" d="M274.65,381.82c-31.39-19.38-32.51-50.29-3.2-70.31-1.6.8-3.21,1.76-4.81,2.73-32.51,20-32.51,52.53,0,72.39,32.51,20,85.21,20,117.72,0,1.12-.64,2.24-1.45,3.2-2.09C354.89,401.84,305.56,400.88,274.65,381.82Z" transform="translate(-90 -81)"/>
+    <path id="saucer" class="cls-3" d="M253,278.52c40-23.7,104.9-23.7,144.94,0s40,62.3,0,86-104.9,23.71-144.94,0S213,302.38,253,278.52Z" transform="translate(-90 -81)"/>
+    <path id="saucershadow" class="cls-6" d="M404.54,358.28c-40,23.7-104.91,23.7-144.94,0-32.36-19.22-38.6-47.89-18.9-70.79-27.07,23.7-22.91,56.21,12.33,77.19,40,23.71,104.9,23.71,144.94,0a79.94,79.94,0,0,0,18.74-15.21A95.67,95.67,0,0,1,404.54,358.28Z" transform="translate(-90 -81)"/>
+    <path id="bubble" class="cls-7" d="M325.58,228.71a64,64,0,0,1,64.06,64.06c0,35.4-28.67,51.25-64.06,51.25s-64.06-15.85-64.06-51.25A64,64,0,0,1,325.58,228.71Z" transform="translate(-90 -81)"/>
+    <path id="leftbubble" class="cls-8" d="M261.52,292.77C261.52,328,290,343.86,325.1,344h.48V228.71A64,64,0,0,0,261.52,292.77Z" transform="translate(-90 -81)"/>
+    <path id="head" class="cls-9" d="M325.58,344c14.41,0,27.71-2.56,38.44-8.16V292.77a38.44,38.44,0,0,0-76.88,0v43.09C297.87,341.46,311.17,344,325.58,344Z" transform="translate(-90 -81)"/>
+    <path id="lefthead" class="cls-10" d="M287.14,292.77v43.09C297.71,341.3,311,344,325.26,344h.32V254.34A38.44,38.44,0,0,0,287.14,292.77Z" transform="translate(-90 -81)"/>
+    <path id="eyebackground" class="cls-11" d="M325.58,280a19.22,19.22,0,1,1-19.22,19.22A19.28,19.28,0,0,1,325.58,280Z" transform="translate(-90 -81)"/>
+    <path id="leftshadow" class="cls-12" d="M325.58,280a19.22,19.22,0,0,0,0,38.44Z" transform="translate(-90 -81)"/>
+    <path id="eye" class="cls-3" d="M325.58,289.57a9.61,9.61,0,1,1-9.61,9.61A9.65,9.65,0,0,1,325.58,289.57Z" transform="translate(-90 -81)"/>
+    <path id="lefteye" class="cls-13" d="M325.58,289.57a9.61,9.61,0,1,0,0,19.22Z" transform="translate(-90 -81)"/>
+  </g>
+  <g id="moon2">
+    <path id="circlebackground-2" data-name="circlebackground" class="cls-1" d="M550,311c0,127-103,230-230,230S90,438,90,311,193,81,320,81C446.81,81.53,549.47,184.19,550,311Z" transform="translate(-90 -81)"/>
+    <g id="innerobjects-2" data-name="innerobjects">
+      <path id="shine2-2" data-name="shine2" class="cls-2" d="M118,277.31a7.1,7.1,0,0,1-1.38-.14,7,7,0,0,1-5.49-8.24h0a213.68,213.68,0,0,1,38.25-85.35,7,7,0,0,1,11.2,8.4,199.39,199.39,0,0,0-35.73,79.73,7,7,0,0,1-6.85,5.61Z" transform="translate(-90 -81)"/>
+      <path id="shine1-2" data-name="shine1" class="cls-2" d="M185.05,162.48a7,7,0,0,1-4.59-12.28,214.51,214.51,0,0,1,22.37-17,7,7,0,0,1,7.72,11.68,200.14,200.14,0,0,0-20.91,15.89A7,7,0,0,1,185.05,162.48Z" transform="translate(-90 -81)"/>
+      <circle id="hole6-2" data-name="hole6" class="cls-2" cx="167.99" cy="171.08" r="35.38"/>
+      <path id="hole5-2" data-name="hole5" class="cls-2" d="M545.6,356a228.89,228.89,0,0,1-23.32,64.6A35.39,35.39,0,1,1,545.6,356Z" transform="translate(-90 -81)"/>
+      <circle id="hole4-2" data-name="hole4" class="cls-2" cx="186.02" cy="319.89" r="35.38"/>
+      <circle id="hole3-2" data-name="hole3" class="cls-2" cx="298.74" cy="343.89" r="24"/>
+      <circle id="hole2-2" data-name="hole2" class="cls-2" cx="326.77" cy="183.17" r="24"/>
+      <circle id="hole1-2" data-name="hole1" class="cls-2" cx="306.72" cy="125.51" r="12"/>
+    </g>
+  </g>
+</svg>

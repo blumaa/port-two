@@ -10,9 +10,12 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Button from "@material-ui/core/Button";
 import ProfileImage from "./ProfileImage";
 import rocket from "../images/rocket.svg";
+import ufoorbittingmoon from "../images/ufo-orbitting-moon.svg";
 import { useMappedState } from "redux-react-hook";
 import LanguageSwitch from "./LanguageSwitch";
 import { textColor } from "./styles";
+
+import HomeAnimation from "./HomeAnimation";
 
 const Home = () => {
   const [lng, setLng] = useState("english");
@@ -68,9 +71,7 @@ const Home = () => {
         <div className="grid-container">
           <div className="top-container">
             <div id="title-box"></div>
-            <div id="lng-container">
-              {/* <LanguageSwitch /> */}
-            </div>
+            <div id="lng-container">{/* <LanguageSwitch /> */}</div>
           </div>
           <div id="about-me-middle-container">
             <div id="title-box">
@@ -88,8 +89,8 @@ const Home = () => {
             </div>
             <div id="main-box-one">
               <div id="main-box-image-container">
-                <ProfileImage image={profilepic} />
-
+                <HomeAnimation />
+                {/* <ProfileImage image={profilepic} /> */}
                 <div id="main-box-text">
                   <Typography
                     variant="body1"
@@ -152,7 +153,6 @@ const Home = () => {
                     src={downarrow}
                     id="accordion-icon"
                     style={{ fill: theme.theme.mainText }}
-                    
                   />
                 </Link>
               </div>
