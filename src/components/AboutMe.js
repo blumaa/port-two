@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import DownArrow from "./DownArrow";
 
 const useStyles = makeStyles({
   root: {
@@ -52,9 +53,11 @@ const AboutMe = () => {
   }
 
   if (language.language === "spanish") {
-    description2 = "Tengo una formación en educación y música que me empuja a pensar fuera de la caja de códigos. Me encanta aprender idiomas (hablo español y estoy aprendiendo alemán). Esto me ayuda a aumentar mi conocimiento de Javascript, Ruby, y muchos otros marcos de trabajo web.Mi experiencia como profesora de inglés como segunda lengua durante más de diez años me transformó en un excelente director, comunicador, y me hizo sentir muy cómodo trabajando de cerca con la gente."
+    description2 =
+      "Tengo una formación en educación y música que me empuja a pensar fuera de la caja de códigos. Me encanta aprender idiomas (hablo español y estoy aprendiendo alemán). Esto me ayuda a aumentar mi conocimiento de Javascript, Ruby, y muchos otros marcos de trabajo web.Mi experiencia como profesora de inglés como segunda lengua durante más de diez años me transformó en un excelente director, comunicador, y me hizo sentir muy cómodo trabajando de cerca con la gente.";
   } else if (language.language === "deutsch") {
-    description2 = "Ich habe einen pädagogischen und musikalischen Hintergrund, was meine Arbeit als Entwickler um zusätzliche Perspektiven bereichert. Ich liebe es, Sprachen zu lernen (ich spreche Spanisch und ich lerne Deutsch). Das hilft mir, meine Kenntnisse in Javascript, Ruby und vielen anderen Web-Frameworks zu erweitern. Meine mehr als zehnjährige Berufserfahrung als Lehrer für Englisch als Zweitsprache hat mich zu einem ausgezeichneten Teamleiter und Kommunikator gemacht, der sich in der  engen Zusammenarbeit mit anderen Menschen sehr wohl fühlt."
+    description2 =
+      "Ich habe einen pädagogischen und musikalischen Hintergrund, was meine Arbeit als Entwickler um zusätzliche Perspektiven bereichert. Ich liebe es, Sprachen zu lernen (ich spreche Spanisch und ich lerne Deutsch). Das hilft mir, meine Kenntnisse in Javascript, Ruby und vielen anderen Web-Frameworks zu erweitern. Meine mehr als zehnjährige Berufserfahrung als Lehrer für Englisch als Zweitsprache hat mich zu einem ausgezeichneten Teamleiter und Kommunikator gemacht, der sich in der  engen Zusammenarbeit mit anderen Menschen sehr wohl fühlt.";
   } else {
     description2 =
       "I have a background in education and music that pushes me to think outside the coding box. I love learning languages (I speak Spanish and I'm learning Deutsch). This helps drive me to increase my knowledge of Javascript, Ruby, and many other web frameworks. My experience as a teacher of English as a Second Language for over ten years transformed me into an excellent manager, communicator, and made me really comfortable working closely with people.";
@@ -113,10 +116,9 @@ const AboutMe = () => {
                 My GitHub
               </Button>
             </div>
-            <div
-              id="description-two"
-              style={{ color: theme.theme.mainText }}
-            >{description2}</div>
+            <div id="description-two" style={{ color: theme.theme.mainText }}>
+              {description2}
+            </div>
           </div>
           <div className="bottom-container">
             <div id="bottom-one"></div>
@@ -129,7 +131,7 @@ const AboutMe = () => {
                   offset={0}
                   duration={500}
                 >
-                  <img src={downarrow} id="accordion-icon" />
+                  <DownArrow />{" "}
                 </Link>
               </div>{" "}
             </div>

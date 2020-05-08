@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import TPReport from "./Portfolio/TPReport";
 import DebtCrusher from "./Portfolio/DebtCrusher";
 import RuinMe from "./Portfolio/RuinMe";
+import DownArrow from "./DownArrow";
 
 const Portofolio = () => {
   const mapState = useCallback((state) => {
@@ -17,11 +18,16 @@ const Portofolio = () => {
   const { theme } = useMappedState(mapState);
   return (
     <>
-      <div id="portfolio" style={{backgroundColor: theme.theme.backgroundColor}}>
+      <div
+        id="portfolio"
+        style={{ backgroundColor: theme.theme.backgroundColor }}
+      >
         <div className="grid-container">
           <div className="top-container">
             <div id="title-box">
-              <div id="title" style={{color: theme.theme.mainText}}>Portfolio</div>
+              <div id="title" style={{ color: theme.theme.mainText }}>
+                Portfolio
+              </div>
             </div>
           </div>
           <div id="middle-container">
@@ -42,7 +48,7 @@ const Portofolio = () => {
                   offset={0}
                   duration={500}
                 >
-                  <img src={downarrow} id="accordion-icon" />
+                  <DownArrow />{" "}
                 </Link>
               </div>{" "}
             </div>

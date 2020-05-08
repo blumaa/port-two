@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import Typography from "@material-ui/core/Typography";
-import downarrow from "../images/downarrow.svg";
+// import downarrow from "../images/downarrow.svg";
 import { Link } from "react-scroll";
 import profilepic from "../images/profile2.png";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -14,6 +14,7 @@ import ufoorbittingmoon from "../images/ufo-orbitting-moon.svg";
 import { useMappedState } from "redux-react-hook";
 import LanguageSwitch from "./LanguageSwitch";
 import { textColor } from "./styles";
+import DownArrow from './DownArrow'
 
 import HomeAnimation from "./HomeAnimation";
 
@@ -136,12 +137,6 @@ const Home = () => {
               </div>
             </div>
             <div id="bottom-two">
-              {/* <div class="container">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-              </div> */}
-              <div id="down-button">
                 <Link
                   to="page1"
                   spy={true}
@@ -149,13 +144,8 @@ const Home = () => {
                   offset={0}
                   duration={500}
                 >
-                  <img
-                    src={downarrow}
-                    id="accordion-icon"
-                    style={{ fill: theme.theme.mainText }}
-                  />
+                  <DownArrow />
                 </Link>
-              </div>
             </div>
             <div id="bottom-three">
               {/* <div id="bottom-three" className="animated bounceInLeft slower"> */}

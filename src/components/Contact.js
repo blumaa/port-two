@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { useMappedState } from "redux-react-hook";
-import uparrow from "../images/uparrow.svg";
+// import uparrow from "../images/uparrow.svg";
 import { Link } from "react-scroll";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -11,6 +11,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import UpArrow from "./UpArrow";
 
 const Contact = () => {
   const [email] = useState("blumaa@gmail.com");
@@ -50,7 +51,7 @@ const Contact = () => {
 
   const handleCopy = () => {
     setCopied(true);
-    setTimeout(()=>setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -60,16 +61,14 @@ const Contact = () => {
         style={{ backgroundColor: theme.theme.backgroundColor }}
       >
         <div className="grid-container" data-aos="fade-in">
-          <div className="top-container">
-            
-          </div>
+          <div className="top-container"></div>
           <div id="middle-container">
             <div id="description-one" style={{ color: theme.theme.mainText }}>
-            <div id="title-box">
-              <div id="title" style={{ color: theme.theme.mainText }}>
-                {title}
+              <div id="title-box">
+                <div id="title" style={{ color: theme.theme.mainText }}>
+                  {title}
+                </div>
               </div>
-            </div>
               <div id="email-buttons">
                 <div id="email-icon">
                   <EmailIcon style={{ color: theme.theme.mainText }} />
@@ -97,39 +96,38 @@ const Contact = () => {
               </div>
               <div id="title">{description}</div>
               <div id="links">
-              <Button
-                variant="link"
-                color="default"
-                startIcon={
-                  <GitHubIcon style={{ color: theme.theme.mainText }} />
-                }
-                href="https://github.com/blumaa"
-                target="_blank"
-              />
-              <Button
-                variant="link"
-                color="default"
-                startIcon={
-                  <LinkedInIcon style={{ color: theme.theme.mainText }} />
-                }
-                href="https://www.linkedin.com/in/aaron-blum-0904/"
-                target="_blank"
-              />
-              <Button
-                variant="link"
-                color="default"
-                startIcon={
-                  <InstagramIcon style={{ color: theme.theme.mainText }} />
-                }
-                href="https://www.instagram.com/xblumaa/"
-                target="_blank"
-              />
-            </div>
+                <Button
+                  variant="link"
+                  color="default"
+                  startIcon={
+                    <GitHubIcon style={{ color: theme.theme.mainText }} />
+                  }
+                  href="https://github.com/blumaa"
+                  target="_blank"
+                />
+                <Button
+                  variant="link"
+                  color="default"
+                  startIcon={
+                    <LinkedInIcon style={{ color: theme.theme.mainText }} />
+                  }
+                  href="https://www.linkedin.com/in/aaron-blum-0904/"
+                  target="_blank"
+                />
+                <Button
+                  variant="link"
+                  color="default"
+                  startIcon={
+                    <InstagramIcon style={{ color: theme.theme.mainText }} />
+                  }
+                  href="https://www.instagram.com/xblumaa/"
+                  target="_blank"
+                />
+              </div>
             </div>
             {/* <div id="description-two">
               Connect with me:
             </div> */}
-           
           </div>
           <div className="bottom-container">
             <div id="bottom-one"></div>
@@ -142,7 +140,7 @@ const Contact = () => {
                   offset={0}
                   duration={500}
                 >
-                  <img src={uparrow} />
+                  <UpArrow />
                 </Link>
               </div>{" "}
             </div>

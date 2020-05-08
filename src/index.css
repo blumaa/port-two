@@ -382,26 +382,8 @@ body {
     align-items: center;
     z-index: 999;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two #down-button img {
-    cursor: pointer;
-    z-index: 999;
-    height: 4vh;
-    position: relative;
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #home .grid-container .bottom-container #bottom-two svg {
+    height: 2.5vh;
   }
   main #main-container #home .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -480,26 +462,8 @@ body {
     z-index: 999;
     width: 20%;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two #down-button img {
-    cursor: pointer;
-    z-index: 999;
-    height: 4vh;
-    position: relative;
-  }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #about-me .grid-container .bottom-container #bottom-two svg {
+    height: 2.5vh;
   }
   main #main-container #about-me .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -610,26 +574,8 @@ body {
     z-index: 999;
     width: 20%;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two #down-button img {
-    cursor: pointer;
-    z-index: 999;
-    height: 4vh;
-    position: relative;
-  }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #portfolio .grid-container .bottom-container #bottom-two svg {
+    height: 2.5vh;
   }
   main #main-container #portfolio .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -743,11 +689,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button img {
-    cursor: pointer;
     z-index: 999;
-    height: 4vh;
+  }
+  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg {
+    height: 2.5vh;
   }
   main #main-container #contact .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -870,26 +815,8 @@ body {
     align-items: center;
     z-index: 999;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button img {
-    cursor: pointer;
-    z-index: 999;
-    height: 4vh;
-    position: relative;
-  }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg {
+    height: 2vh;
   }
   main #main-container #tech-stack .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -1244,26 +1171,13 @@ body {
     align-items: center;
     z-index: 999;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #home .grid-container .bottom-container #bottom-two #down-button img {
+  main #main-container #home .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
-    height: 4vh;
-    position: relative;
+    height: 2.5vh;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #home .grid-container .bottom-container #bottom-two svg:hover {
+    animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
   main #main-container #home .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -1340,26 +1254,13 @@ body {
     z-index: 999;
     width: 20%;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two #down-button img {
+  main #main-container #about-me .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
-    height: 4vh;
-    position: relative;
+    height: 2.5vh;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #about-me .grid-container .bottom-container #bottom-two svg:hover {
+    animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
   main #main-container #about-me .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -1470,26 +1371,13 @@ body {
     z-index: 999;
     width: 20%;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two #down-button img {
+  main #main-container #portfolio .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
-    height: 4vh;
-    position: relative;
+    height: 2.5vh;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #portfolio .grid-container .bottom-container #bottom-two svg:hover {
+    animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
   main #main-container #portfolio .grid-container .bottom-container #bottom-three {
     width: 40%;
@@ -1511,17 +1399,6 @@ body {
     overflow: visible;
     margin-bottom: 10px;
   }
-  main #main-container #contact .grid-container .top-container #title-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    z-index: 0;
-  }
-  main #main-container #contact .grid-container .top-container #title-box #title {
-    color: #3a4a6fff;
-    font-family: "Proza Libre", sans-serif;
-  }
   main #main-container #contact .grid-container #middle-container {
     height: 75vh;
     font-family: "Proza Libre", sans-serif;
@@ -1529,6 +1406,19 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  main #main-container #contact .grid-container #middle-container #title-box {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    z-index: 0;
+    margin-bottom: 20px;
+  }
+  main #main-container #contact .grid-container #middle-container #title-box #title {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-family: "Proza Libre", sans-serif;
   }
   main #main-container #contact .grid-container #middle-container #description-one {
     width: 50vw;
@@ -1601,12 +1491,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button img {
+  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg {
     cursor: pointer;
     z-index: 999;
     height: 4vh;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button img:hover {
+  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg:hover {
     animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
   @keyframes scaleupup {
@@ -1748,26 +1638,13 @@ body {
     align-items: center;
     z-index: 999;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button img {
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
-    height: 4vh;
-    position: relative;
+    height: 2.5vh;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two #down-button img:hover {
-    animation: scaleup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  @keyframes scaleup {
-    100% {
-      transform: scale(1.5);
-      transform: translateY(5px);
-    }
+  main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg:hover {
+    animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
   main #main-container #tech-stack .grid-container .bottom-container #bottom-three {
     width: 40%;
