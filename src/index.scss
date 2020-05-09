@@ -160,19 +160,19 @@ body {
     border: 0;
     margin: 0;
     // overflow: hidden;
-    // border: 5px solid white;
+    // border: 1px solid white;
+    width: 100%;
     // z-index: 999;
     .footer-container {
       // border: 1px solid rgba(0, 0, 0, 0.8);
-      // width: 100%;
-      height: 100%;
+      // height: 100%;
       display: flex;
       flex-direction: row;
 
       // background-image: url(./images/Flat-Mountains.svg);
-      background-size: 80%;
-      background-position: right bottom;
-      background-repeat: no-repeat;
+      // background-size: 80%;
+      // background-position: right bottom;
+      // background-repeat: no-repeat;
       .item1 {
         // border: 1px solid green;
         // height: 100%;
@@ -184,14 +184,11 @@ body {
         // width: 20%;
       }
       .item3 {
-        // width: 60%;
-        // border: 1px solid rgba(0, 0, 0, 0.8);
-        // background-image: url(./images/cloudclump.svg);
-        // background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
         z-index: 1;
+        margin-bottom: 1.5vh;
       }
     }
   }
@@ -297,13 +294,13 @@ body {
     border: 0;
     margin: 0;
     // overflow: hidden;
-    // width: 100%;
+    width: 100%;
     // border: 5px solid white;
     // z-index: 1;
     .footer-container {
       // border: 1px solid rgba(0, 0, 0, 0.8);
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
       display: flex;
       flex-direction: row;
 
@@ -314,22 +311,25 @@ body {
       .item1 {
         // border: 1px solid green;
         // height: 100%;
-        width: 20vw;
+        // width: 20vw;
       }
       .item2 {
         // border: 1px solid green;
         // height: 100%;
-        width: 20vw;
+        // width: 20vw;
       }
       .item3 {
-        height: 100%;
-        width: 60vw;
+        // height: 100%;
         // border: 1px solid rgba(0, 0, 0, 0.8);
         // background-image: url(./images/cloudclump.svg);
         // background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-
+        // background-position: center;
+        // background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+        margin-bottom: 1.5vh;
         z-index: 1;
       }
     }

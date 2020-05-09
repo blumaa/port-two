@@ -11,7 +11,6 @@ import { useDispatch } from "redux-react-hook";
 import * as actions from "../constants/action_types";
 import { useMappedState } from "redux-react-hook";
 import Switch from "@material-ui/core/Switch";
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { withStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -20,7 +19,6 @@ const useStyles = makeStyles({
   },
   paper: {
     backgroundColor: "#384a6cff",
-    width: "50vw",
     color: "white",
     display: "flex",
     boxShadow: "4px 3px 100px 0px #000000",
@@ -168,34 +166,9 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
     </div>
   );
 
-  const handleThemeChange = () => {
-    // console.log("theme change");
-    // console.log(theme.theme.backgroundColor);
-    theme.theme.backgroundColor === "#e3e3e3"
-      ? dispatch({ type: actions.SET_DARK_MODE })
-      : dispatch({ type: actions.SET_LIGHT_MODE });
 
-    setState((prevState) => {
-      return {
-        ...prevState,
-        checked: !prevState.checked,
-      };
-    });
-  };
 
-  const CustomSwitch = withStyles({
-    switchBase: {
-      color: theme.theme.mainText,
-      '&$checked': {
-        color: theme.theme.mainText,
-      },
-      '&$checked + $track': {
-        backgroundColor: theme.theme.buttonText,
-      },
-    },
-    checked: {},
-    track: {},
-  })(Switch);
+
   
   return (
     <div id="up-left-button-container">
@@ -214,18 +187,7 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
             </div>
           )}
         </button>
-        <FormControlLabel
-          control={
-            <CustomSwitch 
-            size="small" 
-              checked={state.checked}
-              onChange={handleThemeChange}
-              name="checked"
-            />
-          }
-          style={{color: theme.theme.mainText}}
-
-        />
+        
 
         <SwipeableDrawer
           transitionDuration={200}
