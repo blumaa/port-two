@@ -52,7 +52,7 @@ $stand-in-color: #ec6543ff;
     #about-me-middle-container {
       // border: 1px solid purple;
       // height: 58vh;
-      height: 75vh;
+      // height: 75vh;
       font-family: $font-stack;
       #title-box {
         height: 30%;
@@ -69,26 +69,12 @@ $stand-in-color: #ec6543ff;
         }
       }
       #main-box-one {
-        // height: 50%;
-        // border-radius: 5px;
-        // margin-bottom: 10px;
-        // box-shadow: 2px 2px 3px 2px rgba(85, 85, 85, 0.747);
-        // border: 1px solid purple;
-        // box-shadow: 5px 5px 10px 2px rgba(124, 124, 124, 0.568);
-        // background-color: #fff5d7ea;
-        // font-size: 2vh;
-        // width: 90%;
-        // height: 80%;
-        // background: linear-gradient(white, rgba(255, 192, 203, 0));
-        // border-bottom-right-radius: 40px;
+        // height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // background-image: url(./images/profile1.svg);
-        // background-repeat: no-repeat;
-        // background-position: left bottom;
-        // background-size: 40%;
+      
         #main-box-image-container {
           // border: 1px solid red;
           // height: 100%;
@@ -97,7 +83,81 @@ $stand-in-color: #ec6543ff;
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          @include ufoanimation;
+          // @include ufoanimation;
+
+          #entwickler {
+            visibility: hidden;
+          }
+
+          #desarrollador {
+            visibility: hidden;
+          }
+
+          #splatter1 {
+            visibility: hidden;
+          }
+
+          #splatter2 {
+            visibility: hidden;
+          }
+
+          #topmoon {
+            visibility: hidden;
+          }
+          #moon {
+            visibility: hidden;
+          }
+          #ufo {
+            visibility: hidden;
+          }
+          #schriftstellor {
+            visibility: hidden;
+          }
+          #escritor {
+            visibility: hidden;
+          }
+          #entwickler {
+            visibility: hidden;
+          }
+          #pedagoge {
+            visibility: hidden;
+          }
+          #profesor {
+            visibility: hidden;
+          }
+          #desarrollador {
+            visibility: hidden;
+          }
+          #writer {
+            visibility: hidden;
+          }
+          #educator {
+            visibility: hidden;
+          }
+          #aaronBlumSolid {
+            visibility: hidden;
+          }
+          #aaronBlumOutline {
+            visibility: show;
+          }
+          #letter1 {
+            visibility: hidden;
+          }
+          #underline{
+            visibility: hidden;
+          }
+          #extraR1{
+            visibility: hidden;
+          }
+          #extraR2{
+            visibility: hidden;
+          }
+          #extraR3{
+            visibility: hidden;
+          }
+          #extraR4{
+            visibility: hidden;
+          }
 
           #main-box-image {
             // width: 100%;
@@ -115,7 +175,8 @@ $stand-in-color: #ec6543ff;
         }
       }
       #main-box-two {
-        margin-top: 1vh;
+        // margin-top: 1vh;
+        // border: 1px solid white;
         display: flex;
         justify-content: center;
         flex-direction: row;

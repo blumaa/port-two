@@ -125,7 +125,6 @@ body {
     height: 8vh;
   }
   main #main-container #home .grid-container #about-me-middle-container {
-    height: 75vh;
     font-family: "Proza Libre", sans-serif;
   }
   main #main-container #home .grid-container #about-me-middle-container #title-box {
@@ -153,84 +152,74 @@ body {
     justify-content: center;
     flex-direction: column;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-1 {
-    fill: #565656;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-2 {
-    fill: #cdcdcd;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-3 {
-    fill: #324d5b;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter1 {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-4 {
-    fill: #e2574c;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter2 {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-5 {
-    fill: #cb4e44;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-6 {
-    fill: #2d4552;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-7 {
-    fill: #e4e7e7;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-8 {
-    fill: #d8dbdb;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-9 {
-    fill: #3db39e;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-10 {
-    fill: #3aaa96;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-11 {
-    fill: #fff;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-12 {
-    fill: #f2f2f2;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-13 {
-    fill: #2f4956;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #topmoon {
+    visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon {
-    transform-origin: center;
-    transform: scale(0.3);
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon .circlebackground {
-    fill: #d3d3d3;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon2 {
-    transform-origin: center;
-    transform: scale(0.3);
-    animation: moonfade 15s ease-in-out infinite;
+    visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #ufo {
-    opacity: 1;
-    transform-origin: center;
-    transform: translateX(18%) translateY(18%) scale(0.3);
-    animation: orbit linear 15s infinite;
+    visibility: hidden;
   }
-  @keyframes moonfade {
-    0%, 49%, 100% {
-      opacity: 0;
-    }
-    50%, 99% {
-      opacity: 1;
-    }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #schriftstellor {
+    visibility: hidden;
   }
-  @keyframes orbit {
-    0%, 100% {
-      transform: translateX(18%) translateY(18%) scale(0.3);
-    }
-    25% {
-      transform: scale(0.4);
-    }
-    50% {
-      transform: translateX(-18%) translateY(-18%) scale(0.3);
-    }
-    75% {
-      transform: scale(0.1);
-    }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #escritor {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #pedagoge {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #profesor {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #writer {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumSolid {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumOutline {
+    visibility: show;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #letter1 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR2 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR3 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR4 {
+    visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
     border-radius: 10px;
@@ -239,7 +228,6 @@ body {
     font-size: 2vh;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-two {
-    margin-top: 1vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -932,89 +920,78 @@ body {
     flex-direction: column;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container svg {
-    height: 30vh;
+    width: 50vw;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-1 {
-    fill: #565656;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-2 {
-    fill: #cdcdcd;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-3 {
-    fill: #324d5b;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter1 {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-4 {
-    fill: #e2574c;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter2 {
+    visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-5 {
-    fill: #cb4e44;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-6 {
-    fill: #2d4552;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-7 {
-    fill: #e4e7e7;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-8 {
-    fill: #d8dbdb;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-9 {
-    fill: #3db39e;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-10 {
-    fill: #3aaa96;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-11 {
-    fill: #fff;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-12 {
-    fill: #f2f2f2;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container .cls-13 {
-    fill: #2f4956;
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #topmoon {
+    visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon {
-    transform-origin: center;
-    transform: scale(0.3);
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon .circlebackground {
-    fill: #d3d3d3;
-  }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon2 {
-    transform-origin: center;
-    transform: scale(0.3);
-    animation: moonfade 15s ease-in-out infinite;
+    visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #ufo {
-    opacity: 1;
-    transform-origin: center;
-    transform: translateX(18%) translateY(18%) scale(0.3);
-    animation: orbit linear 15s infinite;
+    visibility: hidden;
   }
-  @keyframes moonfade {
-    0%, 49%, 100% {
-      opacity: 0;
-    }
-    50%, 99% {
-      opacity: 1;
-    }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #schriftstellor {
+    visibility: hidden;
   }
-  @keyframes orbit {
-    0%, 100% {
-      transform: translateX(18%) translateY(18%) scale(0.3);
-    }
-    25% {
-      transform: scale(0.4);
-    }
-    50% {
-      transform: translateX(-18%) translateY(-18%) scale(0.3);
-    }
-    75% {
-      transform: scale(0.1);
-    }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #escritor {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #pedagoge {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #profesor {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #writer {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumSolid {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumOutline {
+    visibility: show;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #letter1 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR2 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR3 {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR4 {
+    visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-image {
-    height: 30vh;
     margin-right: 20px;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
@@ -1022,8 +999,7 @@ body {
     border-radius: 10px;
     margin-top: 10px;
     margin-left: 20px;
-    width: 25%;
-    font-size: 2vh;
+    width: 35vw;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-two {
     margin-top: 3vh;

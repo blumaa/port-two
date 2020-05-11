@@ -1,10 +1,10 @@
 // src/reducers/reports.js
 const INITIAL_STATE = {
   theme: {
-    backgroundColor: "#e3e3e3",
-    mainText: "#3a4a6fff",
-    buttonText: "#ec6543ff",
-  }
+    backgroundColor: "#252523",
+    mainText: "#dfd8c8",
+    buttonText: "#a39274",
+  },
 };
 
 function themeReducer(state = INITIAL_STATE, action) {

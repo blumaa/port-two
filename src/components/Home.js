@@ -17,6 +17,9 @@ import { textColor } from "./styles";
 import DownArrow from './DownArrow'
 
 import HomeAnimation from "./HomeAnimation";
+import AwesomeAnimation from "./AwesomeAnimation";
+
+import UfoMoonAnimationTitle from './UfoMoonAnimationTitle'
 
 const Home = () => {
   const [lng, setLng] = useState("english");
@@ -75,7 +78,7 @@ const Home = () => {
             <div id="lng-container">{/* <LanguageSwitch /> */}</div>
           </div>
           <div id="about-me-middle-container">
-            <div id="title-box">
+            {/* <div id="title-box">
               <Typography variant="h4" style={{ color: theme.theme.mainText }}>
                 {titleText}
               </Typography>
@@ -87,14 +90,16 @@ const Home = () => {
               >
                 {subtTitleText}
               </Typography>
-            </div>
+            </div> */}
             <div id="main-box-one">
               <div id="main-box-image-container">
-                <HomeAnimation />
+                {/* <HomeAnimation /> */}
+                {/* <UfoMoonAnimationTitle /> */}
+                <AwesomeAnimation />
                 {/* <ProfileImage image={profilepic} /> */}
                 <div id="main-box-text">
                   <Typography
-                    variant="body1"
+                    variant="h6"
                     style={{ color: theme.theme.mainText }}
                   >
                     {description}
@@ -133,7 +138,7 @@ const Home = () => {
           <div className="bottom-container">
             <div id="bottom-one">
               <div className="home-animation">
-                <img src={rocket} />
+                {/* <img src={rocket} /> */}
               </div>
             </div>
             <div id="bottom-two">
