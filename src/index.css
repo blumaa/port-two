@@ -197,6 +197,9 @@ body {
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
     visibility: hidden;
   }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #developer {
+    visibility: hidden;
+  }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumSolid {
     visibility: hidden;
   }
@@ -207,6 +210,9 @@ body {
     visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #solidunderline {
     visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {
@@ -964,6 +970,9 @@ body {
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #writer {
     visibility: hidden;
   }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #developer {
+    visibility: hidden;
+  }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
     visibility: hidden;
   }
@@ -977,6 +986,9 @@ body {
     visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
+    visibility: hidden;
+  }
+  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #solidunderline {
     visibility: hidden;
   }
   main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {

@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, useCallback } from "react";
-import { gsap, SteppedEase } from "gsap";
+import { gsap, SteppedEase, Power3, Bounce } from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { useMappedState } from "redux-react-hook";
+import { Draggable } from "gsap/all";
 
 gsap.registerPlugin(MorphSVGPlugin, DrawSVGPlugin);
 
-const AwesomeAnimation = () => {
+const FullDeveloperWordCycle = () => {
   const mapState = useCallback((state) => {
     return {
       theme: state.themeState,
@@ -14,6 +15,8 @@ const AwesomeAnimation = () => {
   }, []);
 
   const { theme } = useMappedState(mapState);
+
+  let topmoon = useRef(null);
 
   let path1 = useRef(null);
   let path2 = useRef(null);
@@ -37,6 +40,9 @@ const AwesomeAnimation = () => {
 
   let underline1 = useRef(null);
   let underline2 = useRef(null);
+
+  let solidunderline2 = useRef(null);
+  let solidunderline1 = useRef(null);
 
   let splat1 = useRef(null);
   let splat2 = useRef(null);
@@ -94,129 +100,159 @@ const AwesomeAnimation = () => {
   let entwicklerR = useRef(null);
 
   const developerWordCycle = () => {
+
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
     let tl = gsap.timeline({
-      repeat: 1,
+      repeat: -1,
       reversed: false,
-      yoyo: true,
-      repeatDelay: 3,
+      yoyo: false,
+      repeatDelay: getRandomInt(3,10),
     });
 
-    tl.to(developerD.current, {
-      duration: 0.1,
-      morphSVG: desarrolladorD1.current,
-    })
+    const morphTime = 0.08;
+
+    tl.set("#developer", {visibility:"visible"}).to(
+      developerD.current,
+      {
+        duration: morphTime,
+        morphSVG: desarrolladorD1.current,
+      },
+      1
+    )
       .to(developerE1.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorE.current,
       })
       .to(developerV.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorS.current,
       })
       .to(developerE2.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorA1.current,
       })
       .to(developerL.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorR1.current,
       })
       .to(developerO.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorR2.current,
       })
       .to(developerP.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorO1.current,
       })
       .to(developerE3.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorL1.current,
       })
       .to(developerR.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorL2.current,
       })
       .set(developerExtraR1.current, { visibility: "visible" })
       .to(developerExtraR1.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorA2.current,
       })
       .set(developerExtraR2.current, { visibility: "visible" })
       .to(developerExtraR2.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorD2.current,
       })
       .set(developerExtraR3.current, { visibility: "visible" })
       .to(developerExtraR3.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorO2.current,
       })
       .set(developerExtraR4.current, { visibility: "visible" })
       .to(developerExtraR4.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: desarrolladorR3.current,
       });
 
     tl.to(
       developerExtraR4.current,
       {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerR.current,
       },
-      "+=3"
+      "+=1"
     )
       .set(developerExtraR4.current, { visibility: "hidden" })
       .to(developerExtraR2.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerR.current,
       })
       .set(developerExtraR2.current, { visibility: "hidden" })
       .to(developerExtraR1.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerR.current,
       })
       .set(developerExtraR1.current, { visibility: "hidden" })
       .to(developerR.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerR.current,
       })
       .to(developerE3.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerE2.current,
       })
       .to(developerP.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerL.current,
       })
       .to(developerO.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerK.current,
       })
       .to(developerL.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerC.current,
       })
       .to(developerE2.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerI.current,
       })
       .to(developerV.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerW.current,
       })
       .to(developerE1.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerT.current,
       })
       .to(developerD.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerN.current,
       })
       .to(developerExtraR3.current, {
-        duration: 0.1,
+        duration: morphTime,
         morphSVG: entwicklerE1.current,
       });
+
+    tl.set(
+      developerExtraR3.current,
+      {
+        visibility: "hidden",
+      },
+      "+=1"
+    )
+      .to(developerD.current, morphTime, { morphSVG: developerD.current })
+      .to(developerE1.current, morphTime, { morphSVG: developerE1.current })
+      .to(developerV.current, morphTime, { morphSVG: developerV.current })
+      .to(developerE2.current, morphTime, { morphSVG: developerE2.current })
+      .to(developerL.current, morphTime, { morphSVG: developerL.current })
+      .to(developerO.current, morphTime, { morphSVG: developerO.current })
+      .to(developerP.current, morphTime, { morphSVG: developerP.current })
+      .to(developerE3.current, morphTime, { morphSVG: developerE3.current })
+      .to(developerR.current, morphTime, { morphSVG: developerR.current });
 
     return tl;
   };
@@ -224,6 +260,8 @@ const AwesomeAnimation = () => {
   useEffect(() => {
     console.log("start", path1.current);
     console.log("start", pathsolid1.current);
+
+    // Draggable.create("#topmoon");
 
     const master = gsap.timeline({
       reversed: false,
@@ -282,6 +320,8 @@ const AwesomeAnimation = () => {
         reversed: false,
       });
 
+      tl.set("#aaronBlumOutline", {visibility: "visible"})
+
       tl.staggerFromTo(
         [
           path1.current,
@@ -294,11 +334,33 @@ const AwesomeAnimation = () => {
           path8.current,
           path9.current,
         ],
-        2,
-        { drawSVG: 0 },
-        { drawSVG: true, fill: theme.theme.mainText },
-        0.1
-      );
+        3,
+        { drawSVG: "50% 50%" },
+        { drawSVG: "0% 100%", ease: Bounce.easeInOut },
+        .1
+      ).to([
+        path1.current,
+        path2.current,
+        path3.current,
+        path4.current,
+        path5.current,
+        path6.current,
+        path7.current,
+        path8.current,
+        path9.current,
+      ], 1, {opacity: 0});
+      tl.set("#aaronBlumSolid", {visibility: 'visible'}, "-=1")
+      tl.fromTo([
+        pathsolid1.current,
+        pathsolid2.current,
+        pathsolid3.current,
+        pathsolid4.current,
+        pathsolid5.current,
+        pathsolid6.current,
+        pathsolid7.current,
+        pathsolid8.current,
+        pathsolid9.current,
+      ], 3, {opacity: 0}, {opacity: 1}, "-=1")
 
       return tl;
     };
@@ -308,25 +370,26 @@ const AwesomeAnimation = () => {
         reversed: false,
       });
 
-      tl.set("#underline", { visibility: "visible" })
-        .staggerFromTo(
+      tl.set("#underline", {visibility: 'visible'})
+      tl.staggerFromTo(
           [underline1.current, underline2.current],
-          2,
+        .1,
           { drawSVG: 0 },
           { drawSVG: true },
-          0.25
+          .1
         )
-        .to([underline1.current, underline2.current], 1, { fill: theme.theme.buttonText })
-        .delay(2);
+        // tl.from(underline1.current, {x: 200})
+        tl.set("#solidunderline", {visibility: 'visible'}).fromTo(solidunderline1.current, 1, {opacity: 0}, {opacity: 1})
+        // tl.to(underline1.current, {duration: 2, morphSVG: solidunderline1.current });
 
       return tl;
     };
 
     master
       .add(drawLetters)
-      .addLabel("underline", "+=1")
-      .add(drawUnderline, "+=1")
-      .add(developerWordCycle, "underline+=6");
+      .addLabel("underline")
+      .add(drawUnderline, "+=3")
+      .add(developerWordCycle);
   });
   return (
     <svg
@@ -1572,7 +1635,7 @@ const AwesomeAnimation = () => {
           fill="#2f4956"
         ></path>
       </g>
-      <g id="topmoon">
+      <g id="topmoon" ref={topmoon}>
         <path
           id="circlebackground-2"
           data-name="circlebackground"
@@ -1722,55 +1785,55 @@ const AwesomeAnimation = () => {
           ref={pathsolid1}
           d="M326.73,131.4H272.21l-9.27,33.83H246.58L285.11,29.16h28.72l38.53,136.07H336ZM298.38,36.15l-22,80.09h46.16l-22-80.09Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid2}
           d="M436.33,148.9h-2.19q-4.35,9.72-12.08,14.38A31,31,0,0,1,405.79,168a42.23,42.23,0,0,1-16.54-3.21,37.26,37.26,0,0,1-13.35-9.53,45.48,45.48,0,0,1-9-15.45,62.77,62.77,0,0,1-3.27-21.19v-3.11a62.13,62.13,0,0,1,3.27-21,45.48,45.48,0,0,1,9-15.45,38.54,38.54,0,0,1,13.35-9.63,40.33,40.33,0,0,1,16.18-3.3,33,33,0,0,1,16.81,4.37A29.9,29.9,0,0,1,434.14,84h2.19V68.81H450.5V145.4q0,5.83,4.91,5.83H460v14h-9.63A13.06,13.06,0,0,1,440.23,161a15.54,15.54,0,0,1-3.9-10.89Zm-29.08,4.66A27.22,27.22,0,0,0,419,151a26.3,26.3,0,0,0,9.18-7.2,35,35,0,0,0,6-11.17,45.25,45.25,0,0,0,2.19-14.49v-2.33a44.66,44.66,0,0,0-2.19-14.29,34,34,0,0,0-6.08-11.17,28.2,28.2,0,0,0-9.27-7.29,25.94,25.94,0,0,0-11.54-2.63A26.65,26.65,0,0,0,395.61,83a27.77,27.77,0,0,0-9.17,7.1,32.71,32.71,0,0,0-6.09,11.08,44.55,44.55,0,0,0-2.18,14.28v3.11q0,16.53,8.08,25.76T407.25,153.56Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid3}
           d="M477,68.81h32.71V81.64h2.18a24.44,24.44,0,0,1,9.82-11.76,27.81,27.81,0,0,1,14.54-3.79q13.62,0,22,9.52t8.9,27.8l-14.9,2.33q0-13.41-6-19.34a20.14,20.14,0,0,0-14.72-5.93,19.22,19.22,0,0,0-9.72,2.34A20.06,20.06,0,0,0,515,89.22a28.77,28.77,0,0,0-4,9.53,51,51,0,0,0-1.27,11.66v40.82h22.9v14H474.86v-14h20.72V82.81H477Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid4}
           d="M678.41,118.18a56.63,56.63,0,0,1-3.72,21.29A47.19,47.19,0,0,1,664.78,155a41.57,41.57,0,0,1-14.45,9.62,46.45,46.45,0,0,1-34.44,0A41.77,41.77,0,0,1,601.53,155a47,47,0,0,1-9.9-15.55,56.43,56.43,0,0,1-3.73-21.29v-2.33a55.91,55.91,0,0,1,3.73-21.09,47.53,47.53,0,0,1,10-15.65,42.26,42.26,0,0,1,14.45-9.72,45.88,45.88,0,0,1,34.17,0,42.26,42.26,0,0,1,14.45,9.72,47.72,47.72,0,0,1,10,15.65,56.11,56.11,0,0,1,3.72,21.09Zm-45.25,35.38a29.73,29.73,0,0,0,12.08-2.43A28.09,28.09,0,0,0,655,144a34,34,0,0,0,6.54-11.18,42.93,42.93,0,0,0,2.36-14.68v-2.33a41.8,41.8,0,0,0-2.36-14.29A34,34,0,0,0,655,90.39a30.17,30.17,0,0,0-9.82-7.29,28.67,28.67,0,0,0-24,0,30.13,30.13,0,0,0-9.81,7.29,33.84,33.84,0,0,0-6.55,11.17,41.8,41.8,0,0,0-2.36,14.29v2.33a42.93,42.93,0,0,0,2.36,14.68A33.89,33.89,0,0,0,611.35,144a28,28,0,0,0,9.72,7.09A29.81,29.81,0,0,0,633.16,153.56Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid5}
           d="M718.76,165.23H704.58V68.81h14.18V85.14h2.18q8.35-19,29.08-19,15.63,0,24.9,10.4t9.27,31.2v57.54H770V110.8q0-15.17-6.36-22.75t-17.26-7.58q-12.92,0-20.27,9.43t-7.36,25.17Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid6}
           d="M921.59,150.06h10.9V44.32h-10.9V29.16H973a44.08,44.08,0,0,1,16.09,2.72,34.88,34.88,0,0,1,11.81,7.38,30.21,30.21,0,0,1,7.27,11.18,39.55,39.55,0,0,1,2.45,14.09v2.34a31,31,0,0,1-1.63,10.3,28.75,28.75,0,0,1-4.55,8.36,29.86,29.86,0,0,1-6.81,6.32,31.59,31.59,0,0,1-8.45,4v2.33a30.52,30.52,0,0,1,15.26,10.4q6.18,7.68,6.18,18.76v2.33a39.56,39.56,0,0,1-2.45,14.1,31.06,31.06,0,0,1-7.27,11.27,34,34,0,0,1-11.81,7.48A44.08,44.08,0,0,1,973,165.23H921.59Zm26.17-60.64h24.72q10.9,0,17.26-6t6.36-16.52V65.7q0-9.91-6.72-15.65t-17.45-5.73H947.76Zm0,60.64h24.17q10.73,0,17.45-5.73t6.72-15.84v-1.17q0-10.5-6.36-16.62t-17.26-6.12H947.76Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid7}
           d="M1038.27,151.23H1071V43.15h-31.62v-14h45.8V151.23h32.71v14h-79.6Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid8}
           d="M1213.84,68.81H1228v96.42h-14.17v-17.5h-2.19a38.82,38.82,0,0,1-11.45,14.77q-7.08,5.44-18,5.45a35.17,35.17,0,0,1-13.72-2.63,28,28,0,0,1-10.72-7.87,37.2,37.2,0,0,1-6.91-13,60.09,60.09,0,0,1-2.45-18.08V68.81h14.17V124.4q0,15.16,5.82,22.16t17.81,7q12.9,0,20.26-9.43t7.37-25.17Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
         <path
           ref={pathsolid9}
           d="M1347.42,165.23h-14.18V96q0-6.8-2.9-11.17t-9.27-4.38a11.77,11.77,0,0,0-9.73,4.77q-3.72,4.76-3.72,14.67v65.32h-14.18v-70a16.69,16.69,0,0,0-3.27-10.6,10.53,10.53,0,0,0-8.72-4.18,11.58,11.58,0,0,0-10.09,5.06q-3.54,5.06-3.55,13.22v66.48h-14.17V68.81h14.17v10.5H1270q2.36-6.81,6.9-10a18.1,18.1,0,0,1,10.72-3.21,16,16,0,0,1,10.82,3.69,19.16,19.16,0,0,1,5.91,9.53h2.18q6.17-13.22,19.62-13.22,10.18,0,15.73,6.9t5.54,18Z"
           transform="translate(-98.55 75.74)"
-          fill={theme.theme.buttonText}
+          fill={theme.theme.mainText}
         ></path>
       </g>
       <g id="developer">
@@ -1785,7 +1848,6 @@ const AwesomeAnimation = () => {
           d="M853.08,320.3q.31,8.35,4.85,13.42t12.65,5.07a20.67,20.67,0,0,0,6.43-.9,14.74,14.74,0,0,0,4.69-2.48,13.25,13.25,0,0,0,3.16-3.66,21.45,21.45,0,0,0,1.95-4.46l7.8,2.26a24.77,24.77,0,0,1-8.17,12.68q-6,4.9-16.07,4.91a25,25,0,0,1-10.28-2.09,23.08,23.08,0,0,1-8.07-5.92,27.9,27.9,0,0,1-5.27-9.13,34.69,34.69,0,0,1-1.89-11.73v-2.7a30.23,30.23,0,0,1,1.95-10.94,26.39,26.39,0,0,1,5.42-8.74,25.62,25.62,0,0,1,8.17-5.75,24.78,24.78,0,0,1,10.18-2.08,23.08,23.08,0,0,1,11.12,2.53A24.85,24.85,0,0,1,893.82,305a26.47,26.47,0,0,1,1.42,8.12v7.21Zm17.5-23.9a17.57,17.57,0,0,0-6.49,1.19,16.09,16.09,0,0,0-5.27,3.32,17.59,17.59,0,0,0-3.69,5,19.27,19.27,0,0,0-1.84,6.26H887a17,17,0,0,0-1.63-6.54,15.81,15.81,0,0,0-3.69-5,16.69,16.69,0,0,0-5.17-3.16A16.32,16.32,0,0,0,870.58,296.4Z"
           transform="translate(-98.55 75.74)"
           fill={theme.theme.mainText}
-
         ></path>
         <path
           ref={developerV}
@@ -2273,6 +2335,25 @@ const AwesomeAnimation = () => {
         ></path>
       </g>
 
+      <g id="solidunderline" data-name="underline">
+        <path
+          ref={solidunderline2}
+          d="M1320.31,219.74l.45.08,1.6.13c1.88-.47,5.6,0,10.49.46,0-.18-.4-.39,1.33-.36,7.74.9,3.88.27,9.52.29a36.15,36.15,0,0,1-4.74-.46l10.8.56c-1.46-.44-2.65-.91-.82-1.07-1-.78,2.57-1.37,4-2-1.93-.22-3.46-.42-4.18-.57.28-.28,2.14-.28,4.41-.18a3.78,3.78,0,0,0-.69-.27,3.78,3.78,0,0,1,.69.27c1.5.07,3.17.19,4.71.32-.86-.15-1.72-.31-1.28-.41l-6.49-.45c-.21-.08,0-.12.4-.15l-1.69.06,1.27.27c.44.17-.44.2-1.31.23a16.1,16.1,0,0,1-3-.39l-3.48.08c-1.34.45,9.06.94,3.4,1.05l-1.72-.26a73.32,73.32,0,0,0-7.81,0c-2.55-.81-7.38,0-7.76-.9-9.92-1.11-22.95-1.15-32.84-2.69-1.76.49-1.83,1.62-6.19,2.08-.86-.14-2.16-.32-1.71-.42l-3.05.15a27.32,27.32,0,0,1,4.75.45c-4.77,0,2.13.63,1.69.92l-6.51-.06.76.17c11.59.86,23.15,2.14,34.74,3.14Z"
+          transform="translate(-98.55 75.74)"
+          fill={theme.theme.buttonText}
+          stroke={theme.theme.buttonText}
+          stroke-miterlimit="10"
+        />
+        <path
+          ref={solidunderline1}
+          d="M1122.27,200.82l.11.68-80.31-.25c-28.44,0-58.33,0-88.95.46s-62,1.1-93.33,2.16c-15.68.61-31.37,1.18-47,2-7.79.4-15.57.76-23.31,1.21l-23.08,1.35,2.85-2.7c-16.3,1.68-33.69,3.13-50.85,3.95-8.57.42-17.09.64-25.4.79l-24.1.28,11.88,1c-11,1.05-38.91.34-56.11-.62l1.72-.6c23.62.65-1.59-.29,8.05-1.68l4.12-.14-2.39-.44-4.12.15c.48-.36.14-.87,4-.84l-5.48-.31c-11.73-2.27-11.73-3.79-10.17-5.76-3.12.16.07,2.19-13.17,1.24l1.74-.63-7.27.47-7.28.55-6.51-.8c-2.59.22-4.73.53-6.89.7s-4.32.29-7,.28l-1.56,1.4c-11.91.31-25.29,1.68-38.61,3.35s-26.6,3.53-38.49,4.6c-5,2-18,1.8-31.19,5.18l6,.46c7.33-.22,19.29-1.56,32.3-3.18s27.18-3.47,38.84-4.28l-.83.85c-4.85.73-8.3,1.73-14.36,2.07l-1.42,1.51c5.35,1.72,15.7.28,25.85-1.35s20.12-3.45,24.37-3.27c9,.33,6.07,1.17,2,1.81s-9.28,1.32-5,1c-4.88.69-6.27,1.22-5.5,1.59s3.69.61,7.48.84l12.64.8c4.22.35,8,.68,10.06,1.1,5.73.78,13.16,1.39,21.59,1.94s17.86,1.08,27.56,1.56,19.69.9,29.2,1.2,18.54.46,26.3.58l85.32-4c14.67-.64,29.21-1,43-1.52s26.94-.77,38.74-1.26c5.67-.11,12.19-.59,19-1.19s13.94-1.34,20.81-1.86c13.74-1.06,26.49-1.71,33.8.26,14.16,0,28.32-.06,42.49.1l-.9.77c41.32-.32,86.94-2.08,125.55-2,16.85.14,22-1.69,29.61.59,33.44,2.19,73,.59,105.67,1.94-.09-.68,4.49-1.19-1.53-1.83a199.36,199.36,0,0,1-24.33-1.43c-7-.83-11.89-1.88-12.15-2.82l6.26.41-11.13-1.91-7.2.32c-1.82-.52-2.63-.91-2.75-1.2-12.28-1.16-23-3-35.69-4.5A297.77,297.77,0,0,1,1122.27,200.82Z"
+          transform="translate(-98.55 75.74)"
+          fill={theme.theme.buttonText}
+          stroke={theme.theme.buttonText}
+          stroke-miterlimit="10"
+        />
+      </g>
+
       <g id="underline">
         <path
           ref={underline2}
@@ -2294,4 +2375,4 @@ const AwesomeAnimation = () => {
     </svg>
   );
 };
-export default AwesomeAnimation;
+export default FullDeveloperWordCycle;
