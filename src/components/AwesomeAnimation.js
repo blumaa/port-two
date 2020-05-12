@@ -390,7 +390,7 @@ const FullDeveloperWordCycle = () => {
       .addLabel("underline")
       .add(drawUnderline, "+=3")
       .add(developerWordCycle);
-  });
+  }, []);
   return (
     <svg
       id="baselayer"

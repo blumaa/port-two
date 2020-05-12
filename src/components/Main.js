@@ -6,6 +6,8 @@ import TechStack2 from "./TechStack2/TechStack2"
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Separator1 from './animations/Separator1'
+
 
 const Main = ({ show }) => {
   return (
@@ -16,6 +18,9 @@ const Main = ({ show }) => {
       <div id="page1">
         <TechStack />
       </div>
+      <>
+        <Separator1 />
+      </>
       <div id="page2">
         <Portfolio />
       </div>
@@ -26,10 +31,7 @@ const Main = ({ show }) => {
         <Contact />
       </div>
      
-      {/* <Route path="/" exact render={(props) => <AboutMe {...props} show={show}/>} />
-      <Route path="/TechStack" component={TechStack} />
-      <Route path="/Portfolio" component={Portfolio} />
-      <Route path="/Contact" component={Contact} /> */}
+      
     </div>
   );
 };

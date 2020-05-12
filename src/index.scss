@@ -9,344 +9,423 @@ $main-text-color: #3a4a6fff;
   border: 0;
   padding: 0;
   margin: 0;
-  // background-color: $background-color;
-}
-.App {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  // background-color: $background-color;
+  // background-color: red;
 }
 
-body {
-  // background-image: url(./images/Cloud-20s-1084px.svg);
-  z-index: -1;
-  // background-size: 100%;
-  // background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  // border: 1px solid blue;
-  height: 100vh;
-  // width: 100vw;
-  // position: absolute;
-  display: flex;
-  flex-direction: column;
-  // justify-content: flex-start;
-  // color: $main-text-color;
-}
-@media (max-width: 600px) {
-  /* header */
+#root {
+  // background-color: red;
 
-  header {
-    font-family: $font-stack;
-    // height: 10vh;
-    position: fixed;
-    // overflow: hidden;
-    width: 100%;
-    // top: 0;
-    margin: 0;
-    padding: 0;
-    // background-color: #d6d6d6;
-    // box-shadow: 1px 1px 5px rgb(124, 124, 124);
-    z-index: 1;
-    // background-color: orange;
-    display: flex;
-    // flex-direction: center;
-    // justify-content: flex-start;
-    // align-items: center;
-    // border: 1px solid purple;
-
-    #navbar-container {
-      width: 100%;
-      // border: 1px solid red;
-      // height: 100%;
-      // display: grid;
-      // grid-template-columns: 10% 90% 10%;
-      display: flex;
-      // flex-direction: row;
-      z-index: 1;
-      justify-content: space-between;
-      // #menu-container {
-      //   @include burger;
-      // }
-      // width: 30vw;
-      // margin: 0vh 0vw 0vw 2vw;
-      #up-left-button-container {
-        margin-left: 2vw;
-        // width: 80%;
-        display: flex;
-        justify-content: flex-start;
-        // border: 2px solid red;
-        .accordion-button-container {
-          width: 10vw;
-          // align-self: flex-start;
-          outline: none;
-          // display: flex;
-          // justify-content: flex-start;
-          // align-items: center;
-          // flex-direction: column;
-          font-size: 0%;
-          padding: 0;
-          border: 0;
-          // border: 2px solid red;
-          // background-color: rgba(218, 112, 214, 0);
-          // position: absolute;
-          z-index: 900;
-          background-color: #e3e3e300;
-          #burger-button {
-            background-color: #e3e3e300;
-            div {
-              width: 25px;
-              height: 3px;
-              background-color: $main-text-color;
-              margin: 5px 0;
-            }
-          }
-        }
-      }
-      .language {
-        // margin-right: 4vw;
-        display: flex;
-        flex-direction: column;
-        // border: 2px solid red;
-        // align-self: flex-end;
-      }
-    }
-  }
-  
-  /* main */
-  main {
-    // width: 100vw;
-    height: 100vh;
-    // margin-top: 50px;
-    // height: 812px;
-    // position: fixed;
-    // background-color: #76c1d4;
-    // background-size:10%;
+  .App {
     border: 0;
     padding: 0;
     margin: 0;
-    // bottom: 0;
-    // border: purple 1px solid;
-    #main-container {
+    height: 100%;
+    // background-color: red;
+  }
+
+  body {
+    // background-image: url(./images/Cloud-20s-1084px.svg);
+    z-index: -1;
+    // background-size: 100%;
+    // background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    // border: 1px solid blue;
+    height: 100vh;
+    // width: 100vw;
+    // position: absolute;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    // color: $main-text-color;
+  }
+  @media (max-width: 600px) {
+    /* header */
+
+    header {
+      font-family: $font-stack;
+      // height: 10vh;
+      position: fixed;
+      // overflow: hidden;
+      width: 100%;
+      // top: 0;
       margin: 0;
       padding: 0;
-      #home {
-        @include home-master;
-      }
-      #about-me {
-        @include aboutme-master;
-      }
-      #portfolio {
-        @include portfolio-master;
-      }
-      #contact {
-        @include contact-master;
-      }
-      #tech-stack {
-        @include tech-stack-master;
-      }
-    }
-  }
-  .list-transition-enter {
-  }
-
-  /* footer */
-  footer {
-    font-family: $font-stack;
-    // height: 10vh;
-    position: fixed;
-    bottom: 0;
-    border: 0;
-    margin: 0;
-    // overflow: hidden;
-    // border: 1px solid white;
-    width: 100%;
-    // z-index: 999;
-    .footer-container {
-      // border: 1px solid rgba(0, 0, 0, 0.8);
-      // height: 100%;
-      display: flex;
-      flex-direction: row;
-
-      // background-image: url(./images/Flat-Mountains.svg);
-      // background-size: 80%;
-      // background-position: right bottom;
-      // background-repeat: no-repeat;
-      .item1 {
-        // border: 1px solid green;
-        // height: 100%;
-        // width: 20%;
-      }
-      .item2 {
-        // border: 1px solid green;
-        // height: 100%;
-        // width: 20%;
-      }
-      .item3 {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        z-index: 1;
-        margin-bottom: 1.5vh;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 601px) {
-  header {
-    font-family: $font-stack;
-    // height: 10vh;
-    position: fixed;
-    // overflow: hidden;
-    width: 100%;
-    top: 0;
-    margin: 0;
-    // background-color: #d6d6d6;
-    // box-shadow: 1px 1px 5px rgb(124, 124, 124);
-    z-index: 1;
-
-    #navbar-container {
-      width: 100%;
-      // border: 1px solid red;
-      display: flex;
-      flex-direction: row;
+      // background-color: #d6d6d6;
+      // box-shadow: 1px 1px 5px rgb(124, 124, 124);
       z-index: 1;
-      justify-content: space-between;
+      // background-color: orange;
+      display: flex;
+      // flex-direction: center;
+      // justify-content: flex-start;
       // align-items: center;
-      // border: 1px solid red;
-      #up-left-button-container {
-        width: 10vw;
+      // border: 1px solid purple;
+
+      #navbar-container {
+        width: 100%;
+        // border: 1px solid red;
+        // height: 100%;
+        // display: grid;
+        // grid-template-columns: 10% 90% 10%;
         display: flex;
-        margin: 2vh 0vw 0vw;
-        justify-content: space-evenly;
-        .accordion-button-container {
-          // width: 20vw;
-          outline: none;
-          padding: 0;
-          border: 0;
+        // flex-direction: row;
+        z-index: 1;
+        justify-content: space-between;
+        // #menu-container {
+        //   @include burger;
+        // }
+        // width: 30vw;
+        // margin: 0vh 0vw 0vw 2vw;
+        #up-left-button-container {
+          margin-left: 2vw;
+          // width: 80%;
+          display: flex;
+          justify-content: flex-start;
           // border: 2px solid red;
-          z-index: 900;
-          background-color: #e3e3e300;
-          #burger-button {
-            cursor: pointer;
+          .accordion-button-container {
+            width: 10vw;
+            // align-self: flex-start;
+            outline: none;
+            // display: flex;
+            // justify-content: flex-start;
+            // align-items: center;
+            // flex-direction: column;
+            font-size: 0%;
+            padding: 0;
+            border: 0;
+            // border: 2px solid red;
+            // background-color: rgba(218, 112, 214, 0);
+            // position: absolute;
+            z-index: 900;
             background-color: #e3e3e300;
-            div {
-              width: 25px;
-              height: 3px;
-              // background-color: $main-text-color;
-              margin: 5px 0;
+            #burger-button {
+              background-color: #e3e3e300;
+              div {
+                width: 25px;
+                height: 3px;
+                background-color: $main-text-color;
+                margin: 5px 0;
+              }
             }
           }
         }
-      }
-      .language {
-        display: flex;
-        flex-direction: column;
-        // border: 2px solid red;
-        // align-self: flex-end;
-      }
-    }
-  }
-
-  /* main */
-  main {
-    // width: 100vw;
-    height: 100vh;
-    // margin-top: 50px;
-    // height: 812px;
-    // position: fixed;
-    // background-color: #76c1d4;
-    // background-size:10%;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    // bottom: 0;
-    // border: purple 3px solid;
-    #main-container {
-      #home {
-        @include home-master-desktop;
-      }
-      #about-me {
-        @include aboutme-master-desktop;
-      }
-      #portfolio {
-        @include portfolio-master-desktop;
-      }
-      #contact {
-        @include contact-master-desktop;
-      }
-      #tech-stack {
-        @include tech-stack-master-desktop;
+        .language {
+          // margin-right: 4vw;
+          display: flex;
+          flex-direction: column;
+          // border: 2px solid red;
+          // align-self: flex-end;
+        }
       }
     }
-  }
-  .list-transition-enter {
-  }
 
-  /* footer */
-  footer {
-    font-family: $font-stack;
-    // height: 25vh;
-    position: fixed;
-    bottom: 0;
-    border: 0;
-    margin: 0;
-    // overflow: hidden;
-    width: 100%;
-    // border: 5px solid white;
-    // z-index: 1;
-    .footer-container {
-      // border: 1px solid rgba(0, 0, 0, 0.8);
-      // width: 100%;
-      // height: 100%;
-      display: flex;
-      flex-direction: row;
+    /* main */
+    main {
+      // width: 100vw;
+      height: 100vh;
+      // margin-top: 50px;
+      // height: 812px;
+      // position: fixed;
+      // background-color: #76c1d4;
+      // background-size:10%;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      // bottom: 0;
+      // border: purple 1px solid;
+      #main-container {
+        margin: 0;
+        padding: 0;
+        #home {
+          @include home-master;
+        }
 
-      // background-image: url(./images/Flat-Mountains.svg);
-      background-size: 80%;
-      background-position: right bottom;
-      background-repeat: no-repeat;
-      .item1 {
-        // border: 1px solid green;
-        // height: 100%;
-        // width: 20vw;
+          #space-scene {
+            // border: 1px solid blue;
+            // width: 100vw;
+            // height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: #252523;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            background-image: url("./images/starrysky.jpg");
+            // background-size: 100vh;
+            background-attachment: fixed;
+
+            background-repeat: no-repeat;
+            svg {
+              // border: 1px solid red;
+              // height: 60vh;
+              width: 100%;
+            }
+
+            #reference {
+              // height: 60vh;
+              // align-self: flex-end;
+              background: #252523;
+
+              // border: 1px solid green;
+              z-index: 999;
+              // bottom:0;
+              color: white;
+              // display: none;
+              opacity: 0;
+            }
+        }
+        #about-me {
+          @include aboutme-master;
+        }
+        #portfolio {
+          @include portfolio-master;
+        }
+        #contact {
+          @include contact-master;
+        }
+        #tech-stack {
+          @include tech-stack-master;
+        }
       }
-      .item2 {
-        // border: 1px solid green;
-        // height: 100%;
-        // width: 20vw;
-      }
-      .item3 {
-        // height: 100%;
+    }
+    .list-transition-enter {
+    }
+
+    /* footer */
+    footer {
+      font-family: $font-stack;
+      // height: 10vh;
+      position: fixed;
+      bottom: 0;
+      border: 0;
+      margin: 0;
+      // overflow: hidden;
+      // border: 1px solid white;
+      width: 100%;
+      // z-index: 999;
+      .footer-container {
         // border: 1px solid rgba(0, 0, 0, 0.8);
-        // background-image: url(./images/cloudclump.svg);
-        // background-size: 100%;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        width: 100%;
+        // height: 100%;
         display: flex;
-        justify-content: flex-end;
-        z-index: 1;
-        margin-bottom: 1.5vh;
-        z-index: 1;
+        flex-direction: row;
+
+        // background-image: url(./images/Flat-Mountains.svg);
+        // background-size: 80%;
+        // background-position: right bottom;
+        // background-repeat: no-repeat;
+        .item1 {
+          // border: 1px solid green;
+          // height: 100%;
+          // width: 20%;
+        }
+        .item2 {
+          // border: 1px solid green;
+          // height: 100%;
+          // width: 20%;
+        }
+        .item3 {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          z-index: 1;
+          margin-bottom: 1.5vh;
+        }
       }
     }
   }
-}
 
-@media only screen and (min-width: 641px) and (max-width: 1024px) {
-}
+  @media only screen and (min-width: 601px) {
+    header {
+      font-family: $font-stack;
+      // height: 10vh;
+      position: fixed;
+      // overflow: hidden;
+      width: 100%;
+      top: 0;
+      margin: 0;
+      // background-color: #d6d6d6;
+      // box-shadow: 1px 1px 5px rgb(124, 124, 124);
+      z-index: 1;
 
-@media only screen and (min-width: 1025px) {
-}
+      #navbar-container {
+        width: 100%;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+        justify-content: space-between;
+        // align-items: center;
+        // border: 1px solid red;
+        #up-left-button-container {
+          width: 10vw;
+          display: flex;
+          margin: 2vh 0vw 0vw;
+          justify-content: space-evenly;
+          .accordion-button-container {
+            // width: 20vw;
+            outline: none;
+            padding: 0;
+            border: 0;
+            // border: 2px solid red;
+            z-index: 900;
+            background-color: #e3e3e300;
+            #burger-button {
+              cursor: pointer;
+              background-color: #e3e3e300;
+              div {
+                width: 25px;
+                height: 3px;
+                // background-color: $main-text-color;
+                margin: 5px 0;
+              }
+            }
+          }
+        }
+        .language {
+          display: flex;
+          flex-direction: column;
+          // border: 2px solid red;
+          // align-self: flex-end;
+        }
+      }
+    }
 
-@media only screen and (min-width: 641px) {
-}
+    /* main */
+    main {
+      // width: 100vw;
+      height: 100vh;
+      // margin-top: 50px;
+      // height: 812px;
+      // position: fixed;
+      // background-color: #76c1d4;
+      // background-size:10%;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      // bottom: 0;
+      // border: purple 3px solid;
+      #main-container {
+        #home {
+          @include home-master-desktop;
+        }
+        #about-me {
+          @include aboutme-master-desktop;
+        }
+        #space-scene {
+          // border: 1px solid blue;
+          // width: 100vw;
+          // height: 100vh;
+          margin: 0;
+          padding: 0;
+          background: #252523;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
 
-@media only screen and (min-width: 1025px) {
-}
+          background-image: url("./images/starrysky.jpg");
+          background-size: 100%;
+          background-attachment: fixed;
 
-@media only screen and (max-width: 1024px) {
+          background-repeat: no-repeat;
+          svg {
+            // border: 1px solid red;
+            // height: 60vh;
+            width: 100%;
+          }
+
+          #reference {
+            // height: 60vh;
+            // align-self: flex-end;
+            background: #252523;
+
+            // border: 1px solid green;
+            z-index: 999;
+            // bottom:0;
+            color: white;
+            // display: none;
+            opacity: 0;
+          }
+      }
+        #portfolio {
+          @include portfolio-master-desktop;
+        }
+        #contact {
+          @include contact-master-desktop;
+        }
+        #tech-stack {
+          @include tech-stack-master-desktop;
+        }
+      }
+    }
+    .list-transition-enter {
+    }
+
+    /* footer */
+    footer {
+      font-family: $font-stack;
+      // height: 25vh;
+      position: fixed;
+      bottom: 0;
+      border: 0;
+      margin: 0;
+      // overflow: hidden;
+      width: 100%;
+      // border: 5px solid white;
+      // z-index: 1;
+      .footer-container {
+        // border: 1px solid rgba(0, 0, 0, 0.8);
+        // width: 100%;
+        // height: 100%;
+        display: flex;
+        flex-direction: row;
+
+        // background-image: url(./images/Flat-Mountains.svg);
+        background-size: 80%;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        .item1 {
+          // border: 1px solid green;
+          // height: 100%;
+          // width: 20vw;
+        }
+        .item2 {
+          // border: 1px solid green;
+          // height: 100%;
+          // width: 20vw;
+        }
+        .item3 {
+          // height: 100%;
+          // border: 1px solid rgba(0, 0, 0, 0.8);
+          // background-image: url(./images/cloudclump.svg);
+          // background-size: 100%;
+          // background-position: center;
+          // background-repeat: no-repeat;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          z-index: 1;
+          margin-bottom: 1.5vh;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 641px) and (max-width: 1024px) {
+  }
+
+  @media only screen and (min-width: 1025px) {
+  }
+
+  @media only screen and (min-width: 641px) {
+  }
+
+  @media only screen and (min-width: 1025px) {
+  }
+
+  @media only screen and (max-width: 1024px) {
+  }
 }

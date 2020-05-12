@@ -19,14 +19,14 @@ function App() {
 
   // console.log(theme)
   return (
-      <div className="App" style={{backgroundColor: theme.theme.backgroundColor}}>
-        <header>
+      <div className="App" >
+        <header >
           <Navbar />
         </header>
-        <main>
+        <main style={{backgroundColor: theme.theme.backgroundColor}}>
           <Main />
         </main>
-        <footer>
+        <footer >
           <Footer />
         </footer>
       </div>

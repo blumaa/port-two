@@ -20,13 +20,13 @@
   margin: 0;
 }
 
-.App {
+#root .App {
   border: 0;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
-
-body {
+#root body {
   z-index: -1;
   margin: 0;
   padding: 0;
@@ -34,10 +34,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 @media (max-width: 600px) {
-  /* header */
-  header {
+  #root {
+    /* header */
+    /* main */
+    /* footer */
+  }
+  #root header {
     font-family: "Proza Libre", sans-serif;
     position: fixed;
     width: 100%;
@@ -46,18 +49,18 @@ body {
     z-index: 1;
     display: flex;
   }
-  header #navbar-container {
+  #root header #navbar-container {
     width: 100%;
     display: flex;
     z-index: 1;
     justify-content: space-between;
   }
-  header #navbar-container #up-left-button-container {
+  #root header #navbar-container #up-left-button-container {
     margin-left: 2vw;
     display: flex;
     justify-content: flex-start;
   }
-  header #navbar-container #up-left-button-container .accordion-button-container {
+  #root header #navbar-container #up-left-button-container .accordion-button-container {
     width: 10vw;
     outline: none;
     font-size: 0%;
@@ -66,36 +69,34 @@ body {
     z-index: 900;
     background-color: #e3e3e300;
   }
-  header #navbar-container #up-left-button-container .accordion-button-container #burger-button {
+  #root header #navbar-container #up-left-button-container .accordion-button-container #burger-button {
     background-color: #e3e3e300;
   }
-  header #navbar-container #up-left-button-container .accordion-button-container #burger-button div {
+  #root header #navbar-container #up-left-button-container .accordion-button-container #burger-button div {
     width: 25px;
     height: 3px;
     background-color: #3a4a6fff;
     margin: 5px 0;
   }
-  header #navbar-container .language {
+  #root header #navbar-container .language {
     display: flex;
     flex-direction: column;
   }
-
-  /* main */
-  main {
+  #root main {
     height: 100vh;
     border: 0;
     padding: 0;
     margin: 0;
   }
-  main #main-container {
+  #root main #main-container {
     margin: 0;
     padding: 0;
   }
-  main #main-container #home {
+  #root main #main-container #home {
     height: 100vh;
     z-index: 0;
   }
-  main #main-container #home .grid-container {
+  #root main #main-container #home .grid-container {
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -103,7 +104,7 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
   }
-  main #main-container #home .grid-container .top-container {
+  #root main #main-container #home .grid-container .top-container {
     display: flex;
     justify-content: flex-end;
     height: 5vh;
@@ -111,23 +112,23 @@ body {
     overflow: visible;
     text-align: center;
   }
-  main #main-container #home .grid-container .top-container #title-box {
+  #root main #main-container #home .grid-container .top-container #title-box {
     z-index: 0;
   }
-  main #main-container #home .grid-container .top-container #title-box #title {
+  #root main #main-container #home .grid-container .top-container #title-box #title {
     font-family: "Proza Libre", sans-serif;
     color: #384a6cff;
     font-size: 5vh;
   }
-  main #main-container #home .grid-container .top-container #lng-container {
+  #root main #main-container #home .grid-container .top-container #lng-container {
     display: flex;
     flex-direction: column;
     height: 8vh;
   }
-  main #main-container #home .grid-container #about-me-middle-container {
+  #root main #main-container #home .grid-container #about-me-middle-container {
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #home .grid-container #about-me-middle-container #title-box {
+  #root main #main-container #home .grid-container #about-me-middle-container #title-box {
     height: 30%;
     padding-right: 10px;
     padding-left: 10px;
@@ -137,121 +138,121 @@ body {
     justify-content: flex-end;
     align-items: center;
   }
-  main #main-container #home .grid-container #about-me-middle-container #title-box #sub-header {
+  #root main #main-container #home .grid-container #about-me-middle-container #title-box #sub-header {
     color: #ec6543ff;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter1 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter1 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter2 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter2 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #topmoon {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #topmoon {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #ufo {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #ufo {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #schriftstellor {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #schriftstellor {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #escritor {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #escritor {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #pedagoge {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #pedagoge {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #profesor {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #profesor {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #writer {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #writer {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #developer {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #developer {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumSolid {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumSolid {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumOutline {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumOutline {
     visibility: show;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #letter1 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #letter1 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #solidunderline {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #solidunderline {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR2 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR2 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR3 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR3 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR4 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR4 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
     border-radius: 10px;
     padding: 10px;
     width: 65%;
     font-size: 2vh;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-two {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-two {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
   }
-  main #main-container #home .grid-container .bottom-container {
+  #root main #main-container #home .grid-container .bottom-container {
     height: 20vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-one {
+  #root main #main-container #home .grid-container .bottom-container #bottom-one {
     width: 40%;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation {
+  #root main #main-container #home .grid-container .bottom-container #bottom-one .home-animation {
     position: relative;
     left: -50px;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation img {
+  #root main #main-container #home .grid-container .bottom-container #bottom-one .home-animation img {
     height: 70px;
   }
   @keyframes moveabout {
@@ -369,30 +370,51 @@ body {
       transform: translateY(-90vh);
     }
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two {
+  #root main #main-container #home .grid-container .bottom-container #bottom-two {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #home .grid-container .bottom-container #bottom-two svg {
     height: 2.5vh;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-three {
+  #root main #main-container #home .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #about-me {
+  #root main #main-container #space-scene {
+    margin: 0;
+    padding: 0;
+    background: #252523;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("./images/starrysky.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  #root main #main-container #space-scene svg {
+    width: 100%;
+  }
+  #root main #main-container #space-scene #reference {
+    background: #252523;
+    z-index: 999;
+    color: white;
+    opacity: 0;
+  }
+  #root main #main-container #about-me {
     z-index: 0;
   }
-  main #main-container #about-me .grid-container {
+  #root main #main-container #about-me .grid-container {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  main #main-container #about-me .grid-container .top-container {
+  #root main #main-container #about-me .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -401,18 +423,18 @@ body {
     overflow: visible;
     margin-bottom: 10px;
   }
-  main #main-container #about-me .grid-container .top-container #title-box {
+  #root main #main-container #about-me .grid-container .top-container #title-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
   }
-  main #main-container #about-me .grid-container .top-container #title-box #title {
+  #root main #main-container #about-me .grid-container .top-container #title-box #title {
     color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #about-me .grid-container #middle-container {
+  #root main #main-container #about-me .grid-container #middle-container {
     height: 85vh;
     font-family: "Proza Libre", sans-serif;
     display: flex;
@@ -422,12 +444,12 @@ body {
     width: 90%;
     align-self: center;
   }
-  main #main-container #about-me .grid-container #middle-container #description-one {
+  #root main #main-container #about-me .grid-container #middle-container #description-one {
     font-size: 2vh;
     display: flex;
     align-items: center;
   }
-  main #main-container #about-me .grid-container #middle-container #links {
+  #root main #main-container #about-me .grid-container #middle-container #links {
     width: 100%;
     height: 10%;
     display: flex;
@@ -437,42 +459,42 @@ body {
     flex-direction: row;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #about-me .grid-container #middle-container #description-two {
+  #root main #main-container #about-me .grid-container #middle-container #description-two {
     font-size: 2vh;
   }
-  main #main-container #about-me .grid-container .bottom-container {
+  #root main #main-container #about-me .grid-container .bottom-container {
     height: 7vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-one {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-two {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
     width: 20%;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-two svg {
     height: 2.5vh;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-three {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #portfolio {
+  #root main #main-container #portfolio {
     z-index: 0;
   }
-  main #main-container #portfolio .grid-container {
+  #root main #main-container #portfolio .grid-container {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
   }
-  main #main-container #portfolio .grid-container .top-container {
+  #root main #main-container #portfolio .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -481,26 +503,26 @@ body {
     overflow: visible;
     margin-bottom: 10px;
   }
-  main #main-container #portfolio .grid-container .top-container #title-box {
+  #root main #main-container #portfolio .grid-container .top-container #title-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
   }
-  main #main-container #portfolio .grid-container .top-container #title-box #title {
+  #root main #main-container #portfolio .grid-container .top-container #title-box #title {
     align-self: flex-start;
     color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #portfolio .grid-container #middle-container {
+  #root main #main-container #portfolio .grid-container #middle-container {
     font-family: "Proza Libre", sans-serif;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container {
     width: 90%;
     padding: 10px;
     display: flex;
@@ -508,7 +530,7 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-title {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-title {
     color: #ec6543ff;
     font-size: 5vh;
     width: 100%;
@@ -517,14 +539,14 @@ body {
     justify-content: center;
     margin-bottom: 5px;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-links {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-links {
     width: 100%;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-picture {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-picture {
     width: 100%;
     display: flex;
     align-items: center;
@@ -533,58 +555,58 @@ body {
     flex-wrap: wrap;
     margin-bottom: 5px;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-picture img {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-picture img {
     box-shadow: 2px 2px 10px 0.5px rgba(124, 124, 124, 0.568);
     height: 45vw;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-description {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-description {
     font-size: 2vh;
     margin-bottom: 10px;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-frontend {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-frontend {
     width: 45%;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-backend {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-backend {
     width: 45%;
   }
-  main #main-container #portfolio .grid-container .bottom-container {
+  #root main #main-container #portfolio .grid-container .bottom-container {
     display: flex;
     flex-direction: row;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-one {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-two {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
     width: 20%;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-two svg {
     height: 2.5vh;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-three {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #contact {
+  #root main #main-container #contact {
     z-index: 0;
   }
-  main #main-container #contact .grid-container {
+  #root main #main-container #contact .grid-container {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  main #main-container #contact .grid-container .top-container {
+  #root main #main-container #contact .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -593,7 +615,7 @@ body {
     overflow: visible;
     margin-bottom: 10px;
   }
-  main #main-container #contact .grid-container #middle-container {
+  #root main #main-container #contact .grid-container #middle-container {
     height: 75vh;
     font-family: "Proza Libre", sans-serif;
     display: flex;
@@ -601,7 +623,7 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  main #main-container #contact .grid-container #middle-container #description-one {
+  #root main #main-container #contact .grid-container #middle-container #description-one {
     width: 80%;
     height: 50vh;
     display: flex;
@@ -609,43 +631,43 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #title-box {
+  #root main #main-container #contact .grid-container #middle-container #description-one #title-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #title-box #title {
+  #root main #main-container #contact .grid-container #middle-container #description-one #title-box #title {
     color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #title {
+  #root main #main-container #contact .grid-container #middle-container #description-one #title {
     align-self: flex-start;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons {
     width: 100%;
     margin-top: 10px;
     display: flex;
     justify-content: center;
     text-align: center;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-icon {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-icon {
     display: flex;
     justify-content: center;
     text-align: center;
     width: 20%;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-text {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-text {
     width: 80%;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons #copy-button {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons #copy-button {
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  main #main-container #contact .grid-container #middle-container #links {
+  #root main #main-container #contact .grid-container #middle-container #links {
     width: 100%;
     height: 10%;
     display: flex;
@@ -655,54 +677,54 @@ body {
     flex-direction: row;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #contact .grid-container #middle-container #description-two {
+  #root main #main-container #contact .grid-container #middle-container #description-two {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
     font-size: 2vh;
   }
-  main #main-container #contact .grid-container .bottom-container {
+  #root main #main-container #contact .grid-container .bottom-container {
     height: 18vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-one {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-two {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
     width: 20%;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-two #down-button {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg {
     height: 2.5vh;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-three {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #tech-stack {
+  #root main #main-container #tech-stack {
     height: 100vh;
     z-index: 0;
   }
-  main #main-container #tech-stack .grid-container {
+  #root main #main-container #tech-stack .grid-container {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
   }
-  main #main-container #tech-stack .grid-container .top-container {
+  #root main #main-container #tech-stack .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -710,33 +732,33 @@ body {
     z-index: 0;
     overflow: visible;
   }
-  main #main-container #tech-stack .grid-container .top-container #title-box {
+  #root main #main-container #tech-stack .grid-container .top-container #title-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
   }
-  main #main-container #tech-stack .grid-container .top-container #title-box #title {
+  #root main #main-container #tech-stack .grid-container .top-container #title-box #title {
     align-self: flex-start;
     color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #tech-stack .grid-container #middle-container {
+  #root main #main-container #tech-stack .grid-container #middle-container {
     height: 75vh;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container {
     height: 100%;
     display: flex;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-title {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-title {
     height: 30%;
     display: flex;
     justify-content: flex-end;
@@ -745,79 +767,77 @@ body {
     font-size: 5vh;
     padding-bottom: 20px;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
     height: 70%;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
     margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
     margin: 0;
     height: 8vh;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
     font-family: "Proza Libre", sans-serif;
     color: #161616;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container #last-button img {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container #last-button img {
     cursor: pointer;
     z-index: 999;
     height: 4vh;
     transform: rotate(90deg);
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container #next-button img {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container #next-button img {
     cursor: pointer;
     z-index: 999;
     height: 4vh;
     transform: rotate(-90deg);
   }
-  main #main-container #tech-stack .grid-container .bottom-container {
+  #root main #main-container #tech-stack .grid-container .bottom-container {
     height: 20vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-one {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-two {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg {
     height: 2vh;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-three {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-
-  /* footer */
-  footer {
+  #root footer {
     font-family: "Proza Libre", sans-serif;
     position: fixed;
     bottom: 0;
@@ -825,11 +845,11 @@ body {
     margin: 0;
     width: 100%;
   }
-  footer .footer-container {
+  #root footer .footer-container {
     display: flex;
     flex-direction: row;
   }
-  footer .footer-container .item3 {
+  #root footer .footer-container .item3 {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -838,7 +858,11 @@ body {
   }
 }
 @media only screen and (min-width: 601px) {
-  header {
+  #root {
+    /* main */
+    /* footer */
+  }
+  #root header {
     font-family: "Proza Libre", sans-serif;
     position: fixed;
     width: 100%;
@@ -846,194 +870,192 @@ body {
     margin: 0;
     z-index: 1;
   }
-  header #navbar-container {
+  #root header #navbar-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     z-index: 1;
     justify-content: space-between;
   }
-  header #navbar-container #up-left-button-container {
+  #root header #navbar-container #up-left-button-container {
     width: 10vw;
     display: flex;
     margin: 2vh 0vw 0vw;
     justify-content: space-evenly;
   }
-  header #navbar-container #up-left-button-container .accordion-button-container {
+  #root header #navbar-container #up-left-button-container .accordion-button-container {
     outline: none;
     padding: 0;
     border: 0;
     z-index: 900;
     background-color: #e3e3e300;
   }
-  header #navbar-container #up-left-button-container .accordion-button-container #burger-button {
+  #root header #navbar-container #up-left-button-container .accordion-button-container #burger-button {
     cursor: pointer;
     background-color: #e3e3e300;
   }
-  header #navbar-container #up-left-button-container .accordion-button-container #burger-button div {
+  #root header #navbar-container #up-left-button-container .accordion-button-container #burger-button div {
     width: 25px;
     height: 3px;
     margin: 5px 0;
   }
-  header #navbar-container .language {
+  #root header #navbar-container .language {
     display: flex;
     flex-direction: column;
   }
-
-  /* main */
-  main {
+  #root main {
     height: 100vh;
     border: 0;
     padding: 0;
     margin: 0;
   }
-  main #main-container #home {
+  #root main #main-container #home {
     z-index: 0;
   }
-  main #main-container #home .grid-container {
+  #root main #main-container #home .grid-container {
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
   }
-  main #main-container #home .grid-container .top-container {
+  #root main #main-container #home .grid-container .top-container {
     display: flex;
     justify-content: flex-end;
   }
-  main #main-container #home .grid-container .top-container #lng-container {
+  #root main #main-container #home .grid-container .top-container #lng-container {
     display: flex;
     flex-direction: column;
     height: 8vh;
   }
-  main #main-container #home .grid-container #about-me-middle-container {
+  #root main #main-container #home .grid-container #about-me-middle-container {
     height: 85vh;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #home .grid-container #about-me-middle-container #title-box {
+  #root main #main-container #home .grid-container #about-me-middle-container #title-box {
     height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
   }
-  main #main-container #home .grid-container #about-me-middle-container #title-box #sub-header {
+  #root main #main-container #home .grid-container #about-me-middle-container #title-box #sub-header {
     color: #ec6543ff;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container svg {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container svg {
     width: 50vw;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter1 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter1 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter2 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #splatter2 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #topmoon {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #topmoon {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #moon {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #ufo {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #ufo {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #schriftstellor {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #schriftstellor {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #escritor {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #escritor {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #entwickler {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #pedagoge {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #pedagoge {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #profesor {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #profesor {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #desarrollador {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #writer {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #writer {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #developer {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #developer {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #educator {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumSolid {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumSolid {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumOutline {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #aaronBlumOutline {
     visibility: show;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #letter1 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #letter1 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #underline {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #solidunderline {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #solidunderline {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR1 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR2 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR2 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR3 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR3 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR4 {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #extraR4 {
     visibility: hidden;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-image {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-image {
     margin-right: 20px;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-one #main-box-image-container #main-box-text {
     align-self: center;
     border-radius: 10px;
     margin-top: 10px;
     margin-left: 20px;
     width: 35vw;
   }
-  main #main-container #home .grid-container #about-me-middle-container #main-box-two {
+  #root main #main-container #home .grid-container #about-me-middle-container #main-box-two {
     margin-top: 3vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
   }
-  main #main-container #home .grid-container .bottom-container {
+  #root main #main-container #home .grid-container .bottom-container {
     height: 10vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-one {
+  #root main #main-container #home .grid-container .bottom-container #bottom-one {
     width: 40%;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation {
+  #root main #main-container #home .grid-container .bottom-container #bottom-one .home-animation {
     position: relative;
     left: -50px;
     animation: moveabout 5s ease;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-one .home-animation img {
+  #root main #main-container #home .grid-container .bottom-container #bottom-one .home-animation img {
     height: 70px;
   }
   @keyframes moveabout {
@@ -1151,33 +1173,33 @@ body {
       transform: translateY(-90vh);
     }
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two {
+  #root main #main-container #home .grid-container .bottom-container #bottom-two {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #home .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
     height: 2.5vh;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-two svg:hover {
+  #root main #main-container #home .grid-container .bottom-container #bottom-two svg:hover {
     animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  main #main-container #home .grid-container .bottom-container #bottom-three {
+  #root main #main-container #home .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #about-me {
+  #root main #main-container #about-me {
     z-index: 0;
   }
-  main #main-container #about-me .grid-container {
+  #root main #main-container #about-me .grid-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  main #main-container #about-me .grid-container .top-container {
+  #root main #main-container #about-me .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -1186,18 +1208,18 @@ body {
     overflow: visible;
     margin-bottom: 10px;
   }
-  main #main-container #about-me .grid-container .top-container #title-box {
+  #root main #main-container #about-me .grid-container .top-container #title-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
   }
-  main #main-container #about-me .grid-container .top-container #title-box #title {
+  #root main #main-container #about-me .grid-container .top-container #title-box #title {
     color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #about-me .grid-container #middle-container {
+  #root main #main-container #about-me .grid-container #middle-container {
     height: 85vh;
     font-family: "Proza Libre", sans-serif;
     display: flex;
@@ -1207,12 +1229,12 @@ body {
     width: 50vw;
     align-self: center;
   }
-  main #main-container #about-me .grid-container #middle-container #description-one {
+  #root main #main-container #about-me .grid-container #middle-container #description-one {
     font-size: 2.25vh;
     display: flex;
     align-items: center;
   }
-  main #main-container #about-me .grid-container #middle-container #links {
+  #root main #main-container #about-me .grid-container #middle-container #links {
     width: 100%;
     height: 10%;
     display: flex;
@@ -1222,45 +1244,67 @@ body {
     flex-direction: row;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #about-me .grid-container #middle-container #description-two {
+  #root main #main-container #about-me .grid-container #middle-container #description-two {
     font-size: 2.25vh;
   }
-  main #main-container #about-me .grid-container .bottom-container {
+  #root main #main-container #about-me .grid-container .bottom-container {
     height: 7vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-one {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-two {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
     width: 20%;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
     height: 2.5vh;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-two svg:hover {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-two svg:hover {
     animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  main #main-container #about-me .grid-container .bottom-container #bottom-three {
+  #root main #main-container #about-me .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #portfolio {
+  #root main #main-container #space-scene {
+    margin: 0;
+    padding: 0;
+    background: #252523;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("./images/starrysky.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  #root main #main-container #space-scene svg {
+    width: 100%;
+  }
+  #root main #main-container #space-scene #reference {
+    background: #252523;
+    z-index: 999;
+    color: white;
+    opacity: 0;
+  }
+  #root main #main-container #portfolio {
     z-index: 0;
   }
-  main #main-container #portfolio .grid-container {
+  #root main #main-container #portfolio .grid-container {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
   }
-  main #main-container #portfolio .grid-container .top-container {
+  #root main #main-container #portfolio .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -1269,26 +1313,26 @@ body {
     overflow: visible;
     margin-bottom: 10px;
   }
-  main #main-container #portfolio .grid-container .top-container #title-box {
+  #root main #main-container #portfolio .grid-container .top-container #title-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
   }
-  main #main-container #portfolio .grid-container .top-container #title-box #title {
+  #root main #main-container #portfolio .grid-container .top-container #title-box #title {
     align-self: flex-start;
     color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #portfolio .grid-container #middle-container {
+  #root main #main-container #portfolio .grid-container #middle-container {
     font-family: "Proza Libre", sans-serif;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container {
     width: 90%;
     padding: 10px;
     display: flex;
@@ -1296,7 +1340,7 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-title {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-title {
     color: #ec6543ff;
     font-size: 5vh;
     width: 100%;
@@ -1305,14 +1349,14 @@ body {
     justify-content: center;
     margin-bottom: 5px;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-links {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-links {
     width: 100%;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-picture {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-picture {
     width: 75%;
     display: flex;
     align-items: center;
@@ -1321,63 +1365,63 @@ body {
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-picture img {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-picture img {
     box-shadow: 2px 2px 10px 0.5px rgba(124, 124, 124, 0.568);
     height: 30vw;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-description {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-description {
     width: 50%;
     font-size: 2vh;
     margin-bottom: 20px;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container {
     width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-frontend {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-frontend {
     padding: 5px;
   }
-  main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-backend {
+  #root main #main-container #portfolio .grid-container #middle-container #project-container #project-info-container #project-backend {
     padding: 5px;
   }
-  main #main-container #portfolio .grid-container .bottom-container {
+  #root main #main-container #portfolio .grid-container .bottom-container {
     display: flex;
     flex-direction: row;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-one {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-two {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
     width: 20%;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
     height: 2.5vh;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-two svg:hover {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-two svg:hover {
     animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  main #main-container #portfolio .grid-container .bottom-container #bottom-three {
+  #root main #main-container #portfolio .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #contact {
+  #root main #main-container #contact {
     z-index: 0;
   }
-  main #main-container #contact .grid-container {
+  #root main #main-container #contact .grid-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  main #main-container #contact .grid-container .top-container {
+  #root main #main-container #contact .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -1386,7 +1430,7 @@ body {
     overflow: visible;
     margin-bottom: 10px;
   }
-  main #main-container #contact .grid-container #middle-container {
+  #root main #main-container #contact .grid-container #middle-container {
     height: 75vh;
     font-family: "Proza Libre", sans-serif;
     display: flex;
@@ -1394,20 +1438,20 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  main #main-container #contact .grid-container #middle-container #title-box {
+  #root main #main-container #contact .grid-container #middle-container #title-box {
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
     margin-bottom: 20px;
   }
-  main #main-container #contact .grid-container #middle-container #title-box #title {
+  #root main #main-container #contact .grid-container #middle-container #title-box #title {
     display: flex;
     justify-content: center;
     align-self: center;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #contact .grid-container #middle-container #description-one {
+  #root main #main-container #contact .grid-container #middle-container #description-one {
     width: 50vw;
     height: 50vh;
     display: flex;
@@ -1415,31 +1459,31 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #title {
+  #root main #main-container #contact .grid-container #middle-container #description-one #title {
     width: 40vw;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons {
     width: 70%;
     display: flex;
     justify-content: center;
     text-align: center;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-icon {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-icon {
     display: flex;
     justify-content: center;
     text-align: center;
     width: 20%;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-text {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons #email-text {
     width: 80%;
   }
-  main #main-container #contact .grid-container #middle-container #description-one #email-buttons #copy-button {
+  #root main #main-container #contact .grid-container #middle-container #description-one #email-buttons #copy-button {
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  main #main-container #contact .grid-container #middle-container #links {
+  #root main #main-container #contact .grid-container #middle-container #links {
     margin-top: 2%;
     width: 50vw;
     display: flex;
@@ -1449,41 +1493,41 @@ body {
     flex-direction: row;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #contact .grid-container #middle-container #description-two {
+  #root main #main-container #contact .grid-container #middle-container #description-two {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
     font-size: 2vh;
   }
-  main #main-container #contact .grid-container .bottom-container {
+  #root main #main-container #contact .grid-container .bottom-container {
     height: 18vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-one {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-two {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
     width: 20%;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-two #down-button {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg {
     cursor: pointer;
     z-index: 999;
     height: 4vh;
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg:hover {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-two #down-button svg:hover {
     animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
   @keyframes scaleupup {
@@ -1492,21 +1536,21 @@ body {
       transform: translateY(-10px);
     }
   }
-  main #main-container #contact .grid-container .bottom-container #bottom-three {
+  #root main #main-container #contact .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-  main #main-container #tech-stack {
+  #root main #main-container #tech-stack {
     display: flex;
     justify-content: center;
     text-align: center;
     z-index: 0;
   }
-  main #main-container #tech-stack .grid-container {
+  #root main #main-container #tech-stack .grid-container {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
   }
-  main #main-container #tech-stack .grid-container .top-container {
+  #root main #main-container #tech-stack .grid-container .top-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -1514,19 +1558,19 @@ body {
     z-index: 0;
     overflow: visible;
   }
-  main #main-container #tech-stack .grid-container .top-container #title-box {
+  #root main #main-container #tech-stack .grid-container .top-container #title-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     z-index: 0;
   }
-  main #main-container #tech-stack .grid-container .top-container #title-box #title {
+  #root main #main-container #tech-stack .grid-container .top-container #title-box #title {
     align-self: flex-start;
     color: #3a4a6fff;
     font-family: "Proza Libre", sans-serif;
   }
-  main #main-container #tech-stack .grid-container #middle-container {
+  #root main #main-container #tech-stack .grid-container #middle-container {
     height: 75vh;
     font-family: "Proza Libre", sans-serif;
     width: 50vw;
@@ -1534,14 +1578,14 @@ body {
     justify-content: center;
     flex-direction: row;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container {
     height: 100%;
     width: 50vw;
     display: flex;
     justify-content: center;
     flex-direction: row;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -1549,7 +1593,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-title {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-title {
     height: 40vh;
     display: flex;
     justify-content: flex-end;
@@ -1558,87 +1602,85 @@ body {
     font-size: 5vh;
     padding-bottom: 20px;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
     height: 60vh;
     width: 90%;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
     margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
     margin: 0;
     height: 8vh;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
     font-family: "Proza Libre", sans-serif;
     color: #161616;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container {
     width: 10%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container #last-button img {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #last-button-container #last-button img {
     cursor: pointer;
     z-index: 999;
     height: 4vh;
     transform: rotate(90deg);
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container {
     width: 10%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container #next-button img {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #next-button-container #next-button img {
     cursor: pointer;
     z-index: 999;
     height: 4vh;
     transform: rotate(-90deg);
   }
-  main #main-container #tech-stack .grid-container .bottom-container {
+  #root main #main-container #tech-stack .grid-container .bottom-container {
     height: 20vh;
     display: flex;
     flex-direction: row;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-one {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-one {
     width: 40%;
     border-bottom-left-radius: 25px;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-two {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg {
     cursor: pointer;
     z-index: 999;
     height: 2.5vh;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg:hover {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-two svg:hover {
     animation: scaleupup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  main #main-container #tech-stack .grid-container .bottom-container #bottom-three {
+  #root main #main-container #tech-stack .grid-container .bottom-container #bottom-three {
     width: 40%;
   }
-
-  /* footer */
-  footer {
+  #root footer {
     font-family: "Proza Libre", sans-serif;
     position: fixed;
     bottom: 0;
@@ -1646,14 +1688,14 @@ body {
     margin: 0;
     width: 100%;
   }
-  footer .footer-container {
+  #root footer .footer-container {
     display: flex;
     flex-direction: row;
     background-size: 80%;
     background-position: right bottom;
     background-repeat: no-repeat;
   }
-  footer .footer-container .item3 {
+  #root footer .footer-container .item3 {
     width: 100%;
     display: flex;
     justify-content: flex-end;
