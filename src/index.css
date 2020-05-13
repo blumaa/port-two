@@ -393,7 +393,6 @@
     align-items: center;
     background-image: url("./images/starrysky.jpg");
     background-attachment: fixed;
-    background-repeat: no-repeat;
   }
   #root main #main-container #space-scene svg {
     width: 100%;
@@ -1285,7 +1284,6 @@
     background-image: url("./images/starrysky.jpg");
     background-size: 100%;
     background-attachment: fixed;
-    background-repeat: no-repeat;
   }
   #root main #main-container #space-scene svg {
     width: 100%;

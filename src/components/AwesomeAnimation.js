@@ -73,6 +73,7 @@ const FullDeveloperWordCycle = () => {
   let developerV = useRef(null);
   let developerE3 = useRef(null);
   let developerD = useRef(null);
+  let developerExtraD = useRef(null);
 
   let desarrolladorD1 = useRef(null);
   let desarrolladorE = useRef(null);
@@ -87,7 +88,7 @@ const FullDeveloperWordCycle = () => {
   let desarrolladorD2 = useRef(null);
   let desarrolladorO2 = useRef(null);
   let desarrolladorR3 = useRef(null);
-
+  
   let entwicklerE1 = useRef(null);
   let entwicklerN = useRef(null);
   let entwicklerT = useRef(null);
@@ -98,24 +99,24 @@ const FullDeveloperWordCycle = () => {
   let entwicklerL = useRef(null);
   let entwicklerE2 = useRef(null);
   let entwicklerR = useRef(null);
-
+  
   const developerWordCycle = () => {
-
+    
     function getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  
+    }
+    
     let tl = gsap.timeline({
       repeat: -1,
       reversed: false,
       yoyo: false,
       repeatDelay: getRandomInt(3,10),
     });
-
+    
     const morphTime = 0.08;
-
+    
     tl.set("#developer", {visibility:"visible"}).to(
       developerD.current,
       {
@@ -123,7 +124,8 @@ const FullDeveloperWordCycle = () => {
         morphSVG: desarrolladorD1.current,
       },
       1
-    )
+      )
+      .set(developerExtraD.current, { visibility: "hidden" })
       .to(developerE1.current, {
         duration: morphTime,
         morphSVG: desarrolladorE.current,
@@ -190,49 +192,49 @@ const FullDeveloperWordCycle = () => {
         duration: morphTime,
         morphSVG: entwicklerR.current,
       })
-      .set(developerExtraR2.current, { visibility: "hidden" })
+      .set(developerExtraR3.current, { visibility: "hidden" })
       .to(developerExtraR1.current, {
         duration: morphTime,
         morphSVG: entwicklerR.current,
       })
-      .set(developerExtraR1.current, { visibility: "hidden" })
+      .set(developerExtraR2.current, { visibility: "hidden" })
       .to(developerR.current, {
         duration: morphTime,
         morphSVG: entwicklerR.current,
       })
-      .to(developerE3.current, {
+      .to(developerExtraR1.current, {
         duration: morphTime,
         morphSVG: entwicklerE2.current,
       })
-      .to(developerP.current, {
+      .to(developerE3.current, {
         duration: morphTime,
         morphSVG: entwicklerL.current,
       })
-      .to(developerO.current, {
+      .to(developerP.current, {
         duration: morphTime,
         morphSVG: entwicklerK.current,
       })
-      .to(developerL.current, {
+      .to(developerO.current, {
         duration: morphTime,
         morphSVG: entwicklerC.current,
       })
-      .to(developerE2.current, {
+      .to(developerL.current, {
         duration: morphTime,
         morphSVG: entwicklerI.current,
       })
-      .to(developerV.current, {
+      .to(developerE2.current, {
         duration: morphTime,
         morphSVG: entwicklerW.current,
       })
-      .to(developerE1.current, {
+      .to(developerV.current, {
         duration: morphTime,
         morphSVG: entwicklerT.current,
       })
-      .to(developerD.current, {
+      .to(developerE1.current, {
         duration: morphTime,
         morphSVG: entwicklerN.current,
       })
-      .to(developerExtraR3.current, {
+      .to(developerD.current, {
         duration: morphTime,
         morphSVG: entwicklerE1.current,
       });
@@ -1839,6 +1841,12 @@ const FullDeveloperWordCycle = () => {
       <g id="developer">
         <path
           ref={developerD}
+          d="M823,337h-1.27a16.39,16.39,0,0,1-3.21,4.51,19.38,19.38,0,0,1-4.22,3.16,20.25,20.25,0,0,1-4.8,1.86,20.48,20.48,0,0,1-4.85.62,24.86,24.86,0,0,1-9.8-1.92,23.54,23.54,0,0,1-8-5.53,25.46,25.46,0,0,1-5.37-9,35.39,35.39,0,0,1-1.95-12.23v-1.81a34.39,34.39,0,0,1,2-12.12,27.12,27.12,0,0,1,5.37-9,22.6,22.6,0,0,1,7.91-5.59,24.5,24.5,0,0,1,9.59-1.91,20.85,20.85,0,0,1,10.07,2.53,16.89,16.89,0,0,1,7.22,7.84H823V266.64h8.22v78.92H823Zm-17.5,1.8a16.19,16.19,0,0,0,6.85-1.46,16.6,16.6,0,0,0,5.53-4.17,20.37,20.37,0,0,0,3.75-6.49,24.5,24.5,0,0,0,1.37-8.4v-1.35a24.27,24.27,0,0,0-1.37-8.29,20.32,20.32,0,0,0-3.75-6.48,17.21,17.21,0,0,0-5.58-4.23,15.79,15.79,0,0,0-6.8-1.52,16.45,16.45,0,0,0-6.91,1.47,16.23,16.23,0,0,0-5.58,4.17,19.15,19.15,0,0,0-3.69,6.42,24.5,24.5,0,0,0-1.32,8.23v1.81a25.15,25.15,0,0,0,1.32,8.45,18.44,18.44,0,0,0,3.69,6.37,16.15,16.15,0,0,0,5.53,4.06A16.91,16.91,0,0,0,805.54,338.79Z"
+          transform="translate(-98.55 75.74)"
+          fill={theme.theme.mainText}
+        ></path>
+        <path
+          ref={developerExtraD}
           d="M823,337h-1.27a16.39,16.39,0,0,1-3.21,4.51,19.38,19.38,0,0,1-4.22,3.16,20.25,20.25,0,0,1-4.8,1.86,20.48,20.48,0,0,1-4.85.62,24.86,24.86,0,0,1-9.8-1.92,23.54,23.54,0,0,1-8-5.53,25.46,25.46,0,0,1-5.37-9,35.39,35.39,0,0,1-1.95-12.23v-1.81a34.39,34.39,0,0,1,2-12.12,27.12,27.12,0,0,1,5.37-9,22.6,22.6,0,0,1,7.91-5.59,24.5,24.5,0,0,1,9.59-1.91,20.85,20.85,0,0,1,10.07,2.53,16.89,16.89,0,0,1,7.22,7.84H823V266.64h8.22v78.92H823Zm-17.5,1.8a16.19,16.19,0,0,0,6.85-1.46,16.6,16.6,0,0,0,5.53-4.17,20.37,20.37,0,0,0,3.75-6.49,24.5,24.5,0,0,0,1.37-8.4v-1.35a24.27,24.27,0,0,0-1.37-8.29,20.32,20.32,0,0,0-3.75-6.48,17.21,17.21,0,0,0-5.58-4.23,15.79,15.79,0,0,0-6.8-1.52,16.45,16.45,0,0,0-6.91,1.47,16.23,16.23,0,0,0-5.58,4.17,19.15,19.15,0,0,0-3.69,6.42,24.5,24.5,0,0,0-1.32,8.23v1.81a25.15,25.15,0,0,0,1.32,8.45,18.44,18.44,0,0,0,3.69,6.37,16.15,16.15,0,0,0,5.53,4.06A16.91,16.91,0,0,0,805.54,338.79Z"
           transform="translate(-98.55 75.74)"
           fill={theme.theme.mainText}

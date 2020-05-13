@@ -111,7 +111,7 @@ const Separator1 = () => {
   if (width > 600) {
     scrollPosition > 2500 ? fadeOut() : fadeIn();
   } else {
-    scrollPosition > 1300 ? fadeOut() : fadeIn();
+    scrollPosition > 2000 ? fadeOut() : fadeIn();
   }
 
   // intersection && intersection.intersectionRatio < 0.5 ? fadeOut() : fadeIn();
