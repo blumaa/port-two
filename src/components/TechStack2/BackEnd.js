@@ -22,26 +22,34 @@ const BackEnd = () => {
         backend
       </div>
       <div id="stack-icon-container">
-        <div>
-          <div id="icon-container">
-            <img src={nodelogo} id="icon" />
-            <div id="icon-title" style={{color: theme.theme.mainText}}>Node Js</div>
+        <div id="icon-container">
+          <img src={nodelogo} id="icon" />
+          <div id="icon-title" style={{ color: theme.theme.mainText }}>
+            Node Js
           </div>
-          <div id="icon-container">
-            <img src={rubylogo} id="icon" />
-            <div id="icon-title" style={{color: theme.theme.mainText}}>Ruby</div>
+        </div>
+        <div id="icon-container">
+          <img src={rubylogo} id="icon" />
+          <div id="icon-title" style={{ color: theme.theme.mainText }}>
+            Ruby
           </div>
-          <div id="icon-container">
-            <img src={railslogo} id="icon" />
-            <div id="icon-title" style={{color: theme.theme.mainText}}>Ruby on Rails</div>
+        </div>
+        <div id="icon-container">
+          <img src={railslogo} id="icon" />
+          <div id="icon-title" style={{ color: theme.theme.mainText }}>
+            Ruby on Rails
           </div>
-          <div id="icon-container">
-            <img src={mongologo} id="icon" />
-            <div id="icon-title" style={{color: theme.theme.mainText}}>Mongo DB</div>
+        </div>
+        <div id="icon-container">
+          <img src={mongologo} id="icon" />
+          <div id="icon-title" style={{ color: theme.theme.mainText }}>
+            Mongo DB
           </div>
-          <div id="icon-container">
-            <img src={postgreslogo} id="icon" />
-            <div id="icon-title" style={{color: theme.theme.mainText}}>PostgresQL</div>
+        </div>
+        <div id="icon-container">
+          <img src={postgreslogo} id="icon" />
+          <div id="icon-title" style={{ color: theme.theme.mainText }}>
+            PostgresQL
           </div>
         </div>
       </div>

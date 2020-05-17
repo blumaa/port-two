@@ -6,6 +6,7 @@ import TPReport from "./Portfolio/TPReport";
 import DebtCrusher from "./Portfolio/DebtCrusher";
 import RuinMe from "./Portfolio/RuinMe";
 import DownArrow from "./DownArrow";
+import { gsap, Back, Linear, Elastic, Power3, Bounce } from "gsap";
 
 const Portofolio = () => {
   const mapState = useCallback((state) => {

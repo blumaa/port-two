@@ -11,7 +11,8 @@ import { useDispatch } from "redux-react-hook";
 import * as actions from "../constants/action_types";
 import { useMappedState } from "redux-react-hook";
 import Switch from "@material-ui/core/Switch";
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from "@material-ui/core/styles";
+import MenuMorph from "./animations/MenuMorph";
 
 const useStyles = makeStyles({
   top: {
@@ -166,42 +167,36 @@ export default function SwipeableTemporaryDrawer({ flipSwitch }) {
     </div>
   );
 
-
-
-
-  
   return (
-    <div id="up-left-button-container">
-      <>
-        <button
-          onClick={toggleDrawer("left", true)}
-          className="accordion-button-container"
-        >
-          {state.left ? (
-            <Burger isOpen={true} />
-          ) : (
-            <div id="burger-button" >
+    <>
+      <MenuMorph state={state} setState={setState} toggleDrawer={toggleDrawer}/>
+      <div id="up-left-button-container">
+        <>
+          {/* <button
+            onClick={toggleDrawer("left", true)}
+            className="accordion-button-container"
+          > */}
+            {/* <div id="burger-button" >
               <div style={{backgroundColor: theme.theme.mainText}}></div>
               <div style={{backgroundColor: theme.theme.mainText}}></div>
               <div style={{backgroundColor: theme.theme.mainText}}></div>
-            </div>
-          )}
-        </button>
-        
+            </div> */}
+          {/* </button> */}
 
-        <SwipeableDrawer
-          transitionDuration={200}
-          open={state["left"]}
-          onClose={toggleDrawer("left", false)}
-          onOpen={toggleDrawer("left", true)}
-          classes={{
-            paper: classes.paper, // class name, e.g. `classes-nesting-root-x`
-          }}
-          BackdropProps={{ invisible: false }}
-        >
-          {list()}
-        </SwipeableDrawer>
-      </>
-    </div>
+          <SwipeableDrawer
+            transitionDuration={200}
+            open={state["left"]}
+            onClose={toggleDrawer("left", false)}
+            onOpen={toggleDrawer("left", true)}
+            classes={{
+              paper: classes.paper, // class name, e.g. `classes-nesting-root-x`
+            }}
+            BackdropProps={{ invisible: false }}
+          >
+            {list()}
+          </SwipeableDrawer>
+        </>
+      </div>
+    </>
   );
 }

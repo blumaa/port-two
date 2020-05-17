@@ -18,9 +18,11 @@ const Separator1 = () => {
 
   const { language, theme } = useMappedState(mapState);
   const { width, height } = useWindowSize();
+  const sectionRef = useRef(null);
 
-  // console.log(width);
+  console.log('window size', height);
   const [scrollPosition, setSrollPosition] = useState(0);
+  const [scenePos, setScenePos] = useState(0);
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -81,6 +83,12 @@ const Separator1 = () => {
 
     master.add(ufoFlight(), "ufomove").add(moonRotate());
 
+
+    const scenePosition = sectionRef.current.getBoundingClientRect().top;
+
+    // console.log(topPos)
+    setScenePos(scenePosition)
+
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
@@ -96,29 +104,31 @@ const Separator1 = () => {
     threshhold: 0.5,
   });
 
-  const fadeOut = (element) => {
+  const moveDown = (element) => {
     // gsap.to(ufo.current, 1, { opacity: 1, y: -130, ease: Power3.easeOut });
     gsap.to(moon.current, 1, { opacity: 1, y: 85, ease: Power3.easeOut });
     gsap.to(topmoon.current, 1, { opacity: 1, y: 85, ease: Power3.easeOut });
   };
 
-  const fadeIn = () => {
+  const moveUp = () => {
     // gsap.to(ufo.current, 1, { opacity: 1, y: 130, ease: Power3.easeOut });
     gsap.to(moon.current, 1, { opacity: 1, y: -130, ease: Power3.easeOut });
     gsap.to(topmoon.current, 1, { opacity: 1, y: -130, ease: Power3.easeOut });
   };
 
-  if (width > 600) {
-    scrollPosition > 2500 ? fadeOut() : fadeIn();
-  } else {
-    scrollPosition > 2000 ? fadeOut() : fadeIn();
-  }
+  console.log('scroll pos', scrollPosition)
+  console.log('scene pos', scenePos)
 
+  if (width > 600) {
+    scrollPosition > scenePos + 800 ? moveDown(moon.current) : moveUp(moon.current);
+  } else {
+    scrollPosition > scenePos - 100? moveDown(moon.current) : moveUp(moon.current);
+  }
   // intersection && intersection.intersectionRatio < 0.5 ? fadeOut() : fadeIn();
 
   return (
     <>
-      <div id="space-scene">
+      <div id="space-scene" ref={sectionRef}>
         <svg
           id="Layer_1"
           data-name="Layer 1"

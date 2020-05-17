@@ -54,29 +54,19 @@
     display: flex;
     z-index: 1;
     justify-content: space-between;
+    align-items: flex-start;
   }
-  #root header #navbar-container #up-left-button-container {
-    margin-left: 2vw;
-    display: flex;
-    justify-content: flex-start;
+  #root header #navbar-container svg {
+    margin-top: 1.25vh;
+    margin-left: 2.5vw;
+    width: 8vw;
+    z-index: 999;
   }
-  #root header #navbar-container #up-left-button-container .accordion-button-container {
-    width: 10vw;
-    outline: none;
-    font-size: 0%;
-    padding: 0;
-    border: 0;
-    z-index: 900;
-    background-color: #e3e3e300;
+  #root header #navbar-container svg #close {
+    visibility: hidden;
   }
-  #root header #navbar-container #up-left-button-container .accordion-button-container #burger-button {
-    background-color: #e3e3e300;
-  }
-  #root header #navbar-container #up-left-button-container .accordion-button-container #burger-button div {
-    width: 25px;
-    height: 3px;
-    background-color: #3a4a6fff;
-    margin: 5px 0;
+  #root header #navbar-container #menu-container {
+    z-index: -1;
   }
   #root header #navbar-container .language {
     display: flex;
@@ -768,25 +758,23 @@
   }
   #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
     height: 70%;
-  }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
   }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container {
     margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon {
     margin: 0;
     height: 8vh;
   }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon-title {
     font-family: "Proza Libre", sans-serif;
     color: #161616;
   }
@@ -867,26 +855,33 @@
     width: 100%;
     top: 0;
     margin: 0;
-    z-index: 1;
   }
   #root header #navbar-container {
     width: 100%;
     display: flex;
     flex-direction: row;
-    z-index: 1;
     justify-content: space-between;
   }
+  #root header #navbar-container svg {
+    margin-top: 1.25vh;
+    margin-left: 1.5vw;
+    width: 3vw;
+    z-index: 999;
+  }
+  #root header #navbar-container svg #close {
+    visibility: hidden;
+  }
+  #root header #navbar-container #menu-container {
+    z-index: -1;
+  }
   #root header #navbar-container #up-left-button-container {
-    width: 10vw;
     display: flex;
-    margin: 2vh 0vw 0vw;
     justify-content: space-evenly;
   }
   #root header #navbar-container #up-left-button-container .accordion-button-container {
     outline: none;
     padding: 0;
     border: 0;
-    z-index: 900;
     background-color: #e3e3e300;
   }
   #root header #navbar-container #up-left-button-container .accordion-button-container #burger-button {
@@ -1601,27 +1596,25 @@
     padding-bottom: 20px;
   }
   #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container {
-    height: 60vh;
+    height: 70%;
     width: 90%;
-  }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
   }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container {
     margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon {
     margin: 0;
     height: 8vh;
   }
-  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container div #icon-container #icon-title {
+  #root main #main-container #tech-stack .grid-container #middle-container #tech-stack-container #individual-stack-container #stack-icon-container #icon-container #icon-title {
     font-family: "Proza Libre", sans-serif;
     color: #161616;
   }
