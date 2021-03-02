@@ -12,16 +12,16 @@ import Separator1 from './animations/Separator1'
 const Main = ({ show }) => {
   return (
     <div id="main-container">
-      <div id="page0">
+      {/* <div id="page0">
         <Home />
       </div>
       <div id="page1">
         <TechStack />
-      </div>
+      </div> */}
       <>
         <Separator1 />
       </>
-      <div id="page2">
+      {/* <div id="page2">
         <Portfolio />
       </div>
       <div id="page3">
@@ -29,7 +29,7 @@ const Main = ({ show }) => {
       </div>
       <div id="page4">
         <Contact />
-      </div>
+      </div> */}
      
       
     </div>

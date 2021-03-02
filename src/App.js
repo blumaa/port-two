@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
 import { useMappedState } from "redux-react-hook";
 import ReactGA from 'react-ga';
+import Separator1 from './components/animations/Separator1'
 ReactGA.initialize('UA-165021071-1');
 
 function App() {
@@ -18,18 +19,8 @@ function App() {
   const { theme } = useMappedState(mapState);
 
   // console.log(theme)
-  return (
-      <div className="App" >
-        <header >
-          <Navbar />
-        </header>
-        <main style={{backgroundColor: theme.theme.backgroundColor}}>
-          <Main />
-        </main>
-        <footer >
-          <Footer />
-        </footer>
-      </div>
+    return (<Separator1 />
+      
   );
 }
 

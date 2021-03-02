@@ -1,36 +1,14 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { gsap, Back, Linear, Elastic, Power3, Bounce } from "gsap";
-import { useIntersection, useWindowSize } from "react-use";
-import { useMappedState } from "redux-react-hook";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const Separator1 = () => {
   let ufo = useRef(null);
   let moon = useRef(null);
   let topmoon = useRef(null);
-  let section = useRef(null);
-
-  const mapState = useCallback((state) => {
-    return {
-      language: state.languageState,
-      theme: state.themeState,
-    };
-  }, []);
-
-  const { language, theme } = useMappedState(mapState);
-  const { width, height } = useWindowSize();
-  const sectionRef = useRef(null);
-
-  console.log('window size', height);
-  const [scrollPosition, setSrollPosition] = useState(0);
-  const [scenePos, setScenePos] = useState(0);
-
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setSrollPosition(position);
-  };
 
   useEffect(() => {
     let master = gsap.timeline({
+      paused: true,
       reversed: false,
       repeat: -1,
     });
@@ -53,7 +31,7 @@ const Separator1 = () => {
         tl.to(ufo.current, 1, {
           x: random(-400, 900),
           y: random(-150, 150),
-          ease: Back.easeIn,
+          ease: "back.in",
         });
       }
     };
@@ -73,7 +51,7 @@ const Separator1 = () => {
         repeat: -1,
         yoyo: true,
         transformOrigin: "50% 50%",
-        ease: Elastic.easeInOut,
+        ease: "elastic.inOut",
       });
       //   tl.fromTo(moon, 30, {
       //     transformOrigin: 'center',
@@ -84,114 +62,36 @@ const Separator1 = () => {
     master.add(ufoFlight(), "ufomove").add(moonRotate());
 
 
-    const scenePosition = sectionRef.current.getBoundingClientRect().top;
 
-    // console.log(topPos)
-    setScenePos(scenePosition)
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
-  console.log(scrollPosition);
 
-  const intersection = useIntersection(section, {
-    root: null,
-    rootMargin: "0px",
-    threshhold: 0.5,
-  });
 
   const moveDown = (element) => {
-    // gsap.to(ufo.current, 1, { opacity: 1, y: -130, ease: Power3.easeOut });
-    gsap.to(moon.current, 1, { opacity: 1, y: 85, ease: Power3.easeOut });
-    gsap.to(topmoon.current, 1, { opacity: 1, y: 85, ease: Power3.easeOut });
+    // gsap.to(ufo.current, 1, { opacity: 1, y: -130, ease: "power3.out" });
+    gsap.to(moon.current, 1, { opacity: 1, y: 85, ease: "power3.out" });
+    gsap.to(topmoon.current, 1, { opacity: 1, y: 85, ease: "power3.out" });
   };
 
   const moveUp = () => {
-    // gsap.to(ufo.current, 1, { opacity: 1, y: 130, ease: Power3.easeOut });
-    gsap.to(moon.current, 1, { opacity: 1, y: -130, ease: Power3.easeOut });
-    gsap.to(topmoon.current, 1, { opacity: 1, y: -130, ease: Power3.easeOut });
+    // gsap.to(ufo.current, 1, { opacity: 1, y: 130, ease: "power3.out" });
+    gsap.to(moon.current, 1, { opacity: 1, y: -130, ease: "power3.out" });
+    gsap.to(topmoon.current, 1, { opacity: 1, y: -130, ease: "power3.out" });
   };
 
-  console.log('scroll pos', scrollPosition)
-  console.log('scene pos', scenePos)
 
-  if (width > 600) {
-    scrollPosition > scenePos + 800 ? moveDown(moon.current) : moveUp(moon.current);
-  } else {
-    scrollPosition > scenePos - 100? moveDown(moon.current) : moveUp(moon.current);
-  }
-  // intersection && intersection.intersectionRatio < 0.5 ? fadeOut() : fadeIn();
 
   return (
     <>
-      <div id="space-scene" ref={sectionRef}>
         <svg
           id="Layer_1"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 1125 2436"
+          viewBox="0 400 1125 1000"
         >
-          <defs>
-            {theme.theme.backgroundColor === "#e3e3e3" ? (
-              <>
-                <linearGradient
-                  id="linear-gradient"
-                  x1="562.5"
-                  y1="1234.39"
-                  x2="562.5"
-                  y2="2416.98"
-                  gradientTransform="matrix(1, 0, 0, -1, 0, 3670.39)"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#e3e3e3" />
-                  <stop offset="0.11" stop-color="#dedede" />
-                  <stop offset="0.25" stop-color="#d0d0d0" />
-                  <stop offset="0.39" stop-color="#b8b8b8" />
-                  <stop offset="0.54" stop-color="#989898" />
-                  <stop offset="0.69" stop-color="#6d6d6d" />
-                  <stop offset="0.84" stop-color="#3a3a3a" />
-                  <stop offset="1" />
-                </linearGradient>
-                <linearGradient
-                  id="linear-gradient-2"
-                  y1="3670.39"
-                  x2="562.5"
-                  y2="2877.68"
-                  xlinkHref="#linear-gradient"
-                />
-              </>
-            ) : (
-              <>
-                <linearGradient
-                  id="linear-gradient"
-                  x1="562.5"
-                  y1="1234.39"
-                  x2="562.5"
-                  y2="2416.98"
-                  gradientTransform="matrix(1, 0, 0, -1, 0, 3670.39)"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#252525" />
-                  <stop offset="0.32" stop-color="#202020" />
-                  <stop offset="0.68" stop-color="#121212" />
-                  <stop offset="1" />
-                </linearGradient>
-                <linearGradient
-                  id="linear-gradient-2"
-                  x1="562.5"
-                  y1="3670.39"
-                  x2="562.5"
-                  y2="2877.68"
-                  xlinkHref="#linear-gradient"
-                />
-              </>
-            )}
-          </defs>
           <title>space_scene</title>
 
           <g id="moon" ref={moon}>
@@ -415,17 +315,7 @@ const Separator1 = () => {
               fill="#2f4956"
             />
           </g>
-          <g id="windowspacers">
-            <rect
-              y="1253.42"
-              width="1125"
-              height="1182.58"
-              fill="url(#linear-gradient)"
-            />
-            <rect width="1125" height="792.72" fill="url(#linear-gradient-2)" />
-          </g>
         </svg>
-      </div>
     </>
   );
 };
